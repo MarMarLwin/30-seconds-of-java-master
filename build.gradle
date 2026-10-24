@@ -24,10 +24,11 @@ checkstyle {
     maxErrors = 0
     maxWarnings = 0
 }
-sonar {
+sonarqube {
   properties {
     property "sonar.projectKey", "MarMarLwin_30-seconds-of-java-master"
     property "sonar.organization", "marmarlwin"
+    property "sonar.coverage.jacoco.xmlReportPaths", "${buildDir}/reports/jacoco/test/jacocoTestReport.xml"
   }
 }
 
