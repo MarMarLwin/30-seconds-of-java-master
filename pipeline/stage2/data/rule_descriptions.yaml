@@ -1,0 +1,39 @@
+# Curated rule summaries, used only when SonarCloud returns no description
+# (it does so without SONAR_TOKEN). They paraphrase the SonarSource rule pages
+# and are marked description_source: curated in the Stage 2 output.
+
+githubactions:S7637: |
+  Referencing an external action by a mutable tag or branch (for example
+  "@v2" or "@main") lets the action's owner, or anyone who compromises the
+  action's repository, change the code that runs in this workflow without any
+  change to the workflow file. Pin every external action to a full-length
+  commit SHA, and keep the human-readable version in a trailing comment
+  (for example "# v2.16.0") so it can still be reviewed and updated.
+
+dart:S3776: |
+  Cognitive Complexity measures how hard a function's control flow is to
+  understand. Each break in linear flow (if, else, ternary, loop, catch,
+  switch, logical-operator sequence) adds to the score, and nesting adds more.
+  Reduce it by extracting nested parts into well-named private methods or
+  widgets, using early returns, and flattening nested conditionals, while
+  keeping behavior unchanged.
+
+dart:S3358: |
+  Nested ternary operators (a conditional expression inside another
+  conditional expression) are hard to read. Extract the inner conditional
+  into an independent statement, for example an if/else chain or a separate
+  local variable or helper function, so each decision is stated once.
+
+dart:S7115: |
+  After an await, the widget that owns a BuildContext may have been unmounted,
+  so the context must not be used without checking that the same context is
+  still mounted. Checking an unrelated "mounted" (such as State.mounted when a
+  different BuildContext is used) does not protect the context. Guard each use
+  after an async gap with "if (!context.mounted) return;" (or
+  "context.mounted &&") on the exact context being used.
+
+dart:S7055: |
+  "_" is a wildcard: since Dart 3.7 it declares no variable and cannot be
+  referenced. Code that reads a parameter or catch variable named "_" relies
+  on pre-wildcard behavior. Give the variable a real name (for example "e" or
+  "error") wherever it is actually used.

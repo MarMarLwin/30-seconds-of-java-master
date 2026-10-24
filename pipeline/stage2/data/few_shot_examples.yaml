@@ -1,0 +1,156 @@
+# Curated before/after examples for the few-shot strategy, keyed by rule.
+#
+# Rules for adding examples:
+#   - Write them from scratch. Never copy code from the target repository, or
+#     the example leaks the answer and the strategy comparison is invalid.
+#   - Keep the "after" in the same shape the model is asked to return: the
+#     complete refactored snippet, no explanation.
+#   - A rule with no entry gets no few-shot prompt (see skipped_strategies in
+#     the Stage 2 output) rather than a silent zero-shot duplicate.
+
+githubactions:S7637:
+  - title: Pin an action to a commit SHA
+    before: |
+      steps:
+        - uses: actions/checkout@v4
+        - uses: actions/setup-node@v4
+          with:
+            node-version: '20'
+    after: |
+      steps:
+        - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
+          with:
+            node-version: '20'
+
+dart:S3776:
+  - title: Flatten nested conditionals with early returns
+    before: |
+      String status(Order o) {
+        if (o.paid) {
+          if (o.shipped) {
+            if (o.delivered) {
+              return 'Delivered';
+            } else {
+              return 'In transit';
+            }
+          } else {
+            return 'Awaiting shipment';
+          }
+        } else {
+          return 'Unpaid';
+        }
+      }
+    after: |
+      String status(Order o) {
+        if (!o.paid) return 'Unpaid';
+        if (!o.shipped) return 'Awaiting shipment';
+        return o.delivered ? 'Delivered' : 'In transit';
+      }
+  - title: Extract part of a large build method into a helper
+    before: |
+      @override
+      Widget build(BuildContext context) {
+        return Column(
+          children: [
+            if (items.isEmpty)
+              const Text('Empty')
+            else
+              for (final item in items)
+                item.isDone
+                    ? ListTile(title: Text(item.name), trailing: const Icon(Icons.check))
+                    : ListTile(title: Text(item.name)),
+            if (isLoading) const CircularProgressIndicator() else const SizedBox(),
+          ],
+        );
+      }
+    after: |
+      @override
+      Widget build(BuildContext context) {
+        return Column(
+          children: [
+            ..._buildItems(),
+            if (isLoading) const CircularProgressIndicator() else const SizedBox(),
+          ],
+        );
+      }
+
+      List<Widget> _buildItems() {
+        if (items.isEmpty) return const [Text('Empty')];
+        return [for (final item in items) _buildItem(item)];
+      }
+
+      Widget _buildItem(Item item) {
+        return ListTile(
+          title: Text(item.name),
+          trailing: item.isDone ? const Icon(Icons.check) : null,
+        );
+      }
+
+dart:S3358:
+  - title: Replace a nested ternary in a variable with if/else
+    before: |
+      final label = count == 0 ? 'None' : count == 1 ? 'One' : 'Many';
+    after: |
+      String label;
+      if (count == 0) {
+        label = 'None';
+      } else if (count == 1) {
+        label = 'One';
+      } else {
+        label = 'Many';
+      }
+  - title: Move a nested ternary out of a widget argument into a helper
+    before: |
+      Icon(
+        Icons.circle,
+        color: hasError ? Colors.red : isSyncing ? Colors.orange : Colors.green,
+      )
+    after: |
+      Icon(
+        Icons.circle,
+        color: _statusColor(),
+      )
+
+      Color _statusColor() {
+        if (hasError) return Colors.red;
+        if (isSyncing) return Colors.orange;
+        return Colors.green;
+      }
+
+dart:S7115:
+  - title: Check the context that is actually used
+    before: |
+      Future<void> _save(BuildContext context) async {
+        await repository.save();
+        if (mounted) {
+          Navigator.of(context).pop();
+        }
+      }
+    after: |
+      Future<void> _save(BuildContext context) async {
+        await repository.save();
+        if (context.mounted) {
+          Navigator.of(context).pop();
+        }
+      }
+
+dart:S7055:
+  - title: Name a catch variable that is used
+    before: |
+      try {
+        await upload();
+      } catch (_) {
+        log('upload failed: $_');
+      }
+    after: |
+      try {
+        await upload();
+      } catch (e) {
+        log('upload failed: $e');
+      }
+  - title: Name a callback parameter that is used
+    before: |
+      final names = users.map((_) => _.name).toList();
+    after: |
+      final names = users.map((user) => user.name).toList();

@@ -1,0 +1,5189 @@
+{
+  "project": "MarMarLwin_30-seconds-of-java-master",
+  "organization": "marmarlwin",
+  "branch": null,
+  "pull_request": null,
+  "total": 123,
+  "issues": [
+    {
+      "key": "AaFsqnxKZptvl_vNu0T-",
+      "rule": "githubactions:S7637",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:.github/workflows/gradle-ci.yml",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 19,
+      "hash": "339495597603a3f7f70911ca74209fad",
+      "textRange": {
+        "startLine": 19,
+        "endLine": 19,
+        "startOffset": 14,
+        "endOffset": 49
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use full commit SHA hash for this dependency.",
+      "effort": "30min",
+      "debt": "30min",
+      "tags": [
+        "cwe",
+        "former-hotspot"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:47:26+0000",
+      "type": "VULNERABILITY",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "TRUSTWORTHY",
+      "cleanCodeAttributeCategory": "RESPONSIBLE",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "912aa6d3-c443-408c-96c2-c8eaf7ca26bd",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsqnxPZptvl_vNu0T_",
+      "rule": "githubactions:S7637",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:.github/workflows/gradle-pr-builder.yml",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 17,
+      "hash": "339495597603a3f7f70911ca74209fad",
+      "textRange": {
+        "startLine": 17,
+        "endLine": 17,
+        "startOffset": 14,
+        "endOffset": 49
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use full commit SHA hash for this dependency.",
+      "effort": "30min",
+      "debt": "30min",
+      "tags": [
+        "cwe",
+        "former-hotspot"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:47:26+0000",
+      "type": "VULNERABILITY",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "TRUSTWORTHY",
+      "cleanCodeAttributeCategory": "RESPONSIBLE",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "912aa6d3-c443-408c-96c2-c8eaf7ca26bd",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibi_N1YzpLYI6ZjB",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/algorithm/BinarySearchIn2dArraySnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "8dd04e5569bde1f9d688da60e1ecb065",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 41
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjAN1YzpLYI6ZjC",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/algorithm/BinarySearchSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "d58544759d3f85ddd35ec24be2f0f244",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 32
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibiwN1YzpLYI6Zi3",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/algorithm/BubbleSortSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "d18f73fd1d06ef0a690d07498ac41f8b",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 30
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibi2N1YzpLYI6Zi8",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/algorithm/CountingSortSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 32,
+      "hash": "00c5a8682fa8e47c3488f8fc3de86049",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 13,
+        "endOffset": 32
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibi0N1YzpLYI6Zi6",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/algorithm/CycleSortSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "2c5ef4d445726701d02d28db3ffe4ef4",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 29
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibi9N1YzpLYI6ZjA",
+      "rule": "java:S9439",
+      "severity": "MINOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/algorithm/DammSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 47,
+      "hash": "a8cac7d7af64fcc3fca0cf1bb91ca200",
+      "textRange": {
+        "startLine": 47,
+        "endLine": 47,
+        "startOffset": 40,
+        "endOffset": 51
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove the \"new int[][]\" prefix; the declaration already specifies the array type.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "convention"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibi1N1YzpLYI6Zi7",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/algorithm/InsertionSortSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "8c90ac50b17dcfb7afd0aa023b3463df",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 33
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibixN1YzpLYI6Zi4",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/algorithm/LinearSearchIn2dArraySnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "da1a6a121ab1ed98961feb0de150efb1",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 41
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibi5N1YzpLYI6Zi-",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/algorithm/LinearSearchSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "75dfc5f1b3064b102937dee397217dc1",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 32
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibi6N1YzpLYI6Zi_",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/algorithm/LuhnModnSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "2a11079ca04701b7adeaed2ee8cbdfd3",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 28
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibi4N1YzpLYI6Zi9",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/algorithm/MergeSortSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "e60393dd1eb21cfb81bc499cbb4279ae",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 29
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibivN1YzpLYI6Zi2",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/algorithm/QuickSortSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "b820d23bee24f84700a9c25c56f5d825",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 29
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibizN1YzpLYI6Zi5",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/algorithm/SelectionSortSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "b49d7b12c0e115968b40e9ce0b1ef093",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 33
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjCN1YzpLYI6ZjE",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/algorithm/SieveOfEratosthenesSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "ae33a038a5491a6cf9c9ec8eb131b130",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 39
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjCN1YzpLYI6ZjF",
+      "rule": "java:S1125",
+      "severity": "MINOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/algorithm/SieveOfEratosthenesSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 44,
+      "hash": "192c5037607e4d2cf80205b8ecebfc4a",
+      "textRange": {
+        "startLine": 44,
+        "endLine": 44,
+        "startOffset": 24,
+        "endOffset": 28
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove the unnecessary boolean literal.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjBN1YzpLYI6ZjD",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/algorithm/VerhoeffSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "c23be378c5e97de74b5682cd787c1fe6",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 28
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjPN1YzpLYI6ZjR",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/array/AllEqualSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 32,
+      "hash": "be1a13acf6e478d6b3d21b28c9fdd157",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 13,
+        "endOffset": 28
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjMN1YzpLYI6ZjO",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/array/ArrayConcatSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 32,
+      "hash": "c4db81647de9818992a3bee6f7da877d",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 13,
+        "endOffset": 31
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjHN1YzpLYI6ZjK",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/array/ArrayMeanSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 32,
+      "hash": "4ab2159ad9405c2b2c8251a786fb9264",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 13,
+        "endOffset": 29
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjGN1YzpLYI6ZjI",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/array/ArrayMedianSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 32,
+      "hash": "35f5cf7c260891550173c84a9d96215a",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 13,
+        "endOffset": 31
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjGN1YzpLYI6ZjJ",
+      "rule": "java:S9435",
+      "severity": "MINOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/array/ArrayMedianSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 43,
+      "hash": "ba909a92622c818107c9dcb1e0da75c2",
+      "textRange": {
+        "startLine": 43,
+        "endLine": 43,
+        "startOffset": 11,
+        "endOffset": 30
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Invert this negated condition and swap the two branches of the ternary.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjIN1YzpLYI6ZjL",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/array/ArrayModeInPlaceSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 32,
+      "hash": "905848bd8c44bf21f66ef4d52c7f4e65",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 13,
+        "endOffset": 36
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjNN1YzpLYI6ZjP",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/array/ArraySumSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 32,
+      "hash": "71b5aa20e56ef1b1be873bd4e72fe6db",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 13,
+        "endOffset": 28
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjLN1YzpLYI6ZjN",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/array/FindMaxSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 32,
+      "hash": "0161ec94c3c5c6cda24f28d28effc415",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 13,
+        "endOffset": 27
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjON1YzpLYI6ZjQ",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/array/FindMinSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 32,
+      "hash": "3fc812535453759a6d7af4c171112301",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 13,
+        "endOffset": 27
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjFN1YzpLYI6ZjH",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/array/MultiArrayConcatenationSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 32,
+      "hash": "cc148a1f8416a4b5937739a7f66ce129",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 13,
+        "endOffset": 43
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjKN1YzpLYI6ZjM",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/array/ReverseArraySnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "01592c1d2f3e4b0a4c8135735ef5f806",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 32
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibidN1YzpLYI6Zim",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/cls/CreatingObjectSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 32,
+      "hash": "062e0b2357591586f654067ed32fe558",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 13,
+        "endOffset": 34
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibiZN1YzpLYI6Zih",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/cls/GetAllFieldNamesSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 36,
+      "hash": "dd3da0bed36b484b45a0f71c20e90815",
+      "textRange": {
+        "startLine": 36,
+        "endLine": 36,
+        "startOffset": 13,
+        "endOffset": 36
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibiZN1YzpLYI6Zii",
+      "rule": "java:S6204",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/cls/GetAllFieldNamesSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 52,
+      "hash": "6fd61d7b4346e7440f3905d38be78804",
+      "textRange": {
+        "startLine": 52,
+        "endLine": 52,
+        "startOffset": 23,
+        "endOffset": 42
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "java16"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibg3N1YzpLYI6Zif",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/cls/GetAllMethodsSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 35,
+      "hash": "efd789afeea137f25b908e62136978c5",
+      "textRange": {
+        "startLine": 35,
+        "endLine": 35,
+        "startOffset": 13,
+        "endOffset": 33
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibg3N1YzpLYI6Zig",
+      "rule": "java:S6204",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/cls/GetAllMethodsSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 46,
+      "hash": "7fb4ca3bdafe94c1165e7816973e258a",
+      "textRange": {
+        "startLine": 46,
+        "endLine": 46,
+        "startOffset": 17,
+        "endOffset": 36
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "java16"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibiaN1YzpLYI6Zij",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/cls/GetAllPublicFieldNamesSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 35,
+      "hash": "74e5850bc1bb2d136f4034ce1e11fc79",
+      "textRange": {
+        "startLine": 35,
+        "endLine": 35,
+        "startOffset": 13,
+        "endOffset": 42
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibiaN1YzpLYI6Zik",
+      "rule": "java:S6204",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/cls/GetAllPublicFieldNamesSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 46,
+      "hash": "7fb4ca3bdafe94c1165e7816973e258a",
+      "textRange": {
+        "startLine": 46,
+        "endLine": 46,
+        "startOffset": 17,
+        "endOffset": 36
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "java16"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibibN1YzpLYI6Zil",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/cls/SafeCastSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 32,
+      "hash": "02ee3d64ca839e208433867a59ea332c",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 13,
+        "endOffset": 28
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsqnwQZptvl_vNu0T4",
+      "rule": "java:S2143",
+      "severity": "INFO",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/date/AddDaysToDateSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use the \"java.time\" API for date and time.",
+      "effort": "15min",
+      "debt": "15min",
+      "tags": [
+        "java8",
+        "pitfall"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:47:26+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "912aa6d3-c443-408c-96c2-c8eaf7ca26bd",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjnN1YzpLYI6Zjt",
+      "rule": "java:S1128",
+      "severity": "MINOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/date/AddDaysToDateSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 28,
+      "hash": "39688b6ca597ce8f74db399c06de76d2",
+      "textRange": {
+        "startLine": 28,
+        "endLine": 28,
+        "startOffset": 7,
+        "endOffset": 23
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this unused import 'java.time.ZoneId'.",
+      "effort": "1min",
+      "debt": "1min",
+      "tags": [
+        "unused"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjnN1YzpLYI6Zjs",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/date/AddDaysToDateSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 35,
+      "hash": "dbca0873f41448fb55ecd4939289abc4",
+      "textRange": {
+        "startLine": 35,
+        "endLine": 35,
+        "startOffset": 13,
+        "endOffset": 33
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjpN1YzpLYI6Zju",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/date/DateDifferenceSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 34,
+      "hash": "cd9fa2cc6d5065d89962d4196e6d6624",
+      "textRange": {
+        "startLine": 34,
+        "endLine": 34,
+        "startOffset": 13,
+        "endOffset": 34
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjqN1YzpLYI6Zjv",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/encoding/Base64DecodeSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 32,
+      "hash": "d4a1a48863966fc0fc352247743ddb83",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 13,
+        "endOffset": 32
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjrN1YzpLYI6Zjw",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/encoding/Base64EncodeSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 32,
+      "hash": "87e8bb7479adc5fca2f8c52ee21388e3",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 13,
+        "endOffset": 32
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjhN1YzpLYI6Zjl",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/file/ListAllFilesSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 34,
+      "hash": "09afab4592c97518d1ca9407d97c90c2",
+      "textRange": {
+        "startLine": 34,
+        "endLine": 34,
+        "startOffset": 13,
+        "endOffset": 32
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjiN1YzpLYI6Zjm",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/file/ListDirectoriesSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 32,
+      "hash": "e2e656dfa3857002670cab052c9c2b6b",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 13,
+        "endOffset": 35
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjgN1YzpLYI6Zjk",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/file/ListFilesInDirectorySnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 32,
+      "hash": "f5200830637afec5b4c7165e731c2336",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 13,
+        "endOffset": 40
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjjN1YzpLYI6Zjn",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/file/ReadLinesSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 35,
+      "hash": "fd51036271816f6f0fc2f3777896bba7",
+      "textRange": {
+        "startLine": 35,
+        "endLine": 35,
+        "startOffset": 13,
+        "endOffset": 29
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjlN1YzpLYI6Zjo",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/file/ZipDirectorySnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 37,
+      "hash": "2acc24ea2c14543d71c12cd2835bd9b4",
+      "textRange": {
+        "startLine": 37,
+        "endLine": 37,
+        "startOffset": 13,
+        "endOffset": 32
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjlN1YzpLYI6Zjp",
+      "rule": "java:S9342",
+      "severity": "CRITICAL",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/file/ZipDirectorySnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 72,
+      "hash": "650d5d224be59c97cad01c80e99e488f",
+      "textRange": {
+        "startLine": 72,
+        "endLine": 72,
+        "startOffset": 15,
+        "endOffset": 25
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/file/ZipDirectorySnippet.java",
+              "textRange": {
+                "startLine": 71,
+                "endLine": 71,
+                "startOffset": 15,
+                "endOffset": 27
+              },
+              "msg": "Entry opened here"
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Write content to this archive entry; it is empty.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "pitfall"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "BUG",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjlN1YzpLYI6Zjq",
+      "rule": "java:S9342",
+      "severity": "CRITICAL",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/file/ZipDirectorySnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 76,
+      "hash": "650d5d224be59c97cad01c80e99e488f",
+      "textRange": {
+        "startLine": 76,
+        "endLine": 76,
+        "startOffset": 15,
+        "endOffset": 25
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/file/ZipDirectorySnippet.java",
+              "textRange": {
+                "startLine": 75,
+                "endLine": 75,
+                "startOffset": 15,
+                "endOffset": 27
+              },
+              "msg": "Entry opened here"
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Write content to this archive entry; it is empty.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "pitfall"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "BUG",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjfN1YzpLYI6Zjj",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/file/ZipFileSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 37,
+      "hash": "5fba0f92e10d841bf7ed1f41a8a1665e",
+      "textRange": {
+        "startLine": 37,
+        "endLine": 37,
+        "startOffset": 13,
+        "endOffset": 27
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjmN1YzpLYI6Zjr",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/file/ZipFilesSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 37,
+      "hash": "920324e6f35ea368849267bd3edea68e",
+      "textRange": {
+        "startLine": 37,
+        "endLine": 37,
+        "startOffset": 13,
+        "endOffset": 28
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjxN1YzpLYI6Zj2",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/io/InputStreamToStringSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 36,
+      "hash": "710605fb2a807ff3c7bb228abea7a0dd",
+      "textRange": {
+        "startLine": 36,
+        "endLine": 36,
+        "startOffset": 13,
+        "endOffset": 39
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjwN1YzpLYI6Zj0",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/io/ReadFileSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 37,
+      "hash": "72942010c9b87839d63b52c1731595f1",
+      "textRange": {
+        "startLine": 37,
+        "endLine": 37,
+        "startOffset": 13,
+        "endOffset": 28
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjwN1YzpLYI6Zj1",
+      "rule": "java:S6204",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/io/ReadFileSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 47,
+      "hash": "909def4ed295c92b8d34024fa5a5596d",
+      "textRange": {
+        "startLine": 47,
+        "endLine": 47,
+        "startOffset": 28,
+        "endOffset": 47
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "java16"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibiqN1YzpLYI6Ziy",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/math/EloRatingSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "d4763e3501625a80a231204d813c8f0d",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 29
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibiqN1YzpLYI6Zix",
+      "rule": "java:S1488",
+      "severity": "MINOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/math/EloRatingSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 50,
+      "hash": "e5b5f441d988113e6bc69f3033c280f2",
+      "textRange": {
+        "startLine": 50,
+        "endLine": 51,
+        "startOffset": 23,
+        "endOffset": 50
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Immediately return this expression instead of assigning it to the temporary variable \"newRating\".",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibihN1YzpLYI6Zip",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/math/EvenOdd.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "ef71494c3e863f6d13aee2cda0536d84",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 20
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibimN1YzpLYI6Ziu",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/math/FactorialSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "3c4b101a15788c5300d22911b851f196",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 29
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibiuN1YzpLYI6Zi1",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/math/FibonacciSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 33,
+      "hash": "7cae2fe348e09b33ad91847ee6b1712a",
+      "textRange": {
+        "startLine": 33,
+        "endLine": 33,
+        "startOffset": 13,
+        "endOffset": 29
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibieN1YzpLYI6Zin",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/math/GreatestCommonDivisorSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "51a1e662f6ad504054ef578ff1186a49",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 41
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibiiN1YzpLYI6Ziq",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/math/HaversineFormulaSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "d93077974bfdd65084104744f78f81de",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 36
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibisN1YzpLYI6Zi0",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/math/LeastCommonMultipleSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "2a318be10b0799c3213b3741856c0397",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 39
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibilN1YzpLYI6Zit",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/math/LuhnSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "04027545bb6a3eb3b7ca6c5d9d60585c",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 24
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibilN1YzpLYI6Zis",
+      "rule": "java:S1488",
+      "severity": "MINOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/math/LuhnSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 62,
+      "hash": "2abbf4ee61fc19d93a510c9075d60197",
+      "textRange": {
+        "startLine": 62,
+        "endLine": 62,
+        "startOffset": 30,
+        "endOffset": 52
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Immediately return this expression instead of assigning it to the temporary variable \"checksumDigit\".",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibijN1YzpLYI6Zir",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/math/NaturalNumberBinaryConversionSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 35,
+      "hash": "e1bd0970289b6b09eb6fd84aaac5b744",
+      "textRange": {
+        "startLine": 35,
+        "endLine": 35,
+        "startOffset": 13,
+        "endOffset": 49
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibipN1YzpLYI6Ziw",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/math/PerformLotterySnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 33,
+      "hash": "1721c24aec7b5b6657b63f7d586f5387",
+      "textRange": {
+        "startLine": 33,
+        "endLine": 33,
+        "startOffset": 13,
+        "endOffset": 34
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibifN1YzpLYI6Zio",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/math/PrimeNumberSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "ef556f9da14ceb2a8dc26b5ca265c17b",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 31
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibinN1YzpLYI6Ziv",
+      "rule": "java:S2140",
+      "severity": "MINOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/math/RandomNumber.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 59,
+      "hash": "ffbf00781fbe52b1dc7b88e3277f2d7f",
+      "textRange": {
+        "startLine": 59,
+        "endLine": 59,
+        "startOffset": 24,
+        "endOffset": 41
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use \"nextLong()\" instead.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "clumsy",
+        "performance"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibirN1YzpLYI6Ziz",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/math/SquareRoot.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "f0712e90e6262be8849b868de9505598",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 23
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjuN1YzpLYI6Zjz",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/media/CaptureScreenSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 38,
+      "hash": "1344446788f1e0d2bdb5328e2edd8637",
+      "textRange": {
+        "startLine": 38,
+        "endLine": 38,
+        "startOffset": 13,
+        "endOffset": 33
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjzN1YzpLYI6Zj6",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/network/HttpGetSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 35,
+      "hash": "4e3618c77e21780279e6456b85d7f9f3",
+      "textRange": {
+        "startLine": 35,
+        "endLine": 35,
+        "startOffset": 13,
+        "endOffset": 27
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjzN1YzpLYI6Zj5",
+      "rule": "java:S112",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/network/HttpGetSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 44,
+      "hash": "583c111c20c0ab0d184bf509ab97da57",
+      "textRange": {
+        "startLine": 44,
+        "endLine": 44,
+        "startOffset": 64,
+        "endOffset": 73
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace generic exceptions with specific library exceptions or a custom exception.",
+      "effort": "20min",
+      "debt": "20min",
+      "tags": [
+        "cert",
+        "cwe",
+        "error-handling"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsqnwhZptvl_vNu0T6",
+      "rule": "java:S2095",
+      "severity": "BLOCKER",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/network/HttpGetSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 45,
+      "hash": "425976b7d0425705ebdde2f5898d3ef3",
+      "textRange": {
+        "startLine": 45,
+        "endLine": 45,
+        "startOffset": 17,
+        "endOffset": 43
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use try-with-resources or close this \"HttpClient\" in a \"finally\" clause.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "cert",
+        "cwe",
+        "denial-of-service",
+        "leak",
+        "symbolic-execution"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:47:26+0000",
+      "type": "BUG",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "BLOCKER"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "912aa6d3-c443-408c-96c2-c8eaf7ca26bd",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjyN1YzpLYI6Zj4",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/network/HttpPostSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 40,
+      "hash": "2d6ae8330566513e4a70aa164adf4993",
+      "textRange": {
+        "startLine": 40,
+        "endLine": 40,
+        "startOffset": 13,
+        "endOffset": 28
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjyN1YzpLYI6Zj3",
+      "rule": "java:S1319",
+      "severity": "MINOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/network/HttpPostSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 51,
+      "hash": "a0acc12e5dcc1b54a54b8a28d91d4c3a",
+      "textRange": {
+        "startLine": 51,
+        "endLine": 51,
+        "startOffset": 62,
+        "endOffset": 69
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "The type of \"arguments\" should be an interface such as \"Map\" rather than the implementation \"HashMap\".",
+      "effort": "10min",
+      "debt": "10min",
+      "tags": [
+        "bad-practice"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsqnwcZptvl_vNu0T5",
+      "rule": "java:S2095",
+      "severity": "BLOCKER",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/network/HttpPostSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 66,
+      "hash": "5fb42aaaa003831a8a1a7f7991a0b13f",
+      "textRange": {
+        "startLine": 66,
+        "endLine": 66,
+        "startOffset": 11,
+        "endOffset": 37
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use try-with-resources or close this \"HttpClient\" in a \"finally\" clause.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "cert",
+        "cwe",
+        "denial-of-service",
+        "leak",
+        "symbolic-execution"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:47:26+0000",
+      "type": "BUG",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "BLOCKER"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "912aa6d3-c443-408c-96c2-c8eaf7ca26bd",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjWN1YzpLYI6Zja",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/string/AnagramSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 32,
+      "hash": "977bc37175582dc7c126c9170a443eef",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 13,
+        "endOffset": 27
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjbN1YzpLYI6Zjg",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/string/CommonLettersSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 33,
+      "hash": "8169e4d7ddd591368a9cbfc7a52e16b3",
+      "textRange": {
+        "startLine": 33,
+        "endLine": 33,
+        "startOffset": 13,
+        "endOffset": 33
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjUN1YzpLYI6ZjW",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/string/CompareVersionSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "28f678c26b67732103b22290af4dbad8",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 34
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjUN1YzpLYI6ZjX",
+      "rule": "java:S5998",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/string/CompareVersionSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 32,
+      "hash": "77b034cd77124f88bf1073a5a06eeabf",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 71,
+        "endOffset": 82
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Refactor this repetition that can lead to a stack overflow for large inputs.",
+      "effort": "20min",
+      "debt": "20min",
+      "tags": [
+        "regex"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "BUG",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjUN1YzpLYI6ZjY",
+      "rule": "java:S8786",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/string/CompareVersionSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 60,
+      "hash": "c33973f12653f44ad1cafabe1d12cfe0",
+      "textRange": {
+        "startLine": 60,
+        "endLine": 60,
+        "startOffset": 19,
+        "endOffset": 29
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.",
+      "effort": "20min",
+      "debt": "20min",
+      "tags": [
+        "performance",
+        "regex"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "EFFICIENT",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjdN1YzpLYI6Zji",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/string/DuplicateCharacterSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 33,
+      "hash": "68ed2e43d938a3f3aa48b4c48a0b3c5e",
+      "textRange": {
+        "startLine": 33,
+        "endLine": 33,
+        "startOffset": 13,
+        "endOffset": 38
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjVN1YzpLYI6ZjZ",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/string/FormatBytesSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 33,
+      "hash": "97daba932e9f3bc9f1c2a31ce35d1761",
+      "textRange": {
+        "startLine": 33,
+        "endLine": 33,
+        "startOffset": 13,
+        "endOffset": 31
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjTN1YzpLYI6ZjU",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/string/KmpSubstringSearchSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 31,
+      "hash": "eeb7376a3bd8f73c7dcc1cc95ce19a97",
+      "textRange": {
+        "startLine": 31,
+        "endLine": 31,
+        "startOffset": 13,
+        "endOffset": 38
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjTN1YzpLYI6ZjV",
+      "rule": "java:S7158",
+      "severity": "MINOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/string/KmpSubstringSearchSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 41,
+      "hash": "2edc1c71a63b4f1cdc1b7aa86f13fa5a",
+      "textRange": {
+        "startLine": 41,
+        "endLine": 41,
+        "startOffset": 27,
+        "endOffset": 48
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use \"isEmpty()\" to check whether a \"String\" is empty or not.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjaN1YzpLYI6Zjf",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/string/LevenshteinDistanceSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "1790d1eae8993d2d08418eae8bf5abb2",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 39
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjYN1YzpLYI6Zjb",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/string/LindenmayerSystemSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 32,
+      "hash": "792b2b200ee9945c357208aea89bac1c",
+      "textRange": {
+        "startLine": 32,
+        "endLine": 32,
+        "startOffset": 13,
+        "endOffset": 37
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjcN1YzpLYI6Zjh",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/string/MaxCharacterCountSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "c9b1029d1fe7c3a1d13065ebfdba40fd",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 37
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjZN1YzpLYI6Zje",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/string/PalindromCheckSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "befa6c60c08d13294e8f748ec8b3f679",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 34
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjZN1YzpLYI6Zjc",
+      "rule": "java:S127",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/string/PalindromCheckSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 42,
+      "hash": "0dd578d50cfa4265d49d2164f357a42b",
+      "textRange": {
+        "startLine": 42,
+        "endLine": 42,
+        "startOffset": 8,
+        "endOffset": 9
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Refactor the code in order to not assign to this loop counter from within the loop body.",
+      "effort": "10min",
+      "debt": "10min",
+      "tags": [
+        "pitfall"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjZN1YzpLYI6Zjd",
+      "rule": "java:S127",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/string/PalindromCheckSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 45,
+      "hash": "237224f1d3090eef483ef43c5270c63a",
+      "textRange": {
+        "startLine": 45,
+        "endLine": 45,
+        "startOffset": 8,
+        "endOffset": 9
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Refactor the code in order to not assign to this loop counter from within the loop body.",
+      "effort": "10min",
+      "debt": "10min",
+      "tags": [
+        "pitfall"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjQN1YzpLYI6ZjS",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/string/ReverseStringSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "edd6d91dc25b0744932a4df9c01ece59",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 33
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsqnuuZptvl_vNu0T3",
+      "rule": "java:S2143",
+      "severity": "INFO",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/string/StringToDateSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use the \"java.time\" API for date and time.",
+      "effort": "15min",
+      "debt": "15min",
+      "tags": [
+        "java8",
+        "pitfall"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:47:26+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "912aa6d3-c443-408c-96c2-c8eaf7ca26bd",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjRN1YzpLYI6ZjT",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/string/StringToDateSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 34,
+      "hash": "86b5986636fd93f1664b427c5d509fff",
+      "textRange": {
+        "startLine": 34,
+        "endLine": 34,
+        "startOffset": 13,
+        "endOffset": 32
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjEN1YzpLYI6ZjG",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/system/GetEnvOrDefaultSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "063e002a340d21193a6415e2ac376b36",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 35
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjsN1YzpLYI6Zjx",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/thread/ThreadPool.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 33,
+      "hash": "0f0a8109e65a9e0f31964d2695704f47",
+      "textRange": {
+        "startLine": 33,
+        "endLine": 33,
+        "startOffset": 13,
+        "endOffset": 23
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibjtN1YzpLYI6Zjy",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/main/java/thread/ThreadSnippet.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "2fd1dc30ff5ff8e4b17ca7e5fcd73c9d",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 13,
+        "endOffset": 26
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibj6N1YzpLYI6ZkA",
+      "rule": "java:S1481",
+      "severity": "MINOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/algorithm/BinarySearchIn2dArraySnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 42,
+      "hash": "d220b8eb70f6e97d41717e6df25a8283",
+      "textRange": {
+        "startLine": 42,
+        "endLine": 42,
+        "startOffset": 15,
+        "endOffset": 25
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this unused \"assertions\" local variable.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "java22",
+        "unused"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibj_N1YzpLYI6ZkD",
+      "rule": "java:S9439",
+      "severity": "MINOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/algorithm/BinarySearchSnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 44,
+      "hash": "9546db1566de0eca55093d79934587b2",
+      "textRange": {
+        "startLine": 44,
+        "endLine": 44,
+        "startOffset": 16,
+        "endOffset": 25
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove the \"new int[]\" prefix; the declaration already specifies the array type.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "convention"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibj_N1YzpLYI6ZkE",
+      "rule": "java:S9439",
+      "severity": "MINOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/algorithm/BinarySearchSnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 47,
+      "hash": "3fb2cde05f091e3d875e25b197913d60",
+      "textRange": {
+        "startLine": 47,
+        "endLine": 47,
+        "startOffset": 17,
+        "endOffset": 26
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove the \"new int[]\" prefix; the declaration already specifies the array type.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "convention"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibj_N1YzpLYI6ZkF",
+      "rule": "java:S9439",
+      "severity": "MINOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/algorithm/BinarySearchSnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 50,
+      "hash": "4aebde082b5d6cbd7f1408cfdae1914c",
+      "textRange": {
+        "startLine": 50,
+        "endLine": 50,
+        "startOffset": 17,
+        "endOffset": 26
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove the \"new int[]\" prefix; the declaration already specifies the array type.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "convention"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibj7N1YzpLYI6ZkB",
+      "rule": "java:S1481",
+      "severity": "MINOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/algorithm/LinearSearchIn2dArraySnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 42,
+      "hash": "d220b8eb70f6e97d41717e6df25a8283",
+      "textRange": {
+        "startLine": 42,
+        "endLine": 42,
+        "startOffset": 15,
+        "endOffset": 25
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this unused \"assertions\" local variable.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "java22",
+        "unused"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibj4N1YzpLYI6Zj9",
+      "rule": "java:S9439",
+      "severity": "MINOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/algorithm/LinearSearchSnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 43,
+      "hash": "73f912b67f0a9d1455a4170a1314bfee",
+      "textRange": {
+        "startLine": 43,
+        "endLine": 43,
+        "startOffset": 16,
+        "endOffset": 25
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove the \"new int[]\" prefix; the declaration already specifies the array type.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "convention"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibj4N1YzpLYI6Zj-",
+      "rule": "java:S9439",
+      "severity": "MINOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/algorithm/LinearSearchSnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 46,
+      "hash": "2b521bab50092779f04a298c7050b243",
+      "textRange": {
+        "startLine": 46,
+        "endLine": 46,
+        "startOffset": 17,
+        "endOffset": 26
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove the \"new int[]\" prefix; the declaration already specifies the array type.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "convention"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibj4N1YzpLYI6Zj_",
+      "rule": "java:S9439",
+      "severity": "MINOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/algorithm/LinearSearchSnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 49,
+      "hash": "ff483398d6d1a1d46b9151a7acb6dd55",
+      "textRange": {
+        "startLine": 49,
+        "endLine": 49,
+        "startOffset": 17,
+        "endOffset": 26
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove the \"new int[]\" prefix; the declaration already specifies the array type.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "convention"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibj9N1YzpLYI6ZkC",
+      "rule": "java:S5786",
+      "severity": "INFO",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/algorithm/LuhnModnSnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 40,
+      "hash": "8cf76df112bfaa46fd25c4ed21d80cb2",
+      "textRange": {
+        "startLine": 40,
+        "endLine": 40,
+        "startOffset": 6,
+        "endOffset": 25
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/algorithm/LuhnModnSnippetTest.java",
+              "textRange": {
+                "startLine": 47,
+                "endLine": 47,
+                "startOffset": 2,
+                "endOffset": 8
+              },
+              "msg": "Remove this 'public' modifier."
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/algorithm/LuhnModnSnippetTest.java",
+              "textRange": {
+                "startLine": 56,
+                "endLine": 56,
+                "startOffset": 2,
+                "endOffset": 8
+              },
+              "msg": "Remove this 'public' modifier."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Remove redundant visibility modifiers from the methods of this test class.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "junit",
+        "tests"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibkAN1YzpLYI6ZkG",
+      "rule": "java:S5785",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/algorithm/VerhoeffSnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 67,
+      "hash": "833fe74c53651a99e04749deb59c7e24",
+      "textRange": {
+        "startLine": 67,
+        "endLine": 67,
+        "startOffset": 4,
+        "endOffset": 14
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/algorithm/VerhoeffSnippetTest.java",
+              "textRange": {
+                "startLine": 67,
+                "endLine": 67,
+                "startOffset": 15,
+                "endOffset": 37
+              },
+              "msg": "An equals check is performed here, which is better expressed with assertEquals."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Use assertEquals instead.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "junit",
+        "tests"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibkON1YzpLYI6ZkN",
+      "rule": "java:S3415",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/array/ArrayConcatSnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 43,
+      "hash": "5c6d0ed29764d9739dd5f3727178b185",
+      "textRange": {
+        "startLine": 43,
+        "endLine": 43,
+        "startOffset": 34,
+        "endOffset": 36
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/array/ArrayConcatSnippetTest.java",
+              "textRange": {
+                "startLine": 43,
+                "endLine": 43,
+                "startOffset": 17,
+                "endOffset": 32
+              },
+              "msg": "Other argument to swap."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Swap these 2 arguments so they are in the correct order: expected value, actual value.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "junit",
+        "suspicious",
+        "tests"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibkON1YzpLYI6ZkO",
+      "rule": "java:S3415",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/array/ArrayConcatSnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 45,
+      "hash": "09894d7203d7d4cb16d6ed97b564667e",
+      "textRange": {
+        "startLine": 45,
+        "endLine": 45,
+        "startOffset": 33,
+        "endOffset": 34
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/array/ArrayConcatSnippetTest.java",
+              "textRange": {
+                "startLine": 45,
+                "endLine": 45,
+                "startOffset": 17,
+                "endOffset": 31
+              },
+              "msg": "Other argument to swap."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Swap these 2 arguments so they are in the correct order: expected value, actual value.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "junit",
+        "suspicious",
+        "tests"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibkLN1YzpLYI6ZkL",
+      "rule": "java:S3415",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/array/MultiArrayConcatenationSnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 43,
+      "hash": "fdb3f9153ba99804d2597d844ed6fe16",
+      "textRange": {
+        "startLine": 43,
+        "endLine": 43,
+        "startOffset": 32,
+        "endOffset": 33
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/array/MultiArrayConcatenationSnippetTest.java",
+              "textRange": {
+                "startLine": 43,
+                "endLine": 43,
+                "startOffset": 17,
+                "endOffset": 30
+              },
+              "msg": "Other argument to swap."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Swap these 2 arguments so they are in the correct order: expected value, actual value.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "junit",
+        "suspicious",
+        "tests"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibkLN1YzpLYI6ZkM",
+      "rule": "java:S3415",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/array/MultiArrayConcatenationSnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 49,
+      "hash": "af39e79cd616a36a17f623998a849aa1",
+      "textRange": {
+        "startLine": 49,
+        "endLine": 49,
+        "startOffset": 34,
+        "endOffset": 36
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/array/MultiArrayConcatenationSnippetTest.java",
+              "textRange": {
+                "startLine": 49,
+                "endLine": 49,
+                "startOffset": 17,
+                "endOffset": 32
+              },
+              "msg": "Other argument to swap."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Swap these 2 arguments so they are in the correct order: expected value, actual value.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "junit",
+        "suspicious",
+        "tests"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsqnwoZptvl_vNu0T7",
+      "rule": "java:S1068",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/cls/GetAllFieldNamesSnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 44,
+      "hash": "f0b12d3a0aaad3a191d9fcb611993eba",
+      "textRange": {
+        "startLine": 44,
+        "endLine": 44,
+        "startOffset": 18,
+        "endOffset": 31
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this unused \"superFieldTwo\" private field.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "unused"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:47:26+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "912aa6d3-c443-408c-96c2-c8eaf7ca26bd",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsqnwoZptvl_vNu0T8",
+      "rule": "java:S1068",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/cls/GetAllFieldNamesSnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 49,
+      "hash": "c727968cd6ba81e64583452c5627d831",
+      "textRange": {
+        "startLine": 49,
+        "endLine": 49,
+        "startOffset": 18,
+        "endOffset": 26
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this unused \"fieldTwo\" private field.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "unused"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:47:26+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "912aa6d3-c443-408c-96c2-c8eaf7ca26bd",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsqnw6Zptvl_vNu0T9",
+      "rule": "java:S2093",
+      "severity": "CRITICAL",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/file/ZipDirectorySnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 50,
+      "hash": "80d5b17efc16ace990c07580fc3e85eb",
+      "textRange": {
+        "startLine": 50,
+        "endLine": 50,
+        "startOffset": 4,
+        "endOffset": 7
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/file/ZipDirectorySnippetTest.java",
+              "textRange": {
+                "startLine": 53,
+                "endLine": 53,
+                "startOffset": 20,
+                "endOffset": 56
+              },
+              "msg": "AutoCloseable resource"
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Change this \"try\" to a try-with-resources.",
+      "effort": "15min",
+      "debt": "15min",
+      "tags": [
+        "cert",
+        "java8",
+        "pitfall"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:47:26+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "912aa6d3-c443-408c-96c2-c8eaf7ca26bd",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibkJN1YzpLYI6ZkJ",
+      "rule": "java:S3415",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/file/ZipDirectorySnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 65,
+      "hash": "e14decf2c5540ad4174b128e8747cc85",
+      "textRange": {
+        "startLine": 65,
+        "endLine": 65,
+        "startOffset": 32,
+        "endOffset": 33
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/file/ZipDirectorySnippetTest.java",
+              "textRange": {
+                "startLine": 65,
+                "endLine": 65,
+                "startOffset": 19,
+                "endOffset": 30
+              },
+              "msg": "Other argument to swap."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Swap these 2 arguments so they are in the correct order: expected value, actual value.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "junit",
+        "suspicious",
+        "tests"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibkJN1YzpLYI6ZkK",
+      "rule": "java:S3415",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/file/ZipDirectorySnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 66,
+      "hash": "d2562a86469f5fc05c91d3b20331ad4e",
+      "textRange": {
+        "startLine": 66,
+        "endLine": 66,
+        "startOffset": 33,
+        "endOffset": 34
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/file/ZipDirectorySnippetTest.java",
+              "textRange": {
+                "startLine": 66,
+                "endLine": 66,
+                "startOffset": 19,
+                "endOffset": 31
+              },
+              "msg": "Other argument to swap."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Swap these 2 arguments so they are in the correct order: expected value, actual value.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "junit",
+        "suspicious",
+        "tests"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibkCN1YzpLYI6ZkH",
+      "rule": "java:S1128",
+      "severity": "MINOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/io/InputStreamToStringSnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 30,
+      "hash": "943d54ba3e8812437c4d26ef8aa263f8",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 7,
+        "endOffset": 19
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this unused import 'java.io.File'.",
+      "effort": "1min",
+      "debt": "1min",
+      "tags": [
+        "unused"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibkEN1YzpLYI6ZkI",
+      "rule": "java:S1128",
+      "severity": "MINOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/math/RandomNumberTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 31,
+      "hash": "aef2dd53a8fe5ca092965f9a1c22123f",
+      "textRange": {
+        "startLine": 31,
+        "endLine": 31,
+        "startOffset": 7,
+        "endOffset": 33
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this unused import 'org.junit.jupiter.api.Test'.",
+      "effort": "1min",
+      "debt": "1min",
+      "tags": [
+        "unused"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibkRN1YzpLYI6ZkP",
+      "rule": "java:S5786",
+      "severity": "INFO",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/string/CompareVersionSnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 34,
+      "hash": "4e907d5766c9657eda5668c4c0cc8254",
+      "textRange": {
+        "startLine": 34,
+        "endLine": 34,
+        "startOffset": 6,
+        "endOffset": 31
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/string/CompareVersionSnippetTest.java",
+              "textRange": {
+                "startLine": 39,
+                "endLine": 39,
+                "startOffset": 2,
+                "endOffset": 8
+              },
+              "msg": "Remove this 'public' modifier."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Remove redundant visibility modifiers from the methods of this test class.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "junit",
+        "tests"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibkTN1YzpLYI6ZkQ",
+      "rule": "java:S5786",
+      "severity": "INFO",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/string/LindenmayerSystemSnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 38,
+      "hash": "73ec6069ed0dce28c66124f361fabbf0",
+      "textRange": {
+        "startLine": 38,
+        "endLine": 38,
+        "startOffset": 6,
+        "endOffset": 34
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/string/LindenmayerSystemSnippetTest.java",
+              "textRange": {
+                "startLine": 44,
+                "endLine": 44,
+                "startOffset": 2,
+                "endOffset": 8
+              },
+              "msg": "Remove this 'public' modifier."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Remove redundant visibility modifiers from the methods of this test class.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "junit",
+        "tests"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibj1N1YzpLYI6Zj7",
+      "rule": "java:S5786",
+      "severity": "INFO",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/thread/ThreadPoolTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 37,
+      "hash": "514f86a1ca574151617aba80b4293091",
+      "textRange": {
+        "startLine": 37,
+        "endLine": 37,
+        "startOffset": 6,
+        "endOffset": 20
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/thread/ThreadPoolTest.java",
+              "textRange": {
+                "startLine": 42,
+                "endLine": 42,
+                "startOffset": 2,
+                "endOffset": 8
+              },
+              "msg": "Remove this 'public' modifier."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Remove redundant visibility modifiers from the methods of this test class.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "junit",
+        "tests"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaFsibj2N1YzpLYI6Zj8",
+      "rule": "java:S3415",
+      "severity": "MAJOR",
+      "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/thread/ThreadSnippetTest.java",
+      "project": "MarMarLwin_30-seconds-of-java-master",
+      "line": 55,
+      "hash": "4d4d7e25fbe35c1865590d3c2203fa56",
+      "textRange": {
+        "startLine": 55,
+        "endLine": 55,
+        "startOffset": 32,
+        "endOffset": 39
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "MarMarLwin_30-seconds-of-java-master:src/test/java/thread/ThreadSnippetTest.java",
+              "textRange": {
+                "startLine": 55,
+                "endLine": 55,
+                "startOffset": 17,
+                "endOffset": 30
+              },
+              "msg": "Other argument to swap."
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Swap these 2 arguments so they are in the correct order: expected value, actual value.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "junit",
+        "suspicious",
+        "tests"
+      ],
+      "creationDate": "2026-10-24T06:02:07+0000",
+      "updateDate": "2026-10-24T06:11:56+0000",
+      "type": "CODE_SMELL",
+      "organization": "marmarlwin",
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "30-seconds-of-java",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "eb1b0faa-3482-40fa-a022-0fb318a4e9fa",
+      "lastChangeSource": "ANALYSIS"
+    }
+  ]
+}

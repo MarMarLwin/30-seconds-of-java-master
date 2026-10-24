@@ -2481,4 +2481,15 @@ public class DammSnippet {
     return calculateCheckSumDigit(number) == 0;
   }
 }
+
+python3 -m pipeline fetch-issues --repo .
+python3 -m pipeline extract      --repo .
+python3 -m pipeline index        --repo .   # again whenever the code changes
+python3 -m pipeline prompts      --repo .
+python3 -m pipeline inspect      --repo . --issue dart:S7115 --show repository_aware
+
+python3 -m pipeline refactor --repo . --provider claude-code --strategy repository_aware
+
+
+python3 -m pipeline refactor     --repo . --limit 1
 ```

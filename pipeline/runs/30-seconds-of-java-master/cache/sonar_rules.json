@@ -1,0 +1,232 @@
+{
+  "githubactions:S7637": {
+    "key": "githubactions:S7637",
+    "name": "External GitHub Actions and workflows should be pinned to a commit hash",
+    "type": "VULNERABILITY",
+    "impacts": [
+      "SECURITY/HIGH"
+    ],
+    "description": "Referencing an external action by a mutable tag or branch (for example\n\"@v2\" or \"@main\") lets the action's owner, or anyone who compromises the\naction's repository, change the code that runs in this workflow without any\nchange to the workflow file. Pin every external action to a full-length\ncommit SHA, and keep the human-readable version in a trailing comment\n(for example \"# v2.16.0\") so it can still be reviewed and updated.",
+    "description_source": "curated"
+  },
+  "java:S1118": {
+    "key": "java:S1118",
+    "name": "Utility classes should not have public constructors",
+    "type": "CODE_SMELL",
+    "impacts": [
+      "MAINTAINABILITY/MEDIUM"
+    ],
+    "description": "Utility classes should not have public constructors",
+    "description_source": "name_only"
+  },
+  "java:S9439": {
+    "key": "java:S9439",
+    "name": "Array initializers should use the shorthand form instead of an explicit \"new\" array creation",
+    "type": "CODE_SMELL",
+    "impacts": [
+      "MAINTAINABILITY/LOW"
+    ],
+    "description": "Array initializers should use the shorthand form instead of an explicit \"new\" array creation",
+    "description_source": "name_only"
+  },
+  "java:S1125": {
+    "key": "java:S1125",
+    "name": "Boolean literals should not be redundant",
+    "type": "CODE_SMELL",
+    "impacts": [
+      "MAINTAINABILITY/LOW"
+    ],
+    "description": "Boolean literals should not be redundant",
+    "description_source": "name_only"
+  },
+  "java:S9435": {
+    "key": "java:S9435",
+    "name": "Ternary operator conditions should not be negated",
+    "type": "CODE_SMELL",
+    "impacts": [
+      "MAINTAINABILITY/LOW"
+    ],
+    "description": "Ternary operator conditions should not be negated",
+    "description_source": "name_only"
+  },
+  "java:S6204": {
+    "key": "java:S6204",
+    "name": "\"Stream.toList()\" method should be used instead of \"collectors\" when unmodifiable list needed",
+    "type": "CODE_SMELL",
+    "impacts": [
+      "MAINTAINABILITY/MEDIUM"
+    ],
+    "description": "\"Stream.toList()\" method should be used instead of \"collectors\" when unmodifiable list needed",
+    "description_source": "name_only"
+  },
+  "java:S1128": {
+    "key": "java:S1128",
+    "name": "Unnecessary imports should be removed",
+    "type": "CODE_SMELL",
+    "impacts": [
+      "MAINTAINABILITY/LOW"
+    ],
+    "description": "Unnecessary imports should be removed",
+    "description_source": "name_only"
+  },
+  "java:S9342": {
+    "key": "java:S9342",
+    "name": "Archive entries should not be empty",
+    "type": "BUG",
+    "impacts": [
+      "RELIABILITY/HIGH"
+    ],
+    "description": "Archive entries should not be empty",
+    "description_source": "name_only"
+  },
+  "java:S1488": {
+    "key": "java:S1488",
+    "name": "Local variables should not be declared and then immediately returned or thrown",
+    "type": "CODE_SMELL",
+    "impacts": [
+      "MAINTAINABILITY/LOW"
+    ],
+    "description": "Local variables should not be declared and then immediately returned or thrown",
+    "description_source": "name_only"
+  },
+  "java:S2140": {
+    "key": "java:S2140",
+    "name": "Methods of \"Random\" that return floating point values should not be used in random integer generation",
+    "type": "CODE_SMELL",
+    "impacts": [
+      "MAINTAINABILITY/LOW"
+    ],
+    "description": "Methods of \"Random\" that return floating point values should not be used in random integer generation",
+    "description_source": "name_only"
+  },
+  "java:S112": {
+    "key": "java:S112",
+    "name": "Generic exceptions should never be thrown",
+    "type": "CODE_SMELL",
+    "impacts": [
+      "MAINTAINABILITY/MEDIUM"
+    ],
+    "description": "Generic exceptions should never be thrown",
+    "description_source": "name_only"
+  },
+  "java:S2095": {
+    "key": "java:S2095",
+    "name": "Resources should be closed",
+    "type": "BUG",
+    "impacts": [
+      "RELIABILITY/BLOCKER"
+    ],
+    "description": "Resources should be closed",
+    "description_source": "name_only"
+  },
+  "java:S1319": {
+    "key": "java:S1319",
+    "name": "Declarations should use Java collection interfaces such as \"List\" rather than specific implementation classes such as \"LinkedList\"",
+    "type": "CODE_SMELL",
+    "impacts": [
+      "MAINTAINABILITY/LOW"
+    ],
+    "description": "Declarations should use Java collection interfaces such as \"List\" rather than specific implementation classes such as \"LinkedList\"",
+    "description_source": "name_only"
+  },
+  "java:S5998": {
+    "key": "java:S5998",
+    "name": "Regular expressions should not overflow the stack",
+    "type": "BUG",
+    "impacts": [
+      "RELIABILITY/MEDIUM"
+    ],
+    "description": "Regular expressions should not overflow the stack",
+    "description_source": "name_only"
+  },
+  "java:S8786": {
+    "key": "java:S8786",
+    "name": "Regular expressions should not cause non-linear backtracking",
+    "type": "CODE_SMELL",
+    "impacts": [
+      "RELIABILITY/MEDIUM"
+    ],
+    "description": "Regular expressions should not cause non-linear backtracking",
+    "description_source": "name_only"
+  },
+  "java:S7158": {
+    "key": "java:S7158",
+    "name": "\"String.isEmpty()\" and \"String.isBlank()\" should be used to test for emptiness and blankness",
+    "type": "CODE_SMELL",
+    "impacts": [
+      "MAINTAINABILITY/LOW"
+    ],
+    "description": "\"String.isEmpty()\" and \"String.isBlank()\" should be used to test for emptiness and blankness",
+    "description_source": "name_only"
+  },
+  "java:S127": {
+    "key": "java:S127",
+    "name": "\"for\" loop stop conditions should be invariant",
+    "type": "CODE_SMELL",
+    "impacts": [
+      "MAINTAINABILITY/MEDIUM"
+    ],
+    "description": "\"for\" loop stop conditions should be invariant",
+    "description_source": "name_only"
+  },
+  "java:S1481": {
+    "key": "java:S1481",
+    "name": "Unused local variables should be removed",
+    "type": "CODE_SMELL",
+    "impacts": [
+      "MAINTAINABILITY/LOW"
+    ],
+    "description": "Unused local variables should be removed",
+    "description_source": "name_only"
+  },
+  "java:S5786": {
+    "key": "java:S5786",
+    "name": "JUnit5 test methods should have default package visibility",
+    "type": "CODE_SMELL",
+    "impacts": [
+      "MAINTAINABILITY/INFO"
+    ],
+    "description": "JUnit5 test methods should have default package visibility",
+    "description_source": "name_only"
+  },
+  "java:S5785": {
+    "key": "java:S5785",
+    "name": "JUnit assertTrue/assertFalse should be simplified to the corresponding dedicated assertion",
+    "type": "CODE_SMELL",
+    "impacts": [
+      "MAINTAINABILITY/MEDIUM"
+    ],
+    "description": "JUnit assertTrue/assertFalse should be simplified to the corresponding dedicated assertion",
+    "description_source": "name_only"
+  },
+  "java:S3415": {
+    "key": "java:S3415",
+    "name": "Assertion arguments should be passed in the correct order",
+    "type": "CODE_SMELL",
+    "impacts": [
+      "MAINTAINABILITY/MEDIUM"
+    ],
+    "description": "Assertion arguments should be passed in the correct order",
+    "description_source": "name_only"
+  },
+  "java:S1068": {
+    "key": "java:S1068",
+    "name": "Unused \"private\" fields should be removed",
+    "type": "CODE_SMELL",
+    "impacts": [
+      "MAINTAINABILITY/MEDIUM"
+    ],
+    "description": "Unused \"private\" fields should be removed",
+    "description_source": "name_only"
+  },
+  "java:S2093": {
+    "key": "java:S2093",
+    "name": "Try-with-resources should be used",
+    "type": "CODE_SMELL",
+    "impacts": [
+      "MAINTAINABILITY/HIGH"
+    ],
+    "description": "Try-with-resources should be used",
+    "description_source": "name_only"
+  }
+}

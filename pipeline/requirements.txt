@@ -1,0 +1,8 @@
+# Stage 2
+pyyaml>=6.0
+chromadb>=1.0
+sentence-transformers>=3.0
+# Stage 3: openai + tenacity for --provider gemini/openai, anthropic for --provider claude
+openai>=1.40
+tenacity>=8.0
+anthropic>=2.0
