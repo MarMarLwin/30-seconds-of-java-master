@@ -1,5 +1,5 @@
 plugins {
-    id "org.sonarqube" version "6.1.0.5360"
+    id "org.sonarqube" version "7.5.0.8588"
     id 'org.cadixdev.licenser' version '0.6.1'
     id 'jacoco'
 }
@@ -24,14 +24,11 @@ checkstyle {
     maxErrors = 0
     maxWarnings = 0
 }
-
-sonarqube {
-    properties {
-        property "sonar.projectKey", "iluwatar_30-seconds-of-java"
-        property "sonar.organization", "iluwatar"
-        property "sonar.host.url", "https://sonarcloud.io"
-        property "sonar.coverage.jacoco.xmlReportPaths", "${buildDir}/reports/jacoco/test/jacocoTestReport.xml"
-    }
+sonar {
+  properties {
+    property "sonar.projectKey", "MarMarLwin_30-seconds-of-java-master"
+    property "sonar.organization", "marmarlwin"
+  }
 }
 
 tasks.named('sonarqube') {
