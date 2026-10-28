@@ -2486,13 +2486,21 @@ python3 -m pipeline fetch-issues --repo .
 python3 -m pipeline extract      --repo .
 python3 -m pipeline index        --repo .   # again whenever the code changes
 python3 -m pipeline prompts      --repo .
-python3 -m pipeline inspect      --repo . --show repository_aware
+python3 -m pipeline inspect      --repo . --show few_shot
 
-python3 -m pipeline refactor --repo . --provider claude-code --strategy repository_aware
+python3 -m pipeline refactor --repo . --provider claude-code --strategy few_shot
 
-python3 -m pipeline refactor --repo . --provider deepseek --strategy zero_shot
-
-
+python3 -m pipeline refactor --repo . --provider deepseek --strategy few_shot
 
 python3 -m pipeline refactor     --repo . --limit 1
+
+# Compile main and test sources
+./gradlew compileJava compileTestJava
+
+# Run all JUnit 5 tests (a JaCoCo coverage report is generated afterwards)
+./gradlew test
+
+# Full build: compile + tests + Checkstyle (Google style, 0 warnings allowed)
+./gradlew build
+
 ```

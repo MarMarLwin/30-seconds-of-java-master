@@ -1,0 +1,1460 @@
+{
+  "applied_at": "2026-10-28T11:13:31.077785+00:00",
+  "model": "claude-code",
+  "strategy": "few_shot",
+  "target": "working tree",
+  "results_file": "stage3_results_claude-code.json",
+  "applied": 95,
+  "already_applied": 0,
+  "conflict": 21,
+  "skipped": 5,
+  "issues": [
+    {
+      "issue_key": "AaFsqnxKZptvl_vNu0T-",
+      "rule": "githubactions:S7637",
+      "file_path": ".github/workflows/gradle-ci.yml",
+      "lines": [
+        18,
+        19
+      ],
+      "status": "applied",
+      "new_line_count": 2,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsqnxPZptvl_vNu0T_",
+      "rule": "githubactions:S7637",
+      "file_path": ".github/workflows/gradle-pr-builder.yml",
+      "lines": [
+        16,
+        17
+      ],
+      "status": "applied",
+      "new_line_count": 2,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibi_N1YzpLYI6ZjB",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/algorithm/BinarySearchIn2dArraySnippet.java",
+      "lines": [
+        30,
+        95
+      ],
+      "status": "applied",
+      "new_line_count": 69,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjAN1YzpLYI6ZjC",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/algorithm/BinarySearchSnippet.java",
+      "lines": [
+        30,
+        55
+      ],
+      "status": "applied",
+      "new_line_count": 29,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibiwN1YzpLYI6Zi3",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/algorithm/BubbleSortSnippet.java",
+      "lines": [
+        30,
+        50
+      ],
+      "status": "applied",
+      "new_line_count": 24,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibi2N1YzpLYI6Zi8",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/algorithm/CountingSortSnippet.java",
+      "lines": [
+        32,
+        64
+      ],
+      "status": "applied",
+      "new_line_count": 36,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibi0N1YzpLYI6Zi6",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/algorithm/CycleSortSnippet.java",
+      "lines": [
+        30,
+        52
+      ],
+      "status": "applied",
+      "new_line_count": 26,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibi9N1YzpLYI6ZjA",
+      "rule": "java:S9439",
+      "file_path": "src/main/java/algorithm/DammSnippet.java",
+      "lines": [
+        47,
+        58
+      ],
+      "status": "applied",
+      "new_line_count": 12,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibi1N1YzpLYI6Zi7",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/algorithm/InsertionSortSnippet.java",
+      "lines": [
+        30,
+        49
+      ],
+      "status": "applied",
+      "new_line_count": 23,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibixN1YzpLYI6Zi4",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/algorithm/LinearSearchIn2dArraySnippet.java",
+      "lines": [
+        30,
+        51
+      ],
+      "status": "applied",
+      "new_line_count": 25,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibi5N1YzpLYI6Zi-",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/algorithm/LinearSearchSnippet.java",
+      "lines": [
+        30,
+        47
+      ],
+      "status": "applied",
+      "new_line_count": 21,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibi6N1YzpLYI6Zi_",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/algorithm/LuhnModnSnippet.java",
+      "lines": [
+        30,
+        120
+      ],
+      "status": "applied",
+      "new_line_count": 94,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibi4N1YzpLYI6Zi9",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/algorithm/MergeSortSnippet.java",
+      "lines": [
+        30,
+        79
+      ],
+      "status": "applied",
+      "new_line_count": 53,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibivN1YzpLYI6Zi2",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/algorithm/QuickSortSnippet.java",
+      "lines": [
+        30,
+        66
+      ],
+      "status": "applied",
+      "new_line_count": 40,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibizN1YzpLYI6Zi5",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/algorithm/SelectionSortSnippet.java",
+      "lines": [
+        30,
+        54
+      ],
+      "status": "applied",
+      "new_line_count": 28,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjCN1YzpLYI6ZjE",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/algorithm/SieveOfEratosthenesSnippet.java",
+      "lines": [
+        30,
+        53
+      ],
+      "status": "applied",
+      "new_line_count": 27,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjCN1YzpLYI6ZjF",
+      "rule": "java:S1125",
+      "file_path": "src/main/java/algorithm/SieveOfEratosthenesSnippet.java",
+      "lines": [
+        44,
+        48
+      ],
+      "status": "conflict",
+      "conflicts_with": "AaFsibjCN1YzpLYI6ZjE",
+      "reason": "overlaps a larger patch applied on this branch"
+    },
+    {
+      "issue_key": "AaFsibjBN1YzpLYI6ZjD",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/algorithm/VerhoeffSnippet.java",
+      "lines": [
+        30,
+        95
+      ],
+      "status": "applied",
+      "new_line_count": 69,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjPN1YzpLYI6ZjR",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/array/AllEqualSnippet.java",
+      "lines": [
+        32,
+        44
+      ],
+      "status": "applied",
+      "new_line_count": 16,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjMN1YzpLYI6ZjO",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/array/ArrayConcatSnippet.java",
+      "lines": [
+        32,
+        47
+      ],
+      "status": "applied",
+      "new_line_count": 19,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjHN1YzpLYI6ZjK",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/array/ArrayMeanSnippet.java",
+      "lines": [
+        32,
+        43
+      ],
+      "status": "applied",
+      "new_line_count": 15,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjGN1YzpLYI6ZjI",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/array/ArrayMedianSnippet.java",
+      "lines": [
+        32,
+        45
+      ],
+      "status": "applied",
+      "new_line_count": 17,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjGN1YzpLYI6ZjJ",
+      "rule": "java:S9435",
+      "file_path": "src/main/java/array/ArrayMedianSnippet.java",
+      "lines": [
+        43,
+        43
+      ],
+      "status": "conflict",
+      "conflicts_with": "AaFsibjGN1YzpLYI6ZjI",
+      "reason": "overlaps a larger patch applied on this branch"
+    },
+    {
+      "issue_key": "AaFsibjIN1YzpLYI6ZjL",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/array/ArrayModeInPlaceSnippet.java",
+      "lines": [
+        32,
+        67
+      ],
+      "status": "applied",
+      "new_line_count": 39,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjNN1YzpLYI6ZjP",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/array/ArraySumSnippet.java",
+      "lines": [
+        32,
+        43
+      ],
+      "status": "applied",
+      "new_line_count": 15,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjLN1YzpLYI6ZjN",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/array/FindMaxSnippet.java",
+      "lines": [
+        32,
+        43
+      ],
+      "status": "applied",
+      "new_line_count": 15,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjON1YzpLYI6ZjQ",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/array/FindMinSnippet.java",
+      "lines": [
+        32,
+        43
+      ],
+      "status": "skipped",
+      "reason": "refactoring failed: Claude Code error: API Error: Can't reach the API server — check your internet or DNS (ENOTFOUND)"
+    },
+    {
+      "issue_key": "AaFsibjFN1YzpLYI6ZjH",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/array/MultiArrayConcatenationSnippet.java",
+      "lines": [
+        32,
+        56
+      ],
+      "status": "applied",
+      "new_line_count": 28,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjKN1YzpLYI6ZjM",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/array/ReverseArraySnippet.java",
+      "lines": [
+        30,
+        62
+      ],
+      "status": "applied",
+      "new_line_count": 36,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibidN1YzpLYI6Zim",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/cls/CreatingObjectSnippet.java",
+      "lines": [
+        32,
+        59
+      ],
+      "status": "applied",
+      "new_line_count": 31,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibiZN1YzpLYI6Zih",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/cls/GetAllFieldNamesSnippet.java",
+      "lines": [
+        36,
+        57
+      ],
+      "status": "applied",
+      "new_line_count": 25,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibiZN1YzpLYI6Zii",
+      "rule": "java:S6204",
+      "file_path": "src/main/java/cls/GetAllFieldNamesSnippet.java",
+      "lines": [
+        48,
+        52
+      ],
+      "status": "conflict",
+      "conflicts_with": "AaFsibiZN1YzpLYI6Zih",
+      "reason": "overlaps a larger patch applied on this branch"
+    },
+    {
+      "issue_key": "AaFsibg3N1YzpLYI6Zif",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/cls/GetAllMethodsSnippet.java",
+      "lines": [
+        35,
+        48
+      ],
+      "status": "applied",
+      "new_line_count": 17,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibg3N1YzpLYI6Zig",
+      "rule": "java:S6204",
+      "file_path": "src/main/java/cls/GetAllMethodsSnippet.java",
+      "lines": [
+        44,
+        46
+      ],
+      "status": "conflict",
+      "conflicts_with": "AaFsibg3N1YzpLYI6Zif",
+      "reason": "overlaps a larger patch applied on this branch"
+    },
+    {
+      "issue_key": "AaFsibiaN1YzpLYI6Zij",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/cls/GetAllPublicFieldNamesSnippet.java",
+      "lines": [
+        35,
+        48
+      ],
+      "status": "applied",
+      "new_line_count": 17,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibiaN1YzpLYI6Zik",
+      "rule": "java:S6204",
+      "file_path": "src/main/java/cls/GetAllPublicFieldNamesSnippet.java",
+      "lines": [
+        44,
+        46
+      ],
+      "status": "conflict",
+      "conflicts_with": "AaFsibiaN1YzpLYI6Zij",
+      "reason": "overlaps a larger patch applied on this branch"
+    },
+    {
+      "issue_key": "AaFsibibN1YzpLYI6Zil",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/cls/SafeCastSnippet.java",
+      "lines": [
+        32,
+        46
+      ],
+      "status": "applied",
+      "new_line_count": 18,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjnN1YzpLYI6Zjt",
+      "rule": "java:S1128",
+      "file_path": "src/main/java/date/AddDaysToDateSnippet.java",
+      "lines": [
+        25,
+        31
+      ],
+      "status": "applied",
+      "new_line_count": 5,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjnN1YzpLYI6Zjs",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/date/AddDaysToDateSnippet.java",
+      "lines": [
+        35,
+        64
+      ],
+      "status": "applied",
+      "new_line_count": 33,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjpN1YzpLYI6Zju",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/date/DateDifferenceSnippet.java",
+      "lines": [
+        34,
+        74
+      ],
+      "status": "applied",
+      "new_line_count": 44,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjqN1YzpLYI6Zjv",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/encoding/Base64DecodeSnippet.java",
+      "lines": [
+        32,
+        43
+      ],
+      "status": "applied",
+      "new_line_count": 15,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjrN1YzpLYI6Zjw",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/encoding/Base64EncodeSnippet.java",
+      "lines": [
+        32,
+        42
+      ],
+      "status": "applied",
+      "new_line_count": 14,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjhN1YzpLYI6Zjl",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/file/ListAllFilesSnippet.java",
+      "lines": [
+        34,
+        56
+      ],
+      "status": "applied",
+      "new_line_count": 26,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjiN1YzpLYI6Zjm",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/file/ListDirectoriesSnippet.java",
+      "lines": [
+        32,
+        43
+      ],
+      "status": "applied",
+      "new_line_count": 15,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjgN1YzpLYI6Zjk",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/file/ListFilesInDirectorySnippet.java",
+      "lines": [
+        32,
+        43
+      ],
+      "status": "applied",
+      "new_line_count": 15,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjjN1YzpLYI6Zjn",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/file/ReadLinesSnippet.java",
+      "lines": [
+        35,
+        47
+      ],
+      "status": "applied",
+      "new_line_count": 16,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjlN1YzpLYI6Zjo",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/file/ZipDirectorySnippet.java",
+      "lines": [
+        37,
+        96
+      ],
+      "status": "applied",
+      "new_line_count": 63,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjlN1YzpLYI6Zjp",
+      "rule": "java:S9342",
+      "file_path": "src/main/java/file/ZipDirectorySnippet.java",
+      "lines": [
+        64,
+        95
+      ],
+      "status": "conflict",
+      "conflicts_with": "AaFsibjlN1YzpLYI6Zjo",
+      "reason": "overlaps a larger patch applied on this branch"
+    },
+    {
+      "issue_key": "AaFsibjlN1YzpLYI6Zjq",
+      "rule": "java:S9342",
+      "file_path": "src/main/java/file/ZipDirectorySnippet.java",
+      "lines": [
+        64,
+        95
+      ],
+      "status": "conflict",
+      "conflicts_with": "AaFsibjlN1YzpLYI6Zjo",
+      "reason": "overlaps a larger patch applied on this branch"
+    },
+    {
+      "issue_key": "AaFsibjfN1YzpLYI6Zjj",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/file/ZipFileSnippet.java",
+      "lines": [
+        37,
+        62
+      ],
+      "status": "applied",
+      "new_line_count": 29,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjmN1YzpLYI6Zjr",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/file/ZipFilesSnippet.java",
+      "lines": [
+        37,
+        65
+      ],
+      "status": "applied",
+      "new_line_count": 32,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjxN1YzpLYI6Zj2",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/io/InputStreamToStringSnippet.java",
+      "lines": [
+        36,
+        48
+      ],
+      "status": "applied",
+      "new_line_count": 16,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjwN1YzpLYI6Zj0",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/io/ReadFileSnippet.java",
+      "lines": [
+        37,
+        50
+      ],
+      "status": "applied",
+      "new_line_count": 17,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjwN1YzpLYI6Zj1",
+      "rule": "java:S6204",
+      "file_path": "src/main/java/io/ReadFileSnippet.java",
+      "lines": [
+        47,
+        47
+      ],
+      "status": "conflict",
+      "conflicts_with": "AaFsibjwN1YzpLYI6Zj0",
+      "reason": "overlaps a larger patch applied on this branch"
+    },
+    {
+      "issue_key": "AaFsibiqN1YzpLYI6Ziy",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/math/EloRatingSnippet.java",
+      "lines": [
+        30,
+        54
+      ],
+      "status": "applied",
+      "new_line_count": 28,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibiqN1YzpLYI6Zix",
+      "rule": "java:S1488",
+      "file_path": "src/main/java/math/EloRatingSnippet.java",
+      "lines": [
+        44,
+        53
+      ],
+      "status": "conflict",
+      "conflicts_with": "AaFsibiqN1YzpLYI6Ziy",
+      "reason": "overlaps a larger patch applied on this branch"
+    },
+    {
+      "issue_key": "AaFsibihN1YzpLYI6Zip",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/math/EvenOdd.java",
+      "lines": [
+        30,
+        45
+      ],
+      "status": "applied",
+      "new_line_count": 19,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibimN1YzpLYI6Ziu",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/math/FactorialSnippet.java",
+      "lines": [
+        30,
+        59
+      ],
+      "status": "applied",
+      "new_line_count": 33,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibiuN1YzpLYI6Zi1",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/math/FibonacciSnippet.java",
+      "lines": [
+        33,
+        82
+      ],
+      "status": "applied",
+      "new_line_count": 53,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibieN1YzpLYI6Zin",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/math/GreatestCommonDivisorSnippet.java",
+      "lines": [
+        30,
+        45
+      ],
+      "status": "applied",
+      "new_line_count": 19,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibiiN1YzpLYI6Ziq",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/math/HaversineFormulaSnippet.java",
+      "lines": [
+        30,
+        75
+      ],
+      "status": "applied",
+      "new_line_count": 49,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibisN1YzpLYI6Zi0",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/math/LeastCommonMultipleSnippet.java",
+      "lines": [
+        30,
+        49
+      ],
+      "status": "applied",
+      "new_line_count": 23,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibilN1YzpLYI6Zit",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/math/LuhnSnippet.java",
+      "lines": [
+        30,
+        66
+      ],
+      "status": "applied",
+      "new_line_count": 40,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibilN1YzpLYI6Zis",
+      "rule": "java:S1488",
+      "file_path": "src/main/java/math/LuhnSnippet.java",
+      "lines": [
+        43,
+        65
+      ],
+      "status": "conflict",
+      "conflicts_with": "AaFsibilN1YzpLYI6Zit",
+      "reason": "overlaps a larger patch applied on this branch"
+    },
+    {
+      "issue_key": "AaFsibijN1YzpLYI6Zir",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/math/NaturalNumberBinaryConversionSnippet.java",
+      "lines": [
+        35,
+        75
+      ],
+      "status": "applied",
+      "new_line_count": 44,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibipN1YzpLYI6Ziw",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/math/PerformLotterySnippet.java",
+      "lines": [
+        33,
+        50
+      ],
+      "status": "applied",
+      "new_line_count": 21,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibifN1YzpLYI6Zio",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/math/PrimeNumberSnippet.java",
+      "lines": [
+        30,
+        60
+      ],
+      "status": "applied",
+      "new_line_count": 34,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibinN1YzpLYI6Ziv",
+      "rule": "java:S2140",
+      "file_path": "src/main/java/math/RandomNumber.java",
+      "lines": [
+        58,
+        59
+      ],
+      "status": "applied",
+      "new_line_count": 2,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibirN1YzpLYI6Ziz",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/math/SquareRoot.java",
+      "lines": [
+        30,
+        64
+      ],
+      "status": "applied",
+      "new_line_count": 38,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjuN1YzpLYI6Zjz",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/media/CaptureScreenSnippet.java",
+      "lines": [
+        38,
+        54
+      ],
+      "status": "applied",
+      "new_line_count": 20,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjzN1YzpLYI6Zj6",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/network/HttpGetSnippet.java",
+      "lines": [
+        35,
+        51
+      ],
+      "status": "applied",
+      "new_line_count": 20,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjzN1YzpLYI6Zj5",
+      "rule": "java:S112",
+      "file_path": "src/main/java/network/HttpGetSnippet.java",
+      "lines": [
+        44,
+        50
+      ],
+      "status": "conflict",
+      "conflicts_with": "AaFsibjzN1YzpLYI6Zj6",
+      "reason": "overlaps a larger patch applied on this branch"
+    },
+    {
+      "issue_key": "AaFsqnwhZptvl_vNu0T6",
+      "rule": "java:S2095",
+      "file_path": "src/main/java/network/HttpGetSnippet.java",
+      "lines": [
+        44,
+        50
+      ],
+      "status": "conflict",
+      "conflicts_with": "AaFsibjzN1YzpLYI6Zj6",
+      "reason": "overlaps a larger patch applied on this branch"
+    },
+    {
+      "issue_key": "AaFsibjyN1YzpLYI6Zj4",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/network/HttpPostSnippet.java",
+      "lines": [
+        40,
+        68
+      ],
+      "status": "applied",
+      "new_line_count": 32,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjyN1YzpLYI6Zj3",
+      "rule": "java:S1319",
+      "file_path": "src/main/java/network/HttpPostSnippet.java",
+      "lines": [
+        51,
+        67
+      ],
+      "status": "conflict",
+      "conflicts_with": "AaFsibjyN1YzpLYI6Zj4",
+      "reason": "overlaps a larger patch applied on this branch"
+    },
+    {
+      "issue_key": "AaFsqnwcZptvl_vNu0T5",
+      "rule": "java:S2095",
+      "file_path": "src/main/java/network/HttpPostSnippet.java",
+      "lines": [
+        51,
+        67
+      ],
+      "status": "conflict",
+      "conflicts_with": "AaFsibjyN1YzpLYI6Zj4",
+      "reason": "overlaps a larger patch applied on this branch"
+    },
+    {
+      "issue_key": "AaFsibjWN1YzpLYI6Zja",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/string/AnagramSnippet.java",
+      "lines": [
+        32,
+        58
+      ],
+      "status": "applied",
+      "new_line_count": 30,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjbN1YzpLYI6Zjg",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/string/CommonLettersSnippet.java",
+      "lines": [
+        33,
+        55
+      ],
+      "status": "applied",
+      "new_line_count": 26,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjUN1YzpLYI6ZjW",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/string/CompareVersionSnippet.java",
+      "lines": [
+        30,
+        62
+      ],
+      "status": "applied",
+      "new_line_count": 36,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjUN1YzpLYI6ZjX",
+      "rule": "java:S5998",
+      "file_path": "src/main/java/string/CompareVersionSnippet.java",
+      "lines": [
+        32,
+        32
+      ],
+      "status": "conflict",
+      "conflicts_with": "AaFsibjUN1YzpLYI6ZjW",
+      "reason": "overlaps a larger patch applied on this branch"
+    },
+    {
+      "issue_key": "AaFsibjUN1YzpLYI6ZjY",
+      "rule": "java:S8786",
+      "file_path": "src/main/java/string/CompareVersionSnippet.java",
+      "lines": [
+        60,
+        60
+      ],
+      "status": "conflict",
+      "conflicts_with": "AaFsibjUN1YzpLYI6ZjW",
+      "reason": "overlaps a larger patch applied on this branch"
+    },
+    {
+      "issue_key": "AaFsibjdN1YzpLYI6Zji",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/string/DuplicateCharacterSnippet.java",
+      "lines": [
+        33,
+        50
+      ],
+      "status": "applied",
+      "new_line_count": 21,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjVN1YzpLYI6ZjZ",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/string/FormatBytesSnippet.java",
+      "lines": [
+        33,
+        60
+      ],
+      "status": "applied",
+      "new_line_count": 31,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjTN1YzpLYI6ZjU",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/string/KmpSubstringSearchSnippet.java",
+      "lines": [
+        31,
+        96
+      ],
+      "status": "applied",
+      "new_line_count": 69,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjTN1YzpLYI6ZjV",
+      "rule": "java:S7158",
+      "file_path": "src/main/java/string/KmpSubstringSearchSnippet.java",
+      "lines": [
+        41,
+        43
+      ],
+      "status": "conflict",
+      "conflicts_with": "AaFsibjTN1YzpLYI6ZjU",
+      "reason": "overlaps a larger patch applied on this branch"
+    },
+    {
+      "issue_key": "AaFsibjaN1YzpLYI6Zjf",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/string/LevenshteinDistanceSnippet.java",
+      "lines": [
+        30,
+        58
+      ],
+      "status": "applied",
+      "new_line_count": 32,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjYN1YzpLYI6Zjb",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/string/LindenmayerSystemSnippet.java",
+      "lines": [
+        32,
+        64
+      ],
+      "status": "applied",
+      "new_line_count": 36,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjcN1YzpLYI6Zjh",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/string/MaxCharacterCountSnippet.java",
+      "lines": [
+        30,
+        53
+      ],
+      "status": "applied",
+      "new_line_count": 27,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjZN1YzpLYI6Zje",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/string/PalindromCheckSnippet.java",
+      "lines": [
+        30,
+        55
+      ],
+      "status": "applied",
+      "new_line_count": 29,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjZN1YzpLYI6Zjc",
+      "rule": "java:S127",
+      "file_path": "src/main/java/string/PalindromCheckSnippet.java",
+      "lines": [
+        41,
+        43
+      ],
+      "status": "conflict",
+      "conflicts_with": "AaFsibjZN1YzpLYI6Zje",
+      "reason": "overlaps a larger patch applied on this branch"
+    },
+    {
+      "issue_key": "AaFsibjZN1YzpLYI6Zjd",
+      "rule": "java:S127",
+      "file_path": "src/main/java/string/PalindromCheckSnippet.java",
+      "lines": [
+        44,
+        46
+      ],
+      "status": "conflict",
+      "conflicts_with": "AaFsibjZN1YzpLYI6Zje",
+      "reason": "overlaps a larger patch applied on this branch"
+    },
+    {
+      "issue_key": "AaFsibjQN1YzpLYI6ZjS",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/string/ReverseStringSnippet.java",
+      "lines": [
+        30,
+        41
+      ],
+      "status": "applied",
+      "new_line_count": 15,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjRN1YzpLYI6ZjT",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/string/StringToDateSnippet.java",
+      "lines": [
+        34,
+        48
+      ],
+      "status": "applied",
+      "new_line_count": 18,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjEN1YzpLYI6ZjG",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/system/GetEnvOrDefaultSnippet.java",
+      "lines": [
+        30,
+        42
+      ],
+      "status": "applied",
+      "new_line_count": 16,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjsN1YzpLYI6Zjx",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/thread/ThreadPool.java",
+      "lines": [
+        33,
+        44
+      ],
+      "status": "applied",
+      "new_line_count": 15,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibjtN1YzpLYI6Zjy",
+      "rule": "java:S1118",
+      "file_path": "src/main/java/thread/ThreadSnippet.java",
+      "lines": [
+        30,
+        42
+      ],
+      "status": "applied",
+      "new_line_count": 16,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibj6N1YzpLYI6ZkA",
+      "rule": "java:S1481",
+      "file_path": "src/test/java/algorithm/BinarySearchIn2dArraySnippetTest.java",
+      "lines": [
+        42,
+        42
+      ],
+      "status": "skipped",
+      "reason": "refactoring failed: Response contained no code"
+    },
+    {
+      "issue_key": "AaFsibj_N1YzpLYI6ZkD",
+      "rule": "java:S9439",
+      "file_path": "src/test/java/algorithm/BinarySearchSnippetTest.java",
+      "lines": [
+        44,
+        44
+      ],
+      "status": "applied",
+      "new_line_count": 1,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibj_N1YzpLYI6ZkE",
+      "rule": "java:S9439",
+      "file_path": "src/test/java/algorithm/BinarySearchSnippetTest.java",
+      "lines": [
+        47,
+        47
+      ],
+      "status": "applied",
+      "new_line_count": 1,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibj_N1YzpLYI6ZkF",
+      "rule": "java:S9439",
+      "file_path": "src/test/java/algorithm/BinarySearchSnippetTest.java",
+      "lines": [
+        50,
+        50
+      ],
+      "status": "applied",
+      "new_line_count": 1,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibj7N1YzpLYI6ZkB",
+      "rule": "java:S1481",
+      "file_path": "src/test/java/algorithm/LinearSearchIn2dArraySnippetTest.java",
+      "lines": [
+        42,
+        42
+      ],
+      "status": "skipped",
+      "reason": "refactoring failed: Response contained no code"
+    },
+    {
+      "issue_key": "AaFsibj4N1YzpLYI6Zj9",
+      "rule": "java:S9439",
+      "file_path": "src/test/java/algorithm/LinearSearchSnippetTest.java",
+      "lines": [
+        43,
+        43
+      ],
+      "status": "applied",
+      "new_line_count": 1,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibj4N1YzpLYI6Zj-",
+      "rule": "java:S9439",
+      "file_path": "src/test/java/algorithm/LinearSearchSnippetTest.java",
+      "lines": [
+        46,
+        46
+      ],
+      "status": "applied",
+      "new_line_count": 1,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibj4N1YzpLYI6Zj_",
+      "rule": "java:S9439",
+      "file_path": "src/test/java/algorithm/LinearSearchSnippetTest.java",
+      "lines": [
+        49,
+        49
+      ],
+      "status": "applied",
+      "new_line_count": 1,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibj9N1YzpLYI6ZkC",
+      "rule": "java:S5786",
+      "file_path": "src/test/java/algorithm/LuhnModnSnippetTest.java",
+      "lines": [
+        40,
+        85
+      ],
+      "status": "applied",
+      "new_line_count": 46,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibkAN1YzpLYI6ZkG",
+      "rule": "java:S5785",
+      "file_path": "src/test/java/algorithm/VerhoeffSnippetTest.java",
+      "lines": [
+        67,
+        68
+      ],
+      "status": "applied",
+      "new_line_count": 2,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibkON1YzpLYI6ZkN",
+      "rule": "java:S3415",
+      "file_path": "src/test/java/array/ArrayConcatSnippetTest.java",
+      "lines": [
+        43,
+        43
+      ],
+      "status": "applied",
+      "new_line_count": 1,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibkON1YzpLYI6ZkO",
+      "rule": "java:S3415",
+      "file_path": "src/test/java/array/ArrayConcatSnippetTest.java",
+      "lines": [
+        45,
+        45
+      ],
+      "status": "applied",
+      "new_line_count": 1,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibkLN1YzpLYI6ZkL",
+      "rule": "java:S3415",
+      "file_path": "src/test/java/array/MultiArrayConcatenationSnippetTest.java",
+      "lines": [
+        43,
+        43
+      ],
+      "status": "applied",
+      "new_line_count": 1,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibkLN1YzpLYI6ZkM",
+      "rule": "java:S3415",
+      "file_path": "src/test/java/array/MultiArrayConcatenationSnippetTest.java",
+      "lines": [
+        49,
+        49
+      ],
+      "status": "applied",
+      "new_line_count": 1,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsqnwoZptvl_vNu0T7",
+      "rule": "java:S1068",
+      "file_path": "src/test/java/cls/GetAllFieldNamesSnippetTest.java",
+      "lines": [
+        44,
+        44
+      ],
+      "status": "skipped",
+      "reason": "refactoring failed: Response contained no code"
+    },
+    {
+      "issue_key": "AaFsqnwoZptvl_vNu0T8",
+      "rule": "java:S1068",
+      "file_path": "src/test/java/cls/GetAllFieldNamesSnippetTest.java",
+      "lines": [
+        49,
+        49
+      ],
+      "status": "skipped",
+      "reason": "refactoring failed: Response contained no code"
+    },
+    {
+      "issue_key": "AaFsqnw6Zptvl_vNu0T9",
+      "rule": "java:S2093",
+      "file_path": "src/test/java/file/ZipDirectorySnippetTest.java",
+      "lines": [
+        46,
+        71
+      ],
+      "status": "applied",
+      "new_line_count": 26,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibkJN1YzpLYI6ZkJ",
+      "rule": "java:S3415",
+      "file_path": "src/test/java/file/ZipDirectorySnippetTest.java",
+      "lines": [
+        65,
+        65
+      ],
+      "status": "conflict",
+      "conflicts_with": "AaFsqnw6Zptvl_vNu0T9",
+      "reason": "overlaps a larger patch applied on this branch"
+    },
+    {
+      "issue_key": "AaFsibkJN1YzpLYI6ZkK",
+      "rule": "java:S3415",
+      "file_path": "src/test/java/file/ZipDirectorySnippetTest.java",
+      "lines": [
+        66,
+        66
+      ],
+      "status": "conflict",
+      "conflicts_with": "AaFsqnw6Zptvl_vNu0T9",
+      "reason": "overlaps a larger patch applied on this branch"
+    },
+    {
+      "issue_key": "AaFsibkCN1YzpLYI6ZkH",
+      "rule": "java:S1128",
+      "file_path": "src/test/java/io/InputStreamToStringSnippetTest.java",
+      "lines": [
+        27,
+        33
+      ],
+      "status": "applied",
+      "new_line_count": 6,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibkEN1YzpLYI6ZkI",
+      "rule": "java:S1128",
+      "file_path": "src/test/java/math/RandomNumberTest.java",
+      "lines": [
+        28,
+        34
+      ],
+      "status": "applied",
+      "new_line_count": 6,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibkRN1YzpLYI6ZkP",
+      "rule": "java:S5786",
+      "file_path": "src/test/java/string/CompareVersionSnippetTest.java",
+      "lines": [
+        34,
+        77
+      ],
+      "status": "applied",
+      "new_line_count": 44,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibkTN1YzpLYI6ZkQ",
+      "rule": "java:S5786",
+      "file_path": "src/test/java/string/LindenmayerSystemSnippetTest.java",
+      "lines": [
+        38,
+        70
+      ],
+      "status": "applied",
+      "new_line_count": 33,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibj1N1YzpLYI6Zj7",
+      "rule": "java:S5786",
+      "file_path": "src/test/java/thread/ThreadPoolTest.java",
+      "lines": [
+        37,
+        48
+      ],
+      "status": "applied",
+      "new_line_count": 12,
+      "reindented": false
+    },
+    {
+      "issue_key": "AaFsibj2N1YzpLYI6Zj8",
+      "rule": "java:S3415",
+      "file_path": "src/test/java/thread/ThreadSnippetTest.java",
+      "lines": [
+        55,
+        55
+      ],
+      "status": "applied",
+      "new_line_count": 1,
+      "reindented": false
+    }
+  ]
+}

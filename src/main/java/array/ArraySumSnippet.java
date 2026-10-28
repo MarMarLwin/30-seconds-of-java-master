@@ -31,6 +31,9 @@ import java.util.Arrays;
  */
 public class ArraySumSnippet {
 
+  private ArraySumSnippet() {
+  }
+
   /**
    * Returns sum of the integers in the array.
    *

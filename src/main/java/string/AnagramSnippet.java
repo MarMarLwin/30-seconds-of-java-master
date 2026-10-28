@@ -31,6 +31,9 @@ import java.util.Arrays;
  */
 public class AnagramSnippet {
 
+  private AnagramSnippet() {
+  }
+
   /**
    * Checks if two words are anagrams (contains same characters with same frequency in any order).
    *

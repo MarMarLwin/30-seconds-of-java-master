@@ -30,6 +30,9 @@ import java.util.Base64;
  * Base64EncodeSnippet.
  */
 public class Base64EncodeSnippet {
+  private Base64EncodeSnippet() {
+  }
+
   /**
    * Encodes the input string to a Base64 encoded string.
    *
