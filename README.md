@@ -2490,6 +2490,9 @@ python3 -m pipeline inspect      --repo . --issue dart:S7115 --show repository_a
 
 python3 -m pipeline refactor --repo . --provider claude-code --strategy repository_aware
 
+python3 -m pipeline refactor --repo . --provider deepseek --strategy zero_shot
+
+
 
 python3 -m pipeline refactor     --repo . --limit 1
 ```

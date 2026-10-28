@@ -169,6 +169,51 @@ class ClaudeCodeProviderTest(unittest.TestCase):
         self.assertIn('exited with 2', result['error'])
 
 
+class DeepSeekProviderTest(unittest.TestCase):
+    def setUp(self):
+        import os
+        try:
+            import openai  # noqa: F401
+        except ImportError:
+            self.skipTest('openai is not installed')
+        os.environ.setdefault('DEEPSEEK_API_KEY', 'test-key')
+
+    def test_request_goes_to_deepseek(self):
+        refactorer = create_refactorer('deepseek')
+        self.assertEqual(str(refactorer.client.base_url).rstrip('/'), 'https://api.deepseek.com')
+        usage = SimpleNamespace(prompt_tokens=100, completion_tokens=40, total_tokens=140,
+                                model_dump=lambda **_: {'prompt_tokens': 100})
+        response = SimpleNamespace(
+            choices=[SimpleNamespace(finish_reason='stop', message=SimpleNamespace(
+                content='```java\nint x = 1;\n```'))],
+            usage=usage)
+        completions = FakeMessages(response)
+        refactorer.client = SimpleNamespace(chat=SimpleNamespace(completions=completions))
+        result = refactorer.run('system', 'user')
+        call = completions.calls[0]
+        self.assertEqual(call['model'], 'deepseek-chat')
+        self.assertEqual(call['temperature'], 0.0)
+        self.assertEqual(call['max_tokens'], 8192)
+        self.assertEqual(result['refactored_code'], 'int x = 1;')
+        self.assertNotIn('error', result)
+
+    def test_insufficient_balance_stops_the_run(self):
+        import httpx
+        import openai
+        from pipeline.stage3.providers import ProviderFatalError
+        refactorer = create_refactorer('deepseek')
+        request = httpx.Request('POST', 'https://api.deepseek.com/chat/completions')
+        error = openai.APIStatusError('Insufficient Balance', body=None,
+                                      response=httpx.Response(402, request=request))
+
+        def create(**_):
+            raise error
+        refactorer.client = SimpleNamespace(chat=SimpleNamespace(
+            completions=SimpleNamespace(create=create)))
+        with self.assertRaises(ProviderFatalError):
+            refactorer.run('system', 'user')
+
+
 class ReuseTest(unittest.TestCase):
     def test_settings_must_match(self):
         refactorer = SimpleNamespace(model='m', settings={'effort': 'high'})

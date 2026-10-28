@@ -2,7 +2,8 @@
 LLM providers for Stage 3. Each one turns (system prompt, user prompt) into a
 result record with the refactored code and token usage.
 
-    gemini, openai   OpenAI-compatible APIs (openai_compat.py)
+    gemini, openai,  OpenAI-compatible APIs (openai_compat.py)
+    deepseek
     claude           Anthropic API, billed to API credits (claude.py)
     claude-code      the Claude Code CLI, billed to a Claude subscription
                      such as Pro (claude_code.py)
@@ -17,13 +18,13 @@ from .base import ProviderFatalError, Refactorer
 
 logger = logging.getLogger(__name__)
 
-PROVIDER_NAMES = ['gemini', 'openai', 'claude', 'claude-code']
+PROVIDER_NAMES = ['gemini', 'openai', 'deepseek', 'claude', 'claude-code']
 DEFAULT_PROVIDER = 'gemini'
 
 
 def default_model(name: str) -> str:
     """The model label a provider uses when no --model is given (names its files)."""
-    return {'gemini': 'gemini-3.8-flash', 'openai': 'gpt-4o',
+    return {'gemini': 'gemini-3.8-flash', 'openai': 'gpt-4o', 'deepseek': 'deepseek-chat',
             'claude': 'claude-opus-5-5', 'claude-code': 'claude-code'}[name]
 
 
@@ -39,7 +40,7 @@ def create_refactorer(name: str, model: Optional[str] = None,
             return ClaudeCodeRefactorer(model, effort)
         from .claude import ClaudeRefactorer
         return ClaudeRefactorer(model, effort)
-    if name in ('gemini', 'openai'):
+    if name in ('gemini', 'openai', 'deepseek'):
         if effort is not None:
             logger.warning("--effort only applies to the Claude providers; ignored")
         from .openai_compat import OpenAICompatibleRefactorer

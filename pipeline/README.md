@@ -38,6 +38,7 @@ from, or export it:
 GEMINI_API_KEY=...        # default provider (https://aistudio.google.com/apikey)
 ANTHROPIC_API_KEY=...     # only for --provider claude (https://platform.claude.com)
 OPENAI_API_KEY=...        # only for --provider openai
+DEEPSEEK_API_KEY=...      # only for --provider deepseek (https://platform.deepseek.com)
 SONAR_TOKEN=...           # optional: private SonarCloud projects, and official
                           # rule descriptions (see "Rule descriptions" below)
 ```
@@ -84,6 +85,7 @@ Useful options (see `python3 -m pipeline <command> --help`):
 | `--provider claude-code` | `refactor`, `run` | Claude through your Claude Code login (e.g. Pro plan) |
 | `--effort low…max` | `refactor`, `run` | Claude reasoning effort (default `high`) |
 | `--provider openai --model gpt-4o` | `refactor`, `run` | another LLM |
+| `--provider deepseek` | `refactor`, `run` | DeepSeek (default `deepseek-chat`; `--model deepseek-reasoner` for thinking mode) |
 | `--fresh` | `refactor`, `run` | redo every LLM call instead of reusing earlier results |
 
 Stage 3 saves after every issue and skips calls that already succeeded with
@@ -164,6 +166,7 @@ changes after SonarCloud has analysed the refactored code:
 | `claude` | `ANTHROPIC_API_KEY` (API credits) | `claude-opus-5-5` | see below |
 | `claude-code` | your Claude Code login (e.g. a Pro plan), no API key | the plan's default | see below |
 | `openai` | `OPENAI_API_KEY` | `gpt-4o` | temperature 0 |
+| `deepseek` | `DEEPSEEK_API_KEY` | `deepseek-chat` | temperature 0; `deepseek-reasoner` ignores temperature and its reasoning tokens count toward the 8192-token output limit |
 
 Every provider gets the same system prompt and user prompts. With Claude:
 

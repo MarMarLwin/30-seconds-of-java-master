@@ -32,7 +32,7 @@ from .workspace import Workspace
 
 logger = logging.getLogger('pipeline')
 
-PROVIDER_CHOICES = ['gemini', 'openai', 'claude', 'claude-code']   # see stage3/providers/
+PROVIDER_CHOICES = ['gemini', 'openai', 'deepseek', 'claude', 'claude-code']   # see stage3/providers/
 EFFORT_CHOICES = ['low', 'medium', 'high', 'xhigh', 'max']
 
 
@@ -188,6 +188,7 @@ def _add_prompt_args(p: argparse.ArgumentParser) -> None:
 def _add_refactor_args(p: argparse.ArgumentParser) -> None:
     p.add_argument('--provider', choices=PROVIDER_CHOICES, default='gemini',
                    help="LLM provider: gemini (GEMINI_API_KEY), openai (OPENAI_API_KEY), "
+                        "deepseek (DEEPSEEK_API_KEY), "
                         "claude (ANTHROPIC_API_KEY, API credits) or claude-code (your "
                         "Claude Code login, e.g. a Pro plan) (default: gemini)")
     p.add_argument('--model',
@@ -195,7 +196,7 @@ def _add_refactor_args(p: argparse.ArgumentParser) -> None:
                         "or claude-opus-5-5; for claude-code an alias such as sonnet or "
                         "opus, default: the plan's default model)")
     p.add_argument('--temperature', type=float,
-                   help="Sampling temperature for gemini/openai (default: 0.0); "
+                   help="Sampling temperature for gemini/openai/deepseek (default: 0.0); "
                         "not supported by Claude")
     p.add_argument('--effort', choices=EFFORT_CHOICES,
                    help="claude / claude-code only: reasoning effort (default: high)")

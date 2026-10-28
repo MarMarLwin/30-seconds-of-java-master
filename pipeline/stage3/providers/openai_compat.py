@@ -1,5 +1,5 @@
 """
-Providers with an OpenAI-compatible chat completions API (Gemini, OpenAI),
+Providers with an OpenAI-compatible chat completions API (Gemini, OpenAI, DeepSeek),
 called through the OpenAI SDK.
 """
 
@@ -40,6 +40,16 @@ PROVIDERS: Dict[str, Dict[str, Any]] = {
         'default_model': 'gpt-4o',
         'request_params': {'max_completion_tokens': 2048},
     },
+    'deepseek': {
+        'api_key_env': 'DEEPSEEK_API_KEY',
+        'base_url': 'https://api.deepseek.com',
+        'default_model': 'deepseek-chat',
+        'request_params': {
+            # deepseek-chat accepts at most 8192 output tokens. deepseek-reasoner
+            # ignores temperature, and its reasoning tokens count against this limit.
+            'max_tokens': 8192,
+        },
+    },
 }
 
 # Temperature 0 keeps outputs as repeatable as possible, so differences between
@@ -60,8 +70,10 @@ RETRYABLE_ERRORS = (
 def is_quota_error(error: BaseException) -> bool:
     """
     OpenAI reports an exhausted balance as a 429 RateLimitError, but unlike a
-    real rate limit it won't clear by waiting.
+    real rate limit it won't clear by waiting. DeepSeek uses 402 Insufficient Balance.
     """
+    if isinstance(error, openai.APIStatusError) and error.status_code == 402:
+        return True
     return (isinstance(error, openai.RateLimitError)
             and getattr(error, 'code', None) == 'insufficient_quota')
 
@@ -131,8 +143,8 @@ class OpenAICompatibleRefactorer:
             if is_key_error(e):
                 raise ProviderFatalError(self._key_rejected(e))
             if is_quota_error(e):
-                raise ProviderFatalError("The account has no remaining credit "
-                                         f"(insufficient_quota). Add billing. ({e})")
+                raise ProviderFatalError("The account has no remaining credit. "
+                                         f"Add billing or top up the balance. ({e})")
             result['error'] = f"{type(e).__name__}: {e}"
             return result
 
