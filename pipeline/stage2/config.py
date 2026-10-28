@@ -24,7 +24,7 @@ STRATEGIES = ['zero_shot', 'few_shot', 'repository_aware']
 DEFAULT_CONTEXT_BUDGET_TOKENS = 1500
 
 # A symbol that matches more declarations than this is too ambiguous to be
-# worth including (e.g. "build" matches every widget).
+# worth including (e.g. "build" matches every widget, "run" every Runnable).
 MAX_SYMBOL_MATCHES = 3
 
 # Method or function bodies longer than this are shown as a signature only.
@@ -51,12 +51,13 @@ INDEX_EXTENSIONS = ('.dart', '.yaml', '.yml', '.js', '.ts', '.java', '.kt', '.sw
 EXCLUDED_DIRS = {
     '.git', '.dart_tool', '.idea', '.vscode', '.scannerwork', 'build',
     'node_modules', 'Pods', '.gradle', '__pycache__', '.venv', 'venv',
+    'out', 'target', 'bin',
 }
 
 # Generated files add noise to retrieval.
 EXCLUDED_SUFFIXES = ('.g.dart', '.freezed.dart', '.mocks.dart')
 
-# Non-Dart files (and Dart members too long to embed whole) are split into
+# Files without an AST outline (and members too long to embed whole) are split into
 # overlapping line windows.
 CHUNK_LINES = 40
 CHUNK_OVERLAP = 10

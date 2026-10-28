@@ -92,23 +92,32 @@ class RuleCatalog:
 
     def get(self, rule_key: str) -> RuleInfo:
         if rule_key in self.cache:
-            return RuleInfo(**self.cache[rule_key])
+            # A curated description added after the rule was cached still applies.
+            return self._with_fallback(RuleInfo(**self.cache[rule_key]), warn=False)
 
         info = None if self.offline else self._fetch(rule_key)
         if info is None:
             info = RuleInfo(key=rule_key, name=rule_key)
-        if not info.description and rule_key in self.curated:
-            info.description = self.curated[rule_key]
-            info.description_source = 'curated'
-        if not info.description:
-            info.description = info.name
-            logger.warning("No description available for rule %s; using its name", rule_key)
 
         # Only cache what came from the network, so an offline run can be
-        # upgraded by a later online one.
+        # upgraded by a later online one, and curated text is never frozen in.
         if not self.offline:
             self.cache[rule_key] = info.to_dict()
             self._dirty = True
+        return self._with_fallback(info, warn=True)
+
+    def _with_fallback(self, info: RuleInfo, warn: bool) -> RuleInfo:
+        """Fill a missing official description from the curated file, else the rule name."""
+        if info.description_source == 'sonarcloud':
+            return info
+        if info.key in self.curated:
+            info.description = self.curated[info.key]
+            info.description_source = 'curated'
+        elif not info.description:
+            info.description = info.name
+            if warn:
+                logger.warning("No description available for rule %s; using its name",
+                               info.key)
         return info
 
     def _fetch(self, rule_key: str) -> Optional[RuleInfo]:

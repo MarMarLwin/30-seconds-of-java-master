@@ -37,3 +37,139 @@ dart:S7055: |
   referenced. Code that reads a parameter or catch variable named "_" relies
   on pre-wildcard behavior. Give the variable a real name (for example "e" or
   "error") wherever it is actually used.
+
+java:S1118: |
+  A class that only holds static members (a utility class) is never meant to
+  be instantiated, but without an explicit constructor Java gives it an
+  implicit public one, so callers can still write "new Utils()". Add a private
+  no-argument constructor to hide it. Do not change the static members.
+
+java:S9439: |
+  When a variable declaration already states the array type, the array
+  creation prefix in its initializer ("new int[][]") repeats that type.
+  Use the shorter array initializer form, for example
+  "int[][] grid = {{1, 2}, {3, 4}};". The resulting array is identical.
+
+java:S3415: |
+  Assertion methods such as assertEquals take the expected value first and
+  the actual value second. With the arguments swapped, a failing test reports
+  the expected and actual values the wrong way round, which misleads whoever
+  reads the failure. Pass the expected (usually literal or constant) value
+  first and the value under test second.
+
+java:S6204: |
+  Since Java 16, Stream.toList() returns an unmodifiable list and is shorter
+  and clearer than collect(Collectors.toList()). Use it when the resulting
+  list is never modified afterwards. Keep collect(Collectors.toList()) only
+  if code later adds to, removes from or otherwise changes the list.
+
+java:S5786: |
+  JUnit 5 does not require test classes or test methods (@Test,
+  @ParameterizedTest, @BeforeEach, ...) to be public, unlike JUnit 4. The
+  public modifier is noise there, so remove it and use default (package)
+  visibility. Leave non-test helper methods and private members unchanged.
+
+java:S1128: |
+  An import that nothing in the file uses clutters the file and suggests a
+  dependency that does not exist. Remove the unused import (and only that
+  import), leaving every import that is still referenced.
+
+java:S9342: |
+  Calling ZipOutputStream.putNextEntry (or JarOutputStream) and closing the
+  entry without writing anything creates an empty file in the archive, which
+  is almost always a bug: the content was meant to be written in between.
+  Write the intended bytes to the stream after putNextEntry and before
+  closeEntry. If an empty entry is intended (such as a directory), its name
+  should end with "/".
+
+java:S1488: |
+  Assigning an expression to a local variable only to return or throw that
+  variable on the next line adds noise without adding meaning. Return (or
+  throw) the expression directly and remove the temporary variable.
+
+java:S2095: |
+  Objects that implement Closeable or AutoCloseable (streams, readers,
+  connections, HTTP clients, ...) hold resources that must be released. If one
+  is never closed, or closed only on the success path, the resource leaks.
+  Open it in a try-with-resources statement so it is always closed, even when
+  an exception is thrown.
+
+java:S127: |
+  A for loop's counter should only be changed by the loop's update clause.
+  Changing it inside the body (for example "i++" in the middle) makes the
+  number of iterations hard to follow and easy to get wrong. If the step
+  varies, rewrite the loop as a while loop that updates the counter explicitly,
+  keeping the same behavior.
+
+java:S1481: |
+  A local variable that is declared and assigned but never read is dead code
+  and suggests a forgotten step. Remove the variable. If its initializer has a
+  side effect that is still needed, keep the expression as a statement.
+
+java:S1068: |
+  A private field that no code reads or writes is dead code: it takes up
+  space in every instance and confuses readers. Remove the field declaration.
+  Do not remove fields that are used through reflection or serialization.
+
+java:S1125: |
+  Comparing a boolean expression with a boolean literal ("x == true",
+  "x != false") or returning "cond ? true : false" is redundant. Use the
+  boolean expression directly (or its negation with "!"), keeping the same
+  logic.
+
+java:S9435: |
+  A ternary whose condition is a negation ("!a ? x : y") makes the reader
+  invert the logic. Remove the negation and swap the two branches
+  ("a ? y : x"); the result is the same and easier to read.
+
+java:S2140: |
+  Turning a random floating-point value into an integer (for example
+  "(long) (random.nextDouble() * bound)") is less efficient and gives a
+  slightly biased distribution. Use the Random method that returns an integer
+  in the needed range directly, such as nextInt(bound) or nextLong(bound).
+
+java:S112: |
+  Throwing generic exceptions such as RuntimeException, Exception or Error
+  forces callers to catch everything, so they cannot handle different
+  failures differently. Throw a specific existing exception that describes the
+  problem (IllegalArgumentException, IllegalStateException,
+  UncheckedIOException, ...) or a dedicated custom exception.
+
+java:S1319: |
+  Declaring a variable, field, parameter or return type as an implementation
+  class (HashMap, ArrayList, TreeSet, ...) ties the code to that
+  implementation. Declare it with the interface (Map, List, Set, ...) instead,
+  and keep the implementation only where the object is created.
+
+java:S5998: |
+  Java's regex engine implements repetition of a group containing an
+  alternation ("(a|b)*") recursively, so matching a long input can throw a
+  StackOverflowError. Rewrite the pattern to avoid it, for example with a
+  character class ("[ab]*") or a possessive or reluctant quantifier, keeping
+  the set of matched strings the same.
+
+java:S8786: |
+  A regular expression with nested or overlapping quantifiers (such as
+  "(\w+\s?)*") can match the same input in exponentially many ways, so a
+  failing match backtracks for a very long time (catastrophic backtracking,
+  a denial-of-service risk). Rewrite it so that each part of the input can be
+  matched in only one way, keeping the same set of matched strings.
+
+java:S7158: |
+  String.isEmpty() states the intent of an emptiness check directly and is
+  clearer than comparing length() with 0 or calling equals(""). Use
+  isEmpty() (or "!isEmpty()") in place of those comparisons. Keep any null
+  check that the original code needed.
+
+java:S5785: |
+  Asserting "assertTrue(a.equals(b))" (or assertFalse, or == on references)
+  only reports "expected true" when it fails, hiding the values that differed.
+  Use the dedicated assertion (assertEquals, assertNotEquals, assertSame,
+  assertNull, ...) with the expected value first, so a failure shows both
+  values.
+
+java:S2093: |
+  Since Java 7, try-with-resources closes resources automatically and
+  correctly, even when both the body and close() throw. Closing a resource
+  manually in a finally block is longer and easy to get wrong. Declare the
+  resource in a try-with-resources statement and remove the manual close().

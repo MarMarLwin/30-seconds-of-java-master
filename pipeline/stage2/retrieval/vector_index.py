@@ -2,8 +2,9 @@
 ChromaDB index of the repository, used for the vector part of repository-aware
 retrieval.
 
-Dart files are chunked along the AST: one chunk per method, constructor,
-top-level function or variable, plus a signature-only outline per type, so a
+Dart and Java files are chunked along the AST: one chunk per method,
+constructor, top-level function or variable, plus a signature-only outline
+per type, so a
 hit is a whole meaningful unit rather than an arbitrary 40-line window. Other
 files fall back to overlapping line windows.
 """
@@ -18,13 +19,14 @@ from typing import Any, Dict, Iterator, List, Optional, Sequence
 from ..config import (CHUNK_LINES, CHUNK_OVERLAP, EXCLUDED_DIRS, EXCLUDED_SUFFIXES,
                       INDEX_EXTENSIONS, MAX_MEMBER_CHUNK_LINES, WRITE_BATCH_SIZE)
 from ..models import IssueRecord, language_of
-from ...common.dart_ast import DartAstClient, FileOutline
+from ...common.ast_outline import FileOutline
+from ...common.ast_router import AstRouter
 
 logger = logging.getLogger(__name__)
 
 
 def _require_libraries():
-    # The Dart AST tool runs as a subprocess after the tokenizer is loaded;
+    # The AST tools run as subprocesses after the tokenizer is loaded;
     # without this, Hugging Face tokenizers warns on every fork.
     os.environ.setdefault('TOKENIZERS_PARALLELISM', 'false')
     try:
@@ -83,7 +85,7 @@ def line_window_chunks(rel_path: str, lines: List[str], first_line: int = 1,
     return chunks
 
 
-def dart_chunks(rel_path: str, lines: List[str], outline: FileOutline) -> List[Dict[str, Any]]:
+def outline_chunks(rel_path: str, lines: List[str], outline: FileOutline) -> List[Dict[str, Any]]:
     chunks = []
     for decl in outline.declarations:
         if decl.is_type:
@@ -106,7 +108,7 @@ def dart_chunks(rel_path: str, lines: List[str], outline: FileOutline) -> List[D
     return chunks
 
 
-def chunk_repository(repo_root: Path, ast: Optional[DartAstClient],
+def chunk_repository(repo_root: Path, ast: Optional[AstRouter],
                      exclude: Sequence[Path] = ()) -> List[Dict[str, Any]]:
     files = list(iter_source_files(repo_root, exclude))
     rel_paths = [p.relative_to(repo_root).as_posix() for p in files]
@@ -121,7 +123,7 @@ def chunk_repository(repo_root: Path, ast: Optional[DartAstClient],
             continue
         outline = outlines.get(rel_path)
         if outline is not None and outline.declarations:
-            chunks.extend(dart_chunks(rel_path, lines, outline))
+            chunks.extend(outline_chunks(rel_path, lines, outline))
         else:
             chunks.extend(line_window_chunks(rel_path, lines))
     logger.info("Split %d file(s) into %d chunk(s)", len(files), len(chunks))
@@ -133,7 +135,7 @@ def chunk_repository(repo_root: Path, ast: Optional[DartAstClient],
 # --------------------------------------------------------------------------- #
 
 def build_index(repo_root: Path, chroma_path: Path, collection_name: str, model_name: str,
-                ast: Optional[DartAstClient], git_commit: Optional[str],
+                ast: Optional[AstRouter], git_commit: Optional[str],
                 exclude: Sequence[Path] = ()) -> None:
     chromadb, sentence_transformer_cls = _require_libraries()
     chunks = chunk_repository(repo_root, ast, exclude)
@@ -158,7 +160,7 @@ def build_index(repo_root: Path, chroma_path: Path, collection_name: str, model_
             'embedding_model': model_name,
             'git_commit': git_commit or 'unknown',
             'built_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
-            'chunking': 'dart_ast' if ast is not None and ast.available else 'lines',
+            'chunking': '+'.join(f'{lang}_ast' for lang in ast.languages) if ast else 'lines',
         },
     )
 
