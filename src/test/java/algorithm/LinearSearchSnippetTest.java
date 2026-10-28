@@ -46,7 +46,7 @@ class LinearSearchSnippetTest {
     int[] arr2 = {1, 6, 4, 8, 4, 8, 9, 0, 1, 55, 1};
     assertEquals(3, LinearSearchSnippet.linearSearch(arr2, 8));
 
-    int[] arr3 = new int[]{4, 9, 1, 7, 33, 100, 11, 106};
+    int[] arr3 = {4, 9, 1, 7, 33, 100, 11, 106};
     assertEquals(-1, LinearSearchSnippet.linearSearch(arr3, 6));
   }
 

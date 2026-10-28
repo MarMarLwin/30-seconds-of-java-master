@@ -41,7 +41,7 @@ class LindenmayerSystemSnippetTest {
    * Tests for {@link LindenmayerSystemSnippet#generateLindenmayerSystem(String, Map, int)}.
    */
   @Test
-  public void testGenerateLindenmayerSystems() {
+  void testGenerateLindenmayerSystems() {
     String axiom = "A";
 
 

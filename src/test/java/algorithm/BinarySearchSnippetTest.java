@@ -47,7 +47,7 @@ class BinarySearchSnippetTest {
     int[] arr2 = {1, 1, 4, 4, 8, 8, 90, 100, 111, 550, 621};
     assertEquals(2, BinarySearchSnippet.binarySearch(arr2, 0, arr2.length - 1, 4));
 
-    int[] arr3 = new int[]{4, 9, 14, 71, 330, 400, 411, 556};
+    int[] arr3 = {4, 9, 14, 71, 330, 400, 411, 556};
     assertEquals(-1, BinarySearchSnippet.binarySearch(arr3, 0, arr3.length - 1, 6));
   }
 }

@@ -46,7 +46,7 @@ class MultiArrayConcatenationSnippetTest {
                                                               new String[12],
                                                               new String[3],
                                                               new String[8]);
-    assertEquals(multiple.length, 28);
+    assertEquals(28, multiple.length);
     assertThrows(NullPointerException.class, () -> MultiArrayConcatenationSnippet
             .multiArrayConcat(null, null, null, null));
   }
