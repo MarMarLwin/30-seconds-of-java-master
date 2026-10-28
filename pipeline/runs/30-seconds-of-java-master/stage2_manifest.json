@@ -1,11 +1,75 @@
 {
-  "generated_at": "2026-10-24T07:31:51.876974+00:00",
-  "git_commit": "090549f7b195ed09a87a80f2c95cf3cf2d7ef2fd",
+  "generated_at": "2026-10-28T08:13:25.794308+00:00",
+  "git_commit": "377b73d5b5e070716702e6d2d15c48f0a47ea05d",
   "dirty_files": [
-    ".DS_Store",
     "README.md",
-    "pipeline/",
-    "sonar-project.properties"
+    "pipeline/README.md",
+    "pipeline/__pycache__/__init__.cpython-313.pyc",
+    "pipeline/__pycache__/__main__.cpython-313.pyc",
+    "pipeline/__pycache__/cli.cpython-313.pyc",
+    "pipeline/__pycache__/workspace.cpython-313.pyc",
+    "pipeline/common/__pycache__/__init__.cpython-313.pyc",
+    "pipeline/common/__pycache__/ast_outline.cpython-313.pyc",
+    "pipeline/common/__pycache__/ast_router.cpython-313.pyc",
+    "pipeline/common/__pycache__/dart_ast.cpython-313.pyc",
+    "pipeline/common/__pycache__/env.cpython-313.pyc",
+    "pipeline/common/__pycache__/java_ast.cpython-313.pyc",
+    "pipeline/common/__pycache__/sonar_project.cpython-313.pyc",
+    "pipeline/common/ast_outline.py",
+    "pipeline/common/ast_router.py",
+    "pipeline/common/dart_ast.py",
+    "pipeline/common/java_ast.py",
+    "pipeline/runs/30-seconds-of-java-master/chroma_db/c1b22abe-cacd-4df0-a95d-f88f6855a6e1/data_level0.bin",
+    "pipeline/runs/30-seconds-of-java-master/chroma_db/chroma.sqlite3",
+    "pipeline/runs/30-seconds-of-java-master/stage1_snippets.json",
+    "pipeline/runs/30-seconds-of-java-master/stage2_prompts.json",
+    "pipeline/stage1/__pycache__/__init__.cpython-313.pyc",
+    "pipeline/stage1/__pycache__/extract.cpython-313.pyc",
+    "pipeline/stage1/__pycache__/fetch.cpython-313.pyc",
+    "pipeline/stage1/__pycache__/scoping.cpython-313.pyc",
+    "pipeline/stage1/extract.py",
+    "pipeline/stage1/scoping.py",
+    "pipeline/stage2/__init__.py",
+    "pipeline/stage2/__pycache__/__init__.cpython-313.pyc",
+    "pipeline/stage2/__pycache__/commands.cpython-313.pyc",
+    "pipeline/stage2/__pycache__/config.cpython-313.pyc",
+    "pipeline/stage2/__pycache__/generator.cpython-313.pyc",
+    "pipeline/stage2/__pycache__/models.cpython-313.pyc",
+    "pipeline/stage2/__pycache__/rules.cpython-313.pyc",
+    "pipeline/stage2/__pycache__/template.cpython-313.pyc",
+    "pipeline/stage2/commands.py",
+    "pipeline/stage2/config.py",
+    "pipeline/stage2/data/few_shot_examples.yaml",
+    "pipeline/stage2/data/rule_descriptions.yaml",
+    "pipeline/stage2/retrieval/__pycache__/__init__.cpython-313.pyc",
+    "pipeline/stage2/retrieval/__pycache__/import_graph.cpython-313.pyc",
+    "pipeline/stage2/retrieval/__pycache__/vector_index.cpython-313.pyc",
+    "pipeline/stage2/retrieval/import_graph.py",
+    "pipeline/stage2/retrieval/vector_index.py",
+    "pipeline/stage2/rules.py",
+    "pipeline/stage2/strategies/__pycache__/__init__.cpython-313.pyc",
+    "pipeline/stage2/strategies/__pycache__/base.cpython-313.pyc",
+    "pipeline/stage2/strategies/__pycache__/few_shot.cpython-313.pyc",
+    "pipeline/stage2/strategies/__pycache__/repo_aware.cpython-313.pyc",
+    "pipeline/stage2/strategies/__pycache__/zero_shot.cpython-313.pyc",
+    "pipeline/stage2/strategies/repo_aware.py",
+    "pipeline/stage3/__pycache__/__init__.cpython-313.pyc",
+    "pipeline/stage3/__pycache__/apply.cpython-313.pyc",
+    "pipeline/stage3/__pycache__/refactor.cpython-313.pyc",
+    "pipeline/stage3/providers/__pycache__/__init__.cpython-313.pyc",
+    "pipeline/stage3/providers/__pycache__/base.cpython-313.pyc",
+    "pipeline/stage3/providers/__pycache__/claude.cpython-313.pyc",
+    "pipeline/stage3/providers/__pycache__/claude_code.cpython-313.pyc",
+    "pipeline/stage3/providers/__pycache__/openai_compat.cpython-313.pyc",
+    "pipeline/tests/__pycache__/__init__.cpython-313.pyc",
+    "pipeline/tests/__pycache__/test_apply.cpython-313.pyc",
+    "pipeline/tests/__pycache__/test_retrieval.cpython-313.pyc",
+    "pipeline/tests/__pycache__/test_scoping.cpython-313.pyc",
+    "pipeline/tests/__pycache__/test_stage3.cpython-313.pyc",
+    "pipeline/tests/__pycache__/test_template.cpython-313.pyc",
+    "pipeline/tests/test_retrieval.py",
+    "pipeline/tests/test_scoping.py",
+    "pipeline/tools/java_ast/"
   ],
   "dirty_target_files": [],
   "settings": {
@@ -18,8 +82,8 @@
     "context_budget_tokens": 1500,
     "embedding_model": "all-MiniLM-L6-v2",
     "vector_index": {
-      "git_commit": "090549f7b195ed09a87a80f2c95cf3cf2d7ef2fd",
       "hnsw:space": "cosine",
+      "git_commit": "090549f7b195ed09a87a80f2c95cf3cf2d7ef2fd",
       "chunking": "dart_ast",
       "built_at": "2026-10-24T07:31:09.812013+00:00",
       "embedding_model": "all-MiniLM-L6-v2"
@@ -32,402 +96,44 @@
   "strategies": {
     "zero_shot": {
       "prompts": 121,
-      "approx_tokens": 20840,
+      "approx_tokens": 39971,
       "context_chunks": 0
     },
     "few_shot": {
-      "prompts": 2,
-      "approx_tokens": 680,
-      "context_chunks": 2
+      "prompts": 121,
+      "approx_tokens": 51021,
+      "context_chunks": 121
     },
     "repository_aware": {
       "prompts": 121,
-      "approx_tokens": 130296,
-      "context_chunks": 350
+      "approx_tokens": 101754,
+      "context_chunks": 324
     }
   },
   "rule_description_sources": {
     "githubactions:S7637": "curated",
-    "java:S1118": "name_only",
-    "java:S9439": "name_only",
-    "java:S1125": "name_only",
-    "java:S9435": "name_only",
-    "java:S6204": "name_only",
-    "java:S1128": "name_only",
-    "java:S9342": "name_only",
-    "java:S1488": "name_only",
-    "java:S2140": "name_only",
-    "java:S112": "name_only",
-    "java:S2095": "name_only",
-    "java:S1319": "name_only",
-    "java:S5998": "name_only",
-    "java:S8786": "name_only",
-    "java:S7158": "name_only",
-    "java:S127": "name_only",
-    "java:S1481": "name_only",
-    "java:S5786": "name_only",
-    "java:S5785": "name_only",
-    "java:S3415": "name_only",
-    "java:S1068": "name_only",
-    "java:S2093": "name_only"
+    "java:S1118": "curated",
+    "java:S9439": "curated",
+    "java:S1125": "curated",
+    "java:S9435": "curated",
+    "java:S6204": "curated",
+    "java:S1128": "curated",
+    "java:S9342": "curated",
+    "java:S1488": "curated",
+    "java:S2140": "curated",
+    "java:S112": "curated",
+    "java:S2095": "curated",
+    "java:S1319": "curated",
+    "java:S5998": "curated",
+    "java:S8786": "curated",
+    "java:S7158": "curated",
+    "java:S127": "curated",
+    "java:S1481": "curated",
+    "java:S5786": "curated",
+    "java:S5785": "curated",
+    "java:S3415": "curated",
+    "java:S1068": "curated",
+    "java:S2093": "curated"
   },
-  "skipped": {
-    "AaFsibi_N1YzpLYI6ZjB": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjAN1YzpLYI6ZjC": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibiwN1YzpLYI6Zi3": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibi2N1YzpLYI6Zi8": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibi0N1YzpLYI6Zi6": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibi9N1YzpLYI6ZjA": {
-      "few_shot": "no curated example for java:S9439 in few_shot_examples.yaml"
-    },
-    "AaFsibi1N1YzpLYI6Zi7": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibixN1YzpLYI6Zi4": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibi5N1YzpLYI6Zi-": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibi6N1YzpLYI6Zi_": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibi4N1YzpLYI6Zi9": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibivN1YzpLYI6Zi2": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibizN1YzpLYI6Zi5": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjCN1YzpLYI6ZjE": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjCN1YzpLYI6ZjF": {
-      "few_shot": "no curated example for java:S1125 in few_shot_examples.yaml"
-    },
-    "AaFsibjBN1YzpLYI6ZjD": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjPN1YzpLYI6ZjR": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjMN1YzpLYI6ZjO": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjHN1YzpLYI6ZjK": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjGN1YzpLYI6ZjI": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjGN1YzpLYI6ZjJ": {
-      "few_shot": "no curated example for java:S9435 in few_shot_examples.yaml"
-    },
-    "AaFsibjIN1YzpLYI6ZjL": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjNN1YzpLYI6ZjP": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjLN1YzpLYI6ZjN": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjON1YzpLYI6ZjQ": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjFN1YzpLYI6ZjH": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjKN1YzpLYI6ZjM": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibidN1YzpLYI6Zim": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibiZN1YzpLYI6Zih": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibiZN1YzpLYI6Zii": {
-      "few_shot": "no curated example for java:S6204 in few_shot_examples.yaml"
-    },
-    "AaFsibg3N1YzpLYI6Zif": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibg3N1YzpLYI6Zig": {
-      "few_shot": "no curated example for java:S6204 in few_shot_examples.yaml"
-    },
-    "AaFsibiaN1YzpLYI6Zij": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibiaN1YzpLYI6Zik": {
-      "few_shot": "no curated example for java:S6204 in few_shot_examples.yaml"
-    },
-    "AaFsibibN1YzpLYI6Zil": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjnN1YzpLYI6Zjt": {
-      "few_shot": "no curated example for java:S1128 in few_shot_examples.yaml"
-    },
-    "AaFsibjnN1YzpLYI6Zjs": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjpN1YzpLYI6Zju": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjqN1YzpLYI6Zjv": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjrN1YzpLYI6Zjw": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjhN1YzpLYI6Zjl": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjiN1YzpLYI6Zjm": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjgN1YzpLYI6Zjk": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjjN1YzpLYI6Zjn": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjlN1YzpLYI6Zjo": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjlN1YzpLYI6Zjp": {
-      "few_shot": "no curated example for java:S9342 in few_shot_examples.yaml"
-    },
-    "AaFsibjlN1YzpLYI6Zjq": {
-      "few_shot": "no curated example for java:S9342 in few_shot_examples.yaml"
-    },
-    "AaFsibjfN1YzpLYI6Zjj": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjmN1YzpLYI6Zjr": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjxN1YzpLYI6Zj2": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjwN1YzpLYI6Zj0": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjwN1YzpLYI6Zj1": {
-      "few_shot": "no curated example for java:S6204 in few_shot_examples.yaml"
-    },
-    "AaFsibiqN1YzpLYI6Ziy": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibiqN1YzpLYI6Zix": {
-      "few_shot": "no curated example for java:S1488 in few_shot_examples.yaml"
-    },
-    "AaFsibihN1YzpLYI6Zip": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibimN1YzpLYI6Ziu": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibiuN1YzpLYI6Zi1": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibieN1YzpLYI6Zin": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibiiN1YzpLYI6Ziq": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibisN1YzpLYI6Zi0": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibilN1YzpLYI6Zit": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibilN1YzpLYI6Zis": {
-      "few_shot": "no curated example for java:S1488 in few_shot_examples.yaml"
-    },
-    "AaFsibijN1YzpLYI6Zir": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibipN1YzpLYI6Ziw": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibifN1YzpLYI6Zio": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibinN1YzpLYI6Ziv": {
-      "few_shot": "no curated example for java:S2140 in few_shot_examples.yaml"
-    },
-    "AaFsibirN1YzpLYI6Ziz": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjuN1YzpLYI6Zjz": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjzN1YzpLYI6Zj6": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjzN1YzpLYI6Zj5": {
-      "few_shot": "no curated example for java:S112 in few_shot_examples.yaml"
-    },
-    "AaFsqnwhZptvl_vNu0T6": {
-      "few_shot": "no curated example for java:S2095 in few_shot_examples.yaml"
-    },
-    "AaFsibjyN1YzpLYI6Zj4": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjyN1YzpLYI6Zj3": {
-      "few_shot": "no curated example for java:S1319 in few_shot_examples.yaml"
-    },
-    "AaFsqnwcZptvl_vNu0T5": {
-      "few_shot": "no curated example for java:S2095 in few_shot_examples.yaml"
-    },
-    "AaFsibjWN1YzpLYI6Zja": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjbN1YzpLYI6Zjg": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjUN1YzpLYI6ZjW": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjUN1YzpLYI6ZjX": {
-      "few_shot": "no curated example for java:S5998 in few_shot_examples.yaml"
-    },
-    "AaFsibjUN1YzpLYI6ZjY": {
-      "few_shot": "no curated example for java:S8786 in few_shot_examples.yaml"
-    },
-    "AaFsibjdN1YzpLYI6Zji": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjVN1YzpLYI6ZjZ": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjTN1YzpLYI6ZjU": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjTN1YzpLYI6ZjV": {
-      "few_shot": "no curated example for java:S7158 in few_shot_examples.yaml"
-    },
-    "AaFsibjaN1YzpLYI6Zjf": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjYN1YzpLYI6Zjb": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjcN1YzpLYI6Zjh": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjZN1YzpLYI6Zje": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjZN1YzpLYI6Zjc": {
-      "few_shot": "no curated example for java:S127 in few_shot_examples.yaml"
-    },
-    "AaFsibjZN1YzpLYI6Zjd": {
-      "few_shot": "no curated example for java:S127 in few_shot_examples.yaml"
-    },
-    "AaFsibjQN1YzpLYI6ZjS": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjRN1YzpLYI6ZjT": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjEN1YzpLYI6ZjG": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjsN1YzpLYI6Zjx": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibjtN1YzpLYI6Zjy": {
-      "few_shot": "no curated example for java:S1118 in few_shot_examples.yaml"
-    },
-    "AaFsibj6N1YzpLYI6ZkA": {
-      "few_shot": "no curated example for java:S1481 in few_shot_examples.yaml"
-    },
-    "AaFsibj_N1YzpLYI6ZkD": {
-      "few_shot": "no curated example for java:S9439 in few_shot_examples.yaml"
-    },
-    "AaFsibj_N1YzpLYI6ZkE": {
-      "few_shot": "no curated example for java:S9439 in few_shot_examples.yaml"
-    },
-    "AaFsibj_N1YzpLYI6ZkF": {
-      "few_shot": "no curated example for java:S9439 in few_shot_examples.yaml"
-    },
-    "AaFsibj7N1YzpLYI6ZkB": {
-      "few_shot": "no curated example for java:S1481 in few_shot_examples.yaml"
-    },
-    "AaFsibj4N1YzpLYI6Zj9": {
-      "few_shot": "no curated example for java:S9439 in few_shot_examples.yaml"
-    },
-    "AaFsibj4N1YzpLYI6Zj-": {
-      "few_shot": "no curated example for java:S9439 in few_shot_examples.yaml"
-    },
-    "AaFsibj4N1YzpLYI6Zj_": {
-      "few_shot": "no curated example for java:S9439 in few_shot_examples.yaml"
-    },
-    "AaFsibj9N1YzpLYI6ZkC": {
-      "few_shot": "no curated example for java:S5786 in few_shot_examples.yaml"
-    },
-    "AaFsibkAN1YzpLYI6ZkG": {
-      "few_shot": "no curated example for java:S5785 in few_shot_examples.yaml"
-    },
-    "AaFsibkON1YzpLYI6ZkN": {
-      "few_shot": "no curated example for java:S3415 in few_shot_examples.yaml"
-    },
-    "AaFsibkON1YzpLYI6ZkO": {
-      "few_shot": "no curated example for java:S3415 in few_shot_examples.yaml"
-    },
-    "AaFsibkLN1YzpLYI6ZkL": {
-      "few_shot": "no curated example for java:S3415 in few_shot_examples.yaml"
-    },
-    "AaFsibkLN1YzpLYI6ZkM": {
-      "few_shot": "no curated example for java:S3415 in few_shot_examples.yaml"
-    },
-    "AaFsqnwoZptvl_vNu0T7": {
-      "few_shot": "no curated example for java:S1068 in few_shot_examples.yaml"
-    },
-    "AaFsqnwoZptvl_vNu0T8": {
-      "few_shot": "no curated example for java:S1068 in few_shot_examples.yaml"
-    },
-    "AaFsqnw6Zptvl_vNu0T9": {
-      "few_shot": "no curated example for java:S2093 in few_shot_examples.yaml"
-    },
-    "AaFsibkJN1YzpLYI6ZkJ": {
-      "few_shot": "no curated example for java:S3415 in few_shot_examples.yaml"
-    },
-    "AaFsibkJN1YzpLYI6ZkK": {
-      "few_shot": "no curated example for java:S3415 in few_shot_examples.yaml"
-    },
-    "AaFsibkCN1YzpLYI6ZkH": {
-      "few_shot": "no curated example for java:S1128 in few_shot_examples.yaml"
-    },
-    "AaFsibkEN1YzpLYI6ZkI": {
-      "few_shot": "no curated example for java:S1128 in few_shot_examples.yaml"
-    },
-    "AaFsibkRN1YzpLYI6ZkP": {
-      "few_shot": "no curated example for java:S5786 in few_shot_examples.yaml"
-    },
-    "AaFsibkTN1YzpLYI6ZkQ": {
-      "few_shot": "no curated example for java:S5786 in few_shot_examples.yaml"
-    },
-    "AaFsibj1N1YzpLYI6Zj7": {
-      "few_shot": "no curated example for java:S5786 in few_shot_examples.yaml"
-    },
-    "AaFsibj2N1YzpLYI6Zj8": {
-      "few_shot": "no curated example for java:S3415 in few_shot_examples.yaml"
-    }
-  }
+  "skipped": {}
 }

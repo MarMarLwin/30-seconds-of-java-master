@@ -22,9 +22,10 @@ Stages 4 (build and test runner) and 5 (evaluation matrix) are not implemented y
 
 ### 1. One-time setup
 
-Requirements: Python 3.9+, and the Dart SDK if the target repository is a
-Dart/Flutter project (used to parse Dart code; without it the pipeline still
-runs with simpler snippet scoping and context).
+Requirements: Python 3.9+, plus the parser for the target repository's
+language: a JDK 17+ (`java` on PATH) for Java, the Dart SDK for Dart/Flutter.
+They are used to parse the code; without them the pipeline still runs, with
+simpler snippet scoping and context for that language.
 
 ```sh
 cd <this repository>
@@ -68,7 +69,7 @@ python3 -m pipeline fetch-issues --repo .   # needs sonar.projectKey / sonar.org
 python3 -m pipeline extract      --repo .
 python3 -m pipeline index        --repo .   # again whenever the code changes
 python3 -m pipeline prompts      --repo .
-python3 -m pipeline inspect      --repo . --issue dart:S7115 --show repository_aware
+python3 -m pipeline inspect      --repo . --issue java:S1118 --show repository_aware
 python3 -m pipeline refactor     --repo . --limit 1
 ```
 
@@ -216,10 +217,10 @@ the same prompts never overwrites the first one's results.
 | What | Works out of the box | Add for better results |
 |---|---|---|
 | Issues | any SonarCloud project | |
-| Snippet scope | Dart (AST), GitHub Actions steps; other files get ±3 lines | a scoping rule in `stage1/scoping.py` |
+| Snippet scope | Java and Dart (AST), GitHub Actions steps; other files get ±3 lines | a scoping rule in `stage1/scoping.py` |
 | Rule descriptions | rule name from SonarCloud | `SONAR_TOKEN` (official text) or `stage2/data/rule_descriptions.yaml` |
 | Few-shot examples | none: the few-shot prompt is skipped for that rule | examples in `stage2/data/few_shot_examples.yaml` |
-| Repository context | same-file context and vector search for any language; Dart also gets the enclosing class and imported declarations | |
+| Repository context | same-file context and vector search for any language; Java and Dart also get the enclosing class and imported declarations | |
 
 ## Stage 2 design
 
@@ -256,6 +257,11 @@ syntax node that suits the rule:
 | `dart:S3358` nested ternary | innermost named argument or statement |
 | `dart:S7055` wildcard identifier | catch clause |
 | other Dart rules | innermost statement |
+| `java:S1118` utility class constructor, `java:S5786` test class modifiers | whole class (±3 lines if over 160 lines) |
+| `java:S3776`, `S1488`, `S2095`, `S2093`, `S9342`, `S1319`, `S112` | whole method or constructor |
+| `java:S127` loop counter changed in the body | the loop |
+| `java:S1128` unused import | ±3 lines |
+| other Java rules | innermost statement (including field declarations) |
 | `githubactions:*` | the workflow step |
 | anything else | ±3 lines |
 
@@ -267,7 +273,8 @@ in `cache/sonar_rules.json`. SonarCloud returns the description body only to
 an authenticated caller, so without `SONAR_TOKEN` the curated summaries in
 `stage2/data/rule_descriptions.yaml` are used. Each prompt record states the
 source in `rule_info.description_source` (`sonarcloud`, `curated` or
-`name_only`). After setting a token, run `prompts --refresh-rules`.
+`name_only`). Curated text added later also replaces a cached `name_only`
+entry. After setting a token, run `prompts --refresh-rules`.
 
 **Few-shot examples** (`stage2/data/few_shot_examples.yaml`). Keyed by rule
 and written from scratch: never copy code from the target repository, or the
@@ -278,9 +285,13 @@ example leaks the answer. A rule without examples gets no few-shot prompt
 are added in priority order until the budget is full:
 
 1. `enclosing_class`: outline (fields and member signatures) of the class
-   around the snippet; for non-Dart files, `same_file`: the rest of the file.
+   around the snippet; for files without an AST outline (other languages, or
+   no `java`/`dart` available), `same_file`: the rest of the file.
 2. `imported_declaration`: declarations of the symbols the snippet uses, in
-   the files it imports. A bare name matches top-level declarations, `x.name`
+   the files it imports. For Java that is imported classes and packages, plus
+   every class of its own package in any source root (`src/main/java`,
+   `src/test/java`, ...), so a test sees the class it tests. A bare name
+   matches top-level declarations, `x.name`
    matches members, `Type.name` only members of `Type`; names with more than
    3 matches are dropped as ambiguous.
 3. `vector`: the most similar chunks in the same language (cosine ≥ 0.45, at
@@ -290,11 +301,20 @@ Each chunk records its method, file, lines, symbol and score in
 `prompts.<strategy>.context`, so retrieval quality can be analysed with the
 results.
 
-**Dart AST** (`tools/dart_ast`, called by `common/dart_ast.py`). A small Dart
-package that parses files with `package:analyzer` (syntax only) and prints
-imports, declarations and scope nodes as JSON.
+**AST tools** (`tools/`, called through `common/ast_router.py`). One parser
+per language, all printing the same JSON (imports, declarations and scope
+nodes; model in `common/ast_outline.py`):
 
-**Vector index** (`stage2/retrieval/vector_index.py`). Dart files are chunked
+- `tools/dart_ast` (`common/dart_ast.py`): a small Dart package using
+  `package:analyzer`, syntax only.
+- `tools/java_ast/JavaAst.java` (`common/java_ast.py`): a single source file
+  run with `java JavaAst.java`, using the JDK's own compiler API
+  (`com.sun.source.tree`), syntax only. No build step or dependencies, and it
+  accepts any syntax the installed JDK knows (records, switch expressions, ...).
+
+A language's tool is only started when the repository has files in it.
+
+**Vector index** (`stage2/retrieval/vector_index.py`). Java and Dart files are chunked
 along the AST (one chunk per method or declaration, plus one outline per
 type); other files use 40-line windows. The pipeline folder and run folder
 are never indexed. The index records its embedding model and git commit, and
@@ -311,7 +331,8 @@ pipeline/
   cli.py                    `python -m pipeline` commands
   workspace.py              run folder and file names per repository
   requirements.txt
-  common/                   dart_ast.py, sonar_project.py, env.py (shared helpers)
+  common/                   ast_outline.py, ast_router.py, dart_ast.py, java_ast.py,
+                            sonar_project.py, env.py (shared helpers)
   stage1/                   fetch.py, extract.py, scoping.py
   stage2/
     commands.py             index / prompts / inspect
@@ -328,6 +349,7 @@ pipeline/
   stage3/providers/         openai_compat.py (Gemini, OpenAI), claude.py (API),
                             claude_code.py (Claude Code CLI / subscription)
   tools/dart_ast/           Dart AST dumper
+  tools/java_ast/           Java AST dumper (JavaAst.java)
   tests/                    python3 -m unittest discover -s pipeline/tests -t .
   runs/<repo>/              outputs, one folder per target repository
 ```

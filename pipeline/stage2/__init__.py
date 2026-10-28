@@ -8,6 +8,6 @@ attributed to the context alone:
 
     zero_shot         no context
     few_shot          curated before/after examples for the rule
-    repository_aware  code from this repository, retrieved via the Dart AST
+    repository_aware  code from this repository, retrieved via the Dart/Java AST
                       (imported declarations, enclosing class) and vector search
 """

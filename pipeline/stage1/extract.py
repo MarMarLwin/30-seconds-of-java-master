@@ -15,7 +15,7 @@ import sys
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from ..common.dart_ast import DartAstClient
+from ..common.ast_router import AstRouter
 from .scoping import line_buffer_scope, resolve_scope
 
 # --------------------------------------------------------------------------- #
@@ -112,7 +112,7 @@ def read_file_lines(file_path: Path, cache: Dict[Path, List[str]]) -> List[str]:
 
 
 def extract_snippet(lines: List[str], start_line: int, end_line: int, rule: str,
-                    file_path: str, ast: Optional[DartAstClient]) -> Dict[str, Any]:
+                    file_path: str, ast: Optional[AstRouter]) -> Dict[str, Any]:
     """
     Return the snippet for an issue: the enclosing syntax node when `ast` is
     given (or the file is a workflow), otherwise the lines
@@ -147,7 +147,7 @@ def extract_snippet(lines: List[str], start_line: int, end_line: int, rule: str,
 
 
 def process_issue(issue: Dict[str, Any], repo_root: Path, cache: Dict[Path, List[str]],
-                  ast: Optional[DartAstClient]) -> Optional[Dict[str, Any]]:
+                  ast: Optional[AstRouter]) -> Optional[Dict[str, Any]]:
     """Turn one SonarQube issue into an output record, or None if skipped."""
     key = issue.get('key', '<no-key>')
 
@@ -228,9 +228,9 @@ def extract_snippets(issues_path: Path, repo_root: Path, output_path: Path,
     issues = load_issues(issues_path)
     logger.info("Loaded %d issue(s) from %s", len(issues), issues_path)
 
-    # Workflow steps are scoped without the AST tool, so `ast` is still passed
-    # when dart is unavailable (Dart issues then fall back to the line buffer).
-    ast = DartAstClient(repo_root) if scope == 'ast' else None
+    # Workflow steps are scoped without an AST tool, so `ast` is still passed
+    # when dart or java is unavailable (those files then fall back to the line buffer).
+    ast = AstRouter(repo_root) if scope == 'ast' else None
     if ast is not None:
         ast.preload()
 

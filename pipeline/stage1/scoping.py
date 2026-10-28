@@ -15,32 +15,50 @@ import re
 from dataclasses import dataclass
 from typing import List, Optional, Sequence, Tuple
 
-from ..common.dart_ast import DartAstClient, Scope
+from ..common.ast_outline import Scope
+from ..common.ast_router import AstRouter
 
 logger = logging.getLogger(__name__)
 
-# Scope kinds, from the Dart AST tool or computed here:
+# Scope kinds, from the AST tools or computed here:
+#   type        class, interface, enum or record (Java)
 #   member      method, constructor or top-level function
 #   function    innermost closure, or the member if there is none
 #   expression  innermost named argument or statement
 #   catch       catch clause
-#   statement   innermost statement
+#   loop        for, for-each, while or do loop (Java)
+#   statement   innermost statement (Java: also field declarations and imports)
 #   yaml_step   one step of a GitHub Actions job
+# None means no syntactic scope: a fixed line buffer.
 RULE_SCOPES = {
     'dart:S3776': 'member',      # complexity is a property of the whole function
     'dart:S7115': 'function',    # the async gap and the context use are in one body
     'dart:S3358': 'expression',
     'dart:S7055': 'catch',
+
+    'java:S1118': 'type',        # the private constructor goes inside the class
+    'java:S5786': 'type',        # every test method's modifier, flagged on the class
+    'java:S3776': 'member',
+    'java:S1488': 'member',      # the assignment and the return are two statements
+    'java:S2095': 'member',      # the resource and where it should close
+    'java:S2093': 'member',
+    'java:S9342': 'member',      # the archive entry and the writes that should follow
+    'java:S1319': 'member',      # the declared type and how the value is used
+    'java:S112': 'member',
+    'java:S127': 'loop',
+    'java:S1128': None,          # an unused import is one line already
 }
-DEFAULT_DART_SCOPE = 'statement'
+DEFAULT_SCOPES = {'.dart': 'statement', '.java': 'statement'}
 DEFAULT_WORKFLOW_SCOPE = 'yaml_step'
 
 # Which AST scope kinds satisfy each requested scope.
 SCOPE_CANDIDATES = {
+    'type': ('type',),
     'member': ('member',),
     'function': ('function', 'member'),
     'expression': ('argument', 'statement'),
     'catch': ('catch',),
+    'loop': ('loop',),
     'statement': ('statement',),
 }
 
@@ -59,8 +77,9 @@ class SnippetScope:
 
 
 def scope_kind_for(rule: str, file_path: str) -> Optional[str]:
-    if file_path.endswith('.dart'):
-        return RULE_SCOPES.get(rule, DEFAULT_DART_SCOPE)
+    for extension, default in DEFAULT_SCOPES.items():
+        if file_path.endswith(extension):
+            return RULE_SCOPES.get(rule, default)
     if file_path.startswith('.github/workflows/') and rule.startswith('githubactions:'):
         return DEFAULT_WORKFLOW_SCOPE
     return None
@@ -81,7 +100,7 @@ def smallest_enclosing(scopes: Sequence[Scope], kinds: Tuple[str, ...],
     return min(matches, key=lambda s: (s.line_count, kinds.index(s.kind)))
 
 
-def dart_scope(scopes: Sequence[Scope], kind: str, start_line: int,
+def ast_scope(scopes: Sequence[Scope], kind: str, start_line: int,
                end_line: int) -> Optional[SnippetScope]:
     node = smallest_enclosing(scopes, SCOPE_CANDIDATES[kind], start_line, end_line)
     if node is None or node.line_count > MAX_SCOPE_LINES:
@@ -134,7 +153,7 @@ def yaml_step_scope(lines: List[str], start_line: int, end_line: int) -> Optiona
 
 
 def resolve_scope(rule: str, file_path: str, lines: List[str], start_line: int,
-                  end_line: int, ast: Optional[DartAstClient]) -> SnippetScope:
+                  end_line: int, ast: Optional[AstRouter]) -> SnippetScope:
     kind = scope_kind_for(rule, file_path)
     scope = None
     if kind == 'yaml_step':
@@ -142,7 +161,7 @@ def resolve_scope(rule: str, file_path: str, lines: List[str], start_line: int,
     elif kind and ast is not None:
         outline = ast.outline(file_path)
         if outline is not None:
-            scope = dart_scope(outline.scopes, kind, start_line, end_line)
+            scope = ast_scope(outline.scopes, kind, start_line, end_line)
 
     if scope is None:
         if kind:

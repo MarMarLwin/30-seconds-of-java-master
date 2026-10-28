@@ -154,3 +154,271 @@ dart:S7055:
       final names = users.map((_) => _.name).toList();
     after: |
       final names = users.map((user) => user.name).toList();
+
+java:S1118:
+  - title: Hide the constructor of a class with only static members
+    before: |
+      public class PriceUtils {
+        public static double withTax(double price, double rate) {
+          return price * (1 + rate);
+        }
+      }
+    after: |
+      public class PriceUtils {
+        private PriceUtils() {
+        }
+
+        public static double withTax(double price, double rate) {
+          return price * (1 + rate);
+        }
+      }
+
+java:S9439:
+  - title: Drop the redundant array creation in an initialized declaration
+    before: |
+      String[][] seats = new String[][] {{"A1", "A2"}, {"B1", "B2"}};
+    after: |
+      String[][] seats = {{"A1", "A2"}, {"B1", "B2"}};
+
+java:S3415:
+  - title: Put the expected value first in an assertion
+    before: |
+      assertEquals(order.itemCount(), 3);
+    after: |
+      assertEquals(3, order.itemCount());
+
+java:S6204:
+  - title: Use Stream.toList() for a list that is never modified
+    before: |
+      List<String> emails = users.stream()
+          .map(User::email)
+          .collect(Collectors.toList());
+    after: |
+      List<String> emails = users.stream()
+          .map(User::email)
+          .toList();
+
+java:S5786:
+  - title: Drop public from JUnit 5 test classes and methods
+    before: |
+      public class CartTest {
+        @Test
+        public void emptyCartHasZeroTotal() {
+          assertEquals(0, new Cart().total());
+        }
+      }
+    after: |
+      class CartTest {
+        @Test
+        void emptyCartHasZeroTotal() {
+          assertEquals(0, new Cart().total());
+        }
+      }
+
+java:S1128:
+  - title: Remove an import that nothing uses
+    before: |
+      import java.time.LocalDate;
+      import java.util.List;
+      import java.util.Map;
+    after: |
+      import java.time.LocalDate;
+      import java.util.List;
+
+java:S9342:
+  - title: Write the content of an archive entry before closing it
+    before: |
+      static void addReport(ZipOutputStream zip, String name, byte[] data) throws IOException {
+        zip.putNextEntry(new ZipEntry(name));
+        zip.closeEntry();
+      }
+    after: |
+      static void addReport(ZipOutputStream zip, String name, byte[] data) throws IOException {
+        zip.putNextEntry(new ZipEntry(name));
+        zip.write(data);
+        zip.closeEntry();
+      }
+
+java:S1488:
+  - title: Return the expression instead of a temporary variable
+    before: |
+      int discountedPrice(int price, int percent) {
+        int discounted = price - price * percent / 100;
+        return discounted;
+      }
+    after: |
+      int discountedPrice(int price, int percent) {
+        return price - price * percent / 100;
+      }
+
+java:S2095:
+  - title: Close a resource with try-with-resources
+    before: |
+      static String firstLine(Path file) throws IOException {
+        BufferedReader reader = Files.newBufferedReader(file);
+        return reader.readLine();
+      }
+    after: |
+      static String firstLine(Path file) throws IOException {
+        try (BufferedReader reader = Files.newBufferedReader(file)) {
+          return reader.readLine();
+        }
+      }
+
+java:S127:
+  - title: Use a while loop when the body moves the counter
+    before: |
+      for (int i = 0; i < tokens.length; i++) {
+        if (tokens[i].equals("--skip")) {
+          i++;
+          continue;
+        }
+        process(tokens[i]);
+      }
+    after: |
+      int i = 0;
+      while (i < tokens.length) {
+        if (tokens[i].equals("--skip")) {
+          i += 2;
+          continue;
+        }
+        process(tokens[i]);
+        i++;
+      }
+
+java:S1481:
+  - title: Remove a local variable that is never read
+    before: |
+      double average(List<Integer> scores) {
+        int count = scores.size();
+        return scores.stream().mapToInt(Integer::intValue).average().orElse(0);
+      }
+    after: |
+      double average(List<Integer> scores) {
+        return scores.stream().mapToInt(Integer::intValue).average().orElse(0);
+      }
+
+java:S1068:
+  - title: Remove a private field that is never used
+    before: |
+      private final String warehouseCode;
+      private final List<Shipment> shipments = new ArrayList<>();
+    after: |
+      private final List<Shipment> shipments = new ArrayList<>();
+
+java:S1125:
+  - title: Remove a redundant boolean literal
+    before: |
+      if (account.isLocked() == true) {
+        return false;
+      }
+      return account.isActive() ? true : false;
+    after: |
+      if (account.isLocked()) {
+        return false;
+      }
+      return account.isActive();
+
+java:S9435:
+  - title: Invert a negated ternary condition
+    before: |
+      String label = !stock.isEmpty() ? "In stock" : "Sold out";
+    after: |
+      String label = stock.isEmpty() ? "Sold out" : "In stock";
+
+java:S2140:
+  - title: Ask Random for a bounded long directly
+    before: |
+      long ticket = (long) (random.nextDouble() * maxTicket);
+    after: |
+      long ticket = random.nextLong(maxTicket);
+
+java:S112:
+  - title: Throw a specific exception instead of a generic one
+    before: |
+      static int parseQuantity(String text) {
+        if (text == null || text.isBlank()) {
+          throw new RuntimeException("Quantity is required");
+        }
+        return Integer.parseInt(text.trim());
+      }
+    after: |
+      static int parseQuantity(String text) {
+        if (text == null || text.isBlank()) {
+          throw new IllegalArgumentException("Quantity is required");
+        }
+        return Integer.parseInt(text.trim());
+      }
+
+java:S1319:
+  - title: Declare a collection by its interface
+    before: |
+      static int totalStock(HashMap<String, Integer> stockBySku) {
+        int total = 0;
+        for (int count : stockBySku.values()) {
+          total += count;
+        }
+        return total;
+      }
+    after: |
+      static int totalStock(Map<String, Integer> stockBySku) {
+        int total = 0;
+        for (int count : stockBySku.values()) {
+          total += count;
+        }
+        return total;
+      }
+
+java:S5998:
+  - title: Replace a repeated alternation with a character class
+    before: |
+      static boolean isHexColor(String value) {
+        return value.matches("#(0|1|2|3|4|5|6|7|8|9|a|b|c|d|e|f)*");
+      }
+    after: |
+      static boolean isHexColor(String value) {
+        return value.matches("#[0-9a-f]*");
+      }
+
+java:S8786:
+  - title: Remove nested quantifiers that backtrack
+    before: |
+      private static final Pattern TAGS = Pattern.compile("^(\\w+\\s?)*$");
+    after: |
+      private static final Pattern TAGS = Pattern.compile("^(?:\\w+(?:\\s\\w+)*\\s?)?$");
+
+java:S7158:
+  - title: Check for an empty string with isEmpty()
+    before: |
+      if (customer.name().length() == 0) {
+        return "Guest";
+      }
+    after: |
+      if (customer.name().isEmpty()) {
+        return "Guest";
+      }
+
+java:S5785:
+  - title: Use assertEquals for an equality check
+    before: |
+      assertTrue(invoice.currency().equals("EUR"));
+    after: |
+      assertEquals("EUR", invoice.currency());
+
+java:S2093:
+  - title: Replace try/finally closing with try-with-resources
+    before: |
+      static void saveNotes(Path file, String text) throws IOException {
+        Writer writer = Files.newBufferedWriter(file);
+        try {
+          writer.write(text);
+        } finally {
+          writer.close();
+        }
+      }
+    after: |
+      static void saveNotes(Path file, String text) throws IOException {
+        try (Writer writer = Files.newBufferedWriter(file)) {
+          writer.write(text);
+        }
+      }
