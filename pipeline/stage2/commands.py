@@ -10,7 +10,7 @@ import json
 import logging
 from typing import Optional
 
-from ..common.dart_ast import DartAstClient
+from ..common.ast_router import AstRouter
 from ..common.sonar_project import read_sonar_properties
 from ..workspace import Workspace
 from . import config
@@ -24,9 +24,9 @@ logger = logging.getLogger(__name__)
 
 def build_index(ws: Workspace, embedding_model: str = config.DEFAULT_EMBEDDING_MODEL) -> None:
     from .retrieval.vector_index import build_index as build
-    ast = DartAstClient(ws.repo_root)
+    ast = AstRouter(ws.repo_root)
     build(ws.repo_root, ws.chroma_path, config.COLLECTION_NAME, embedding_model,
-          ast if ast.available else None, git_state(ws.repo_root)['git_commit'],
+          ast, git_state(ws.repo_root)['git_commit'],
           exclude=ws.excluded_paths)
 
 
@@ -48,7 +48,7 @@ def generate_prompts(ws: Workspace, budget: int = config.DEFAULT_CONTEXT_BUDGET_
     strategies = [ZeroShotStrategy(), FewShotStrategy()]
     vector = None
     if not skip_rag:
-        ast = DartAstClient(ws.repo_root)
+        ast = AstRouter(ws.repo_root)
         ast.preload()
         if not no_vector:
             from .retrieval.vector_index import VectorIndex

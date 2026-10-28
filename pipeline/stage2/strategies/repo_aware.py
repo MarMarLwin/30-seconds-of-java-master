@@ -7,11 +7,13 @@ used up:
   1. enclosing_class       An outline (fields and member signatures) of the
                            class around the snippet, e.g. the State fields and
                            helper methods a widget's build method uses.
-     same_file             For non-Dart files: the rest of the file, with the
-                           snippet replaced by a marker.
-  2. imported_declaration  Declarations, in files the target imports, of the
-                           symbols the snippet uses (found via the Dart AST and
-                           import graph). Symbols on the flagged lines first.
+     same_file             For files without an AST outline (other languages,
+                           or no dart/java available): the rest of the file,
+                           with the snippet replaced by a marker.
+  2. imported_declaration  Declarations, in files the target imports (for Java
+                           also its own package), of the symbols the snippet
+                           uses (found via the AST and import graph). Symbols
+                           on the flagged lines first.
                            A bare name matches top-level declarations only; a
                            name after a dot matches members, restricted to the
                            receiver's type when the receiver is a type name
@@ -29,15 +31,16 @@ from ..config import (DEFAULT_CONTEXT_BUDGET_TOKENS, MAX_INLINE_BODY_LINES,
                       MAX_SYMBOL_MATCHES, MIN_VECTOR_SCORE, VECTOR_OVERFETCH,
                       VECTOR_TOP_K)
 from ..models import ContextChunk, IssueRecord, RuleInfo, fence_language
-from ...common.dart_ast import DartAstClient, Declaration, FileOutline
+from ...common.ast_outline import Declaration, FileOutline
+from ...common.ast_router import AstRouter
 from ..retrieval.import_graph import ImportGraph
 from ..retrieval.vector_index import VectorIndex
 
 logger = logging.getLogger(__name__)
 
-# Never worth looking up: Dart keywords, core types, and names so common in
-# Flutter code that any match would be a guess.
-IGNORED_IDENTIFIERS = set("""
+# Never worth looking up: keywords, core types, and names so common that any
+# match would be a guess.
+DART_IGNORED_IDENTIFIERS = set("""
     abstract as assert async await base break case catch class const continue
     covariant default deferred do dynamic else enum export extends extension
     external factory false final finally for get hide if implements import in
@@ -50,16 +53,38 @@ IGNORED_IDENTIFIERS = set("""
     dispose initState createState of index error e st print debugPrint
 """.split())
 
+JAVA_IGNORED_IDENTIFIERS = set("""
+    abstract assert boolean break byte case catch char class const continue
+    default do double else enum extends final finally float for goto if
+    implements import instanceof int interface long native new non-sealed
+    package permits private protected public record return sealed short static
+    strictfp super switch synchronized this throw throws transient try var void
+    volatile when while yield true false null
+    String Integer Long Double Float Short Byte Character Boolean Number Object
+    Math System out err println printf print format valueOf toString equals
+    hashCode length size get put add of List ArrayList Map HashMap Set HashSet
+    Collection Collections Arrays Optional Stream IntStream Collectors toList
+    Exception RuntimeException IllegalArgumentException IllegalStateException
+    Override Test BeforeEach AfterEach Assertions assertEquals assertTrue
+    assertFalse assertNull assertNotNull assertThrows assertThat is equalTo
+    args main value name key index result e ex
+""".split())
+
+IGNORED_IDENTIFIERS = {'dart': DART_IGNORED_IDENTIFIERS, 'java': JAVA_IGNORED_IDENTIFIERS}
+
+# Languages with an AST tool, which get structural retrieval.
+STRUCTURAL_LANGUAGES = ('dart', 'java')
+
 MAX_OUTLINE_MEMBERS = 30
 SAME_FILE_WINDOW_LINES = 60
 
 _IDENTIFIER_RE = re.compile(r'[A-Za-z_$][A-Za-z0-9_$]*')
 _STRING_RE = re.compile(r"'(?:\\.|[^'\\])*'|\"(?:\\.|[^\"\\])*\"")
-_COMMENT_RE = re.compile(r'//[^\n]*')
+_COMMENT_RE = re.compile(r'//[^\n]*|/\*.*?\*/', re.DOTALL)
 _RECEIVER_RE = re.compile(r'([A-Za-z_$][A-Za-z0-9_$]*)\s*[?!]?\.$')
 
 
-def references_in(code: str) -> List[Tuple[str, Optional[str]]]:
+def references_in(code: str, language: str = 'dart') -> List[Tuple[str, Optional[str]]]:
     """
     (name, receiver) for each identifier, in order of first appearance,
     ignoring strings and comments. receiver is None for a bare name, the
@@ -67,10 +92,11 @@ def references_in(code: str) -> List[Tuple[str, Optional[str]]]:
     an expression such as a call.
     """
     code = _COMMENT_RE.sub('', _STRING_RE.sub("''", code))
+    ignored = IGNORED_IDENTIFIERS.get(language, DART_IGNORED_IDENTIFIERS)
     seen: Dict[Tuple[str, Optional[str]], None] = {}
     for match in _IDENTIFIER_RE.finditer(code):
         name = match.group(0)
-        if name in IGNORED_IDENTIFIERS or len(name) < 2:
+        if name in ignored or len(name) < 2:
             continue
         before = code[:match.start()].rstrip()
         receiver = None
@@ -114,7 +140,7 @@ def _matching(candidates: List[Tuple[FileOutline, Declaration]], receiver: Optio
 class RepoAwareStrategy:
     name = 'repository_aware'
 
-    def __init__(self, repo_root: Path, ast: Optional[DartAstClient],
+    def __init__(self, repo_root: Path, ast: Optional[AstRouter],
                  vector: Optional[VectorIndex],
                  budget_tokens: int = DEFAULT_CONTEXT_BUDGET_TOKENS):
         self.repo_root = repo_root
@@ -128,10 +154,12 @@ class RepoAwareStrategy:
 
     def build(self, issue: IssueRecord, rule: RuleInfo) -> List[ContextChunk]:
         candidates: List[ContextChunk] = []
-        if issue.language == 'dart':
-            if self.graph is not None:
-                candidates += self._enclosing_class(issue)
-                candidates += self._imported_declarations(issue)
+        outline = None
+        if self.graph is not None and issue.language in STRUCTURAL_LANGUAGES:
+            outline = self.ast.outline(issue.file_path)
+        if outline is not None:
+            candidates += self._enclosing_class(issue, outline)
+            candidates += self._imported_declarations(issue)
         else:
             candidates += self._same_file(issue)
         if self.vector is not None:
@@ -184,8 +212,9 @@ class RepoAwareStrategy:
             return []
         table = self._symbol_table(files)
 
-        flagged = references_in(issue.flagged_code)
-        rest = [r for r in references_in(issue.target_snippet) if r not in flagged]
+        flagged = references_in(issue.flagged_code, issue.language)
+        rest = [r for r in references_in(issue.target_snippet, issue.language)
+                if r not in flagged]
         chunks = []
         for name, receiver in flagged + rest:
             matches = _matching(table.get(name, []), receiver)
@@ -230,11 +259,13 @@ class RepoAwareStrategy:
     # 1. Enclosing class / same file
     # ------------------------------------------------------------------ #
 
-    def _enclosing_class(self, issue: IssueRecord) -> List[ContextChunk]:
-        outline = self.ast.outline(issue.file_path)
-        if outline is None:
-            return []
-        decl = outline.enclosing_type(issue.snippet_start_line, issue.snippet_end_line)
+    def _enclosing_class(self, issue: IssueRecord, outline: FileOutline) -> List[ContextChunk]:
+        snippet = (issue.snippet_start_line, issue.snippet_end_line)
+        # A snippet that is a whole type (Java 'type' scope) is not its own context.
+        types = [d for d in outline.declarations if d.is_type
+                 and d.start_line <= snippet[0] and snippet[1] <= d.end_line
+                 and (d.start_line, d.end_line) != snippet]
+        decl = min(types, key=lambda d: d.line_count, default=None)
         if decl is None:
             return []
         body = self._outline_body(outline, decl,

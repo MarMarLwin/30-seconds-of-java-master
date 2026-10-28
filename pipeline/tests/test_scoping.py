@@ -2,8 +2,10 @@ import shutil
 import unittest
 from pathlib import Path
 
-from pipeline.common.dart_ast import DartAstClient, Scope
-from pipeline.stage1.scoping import (dart_scope, resolve_scope, scope_kind_for,
+from pipeline.common.ast_outline import Scope
+from pipeline.common.dart_ast import DartAstClient
+from pipeline.common.java_ast import JavaAstClient, java_major_version
+from pipeline.stage1.scoping import (ast_scope, resolve_scope, scope_kind_for,
                                      yaml_step_scope)
 
 WORKFLOW = """\
@@ -21,6 +23,38 @@ jobs:
       - name: Build
         run: flutter build apk
 """.splitlines()
+
+JAVA = """\
+package shop;
+
+import java.util.List;
+
+/** Totals. */
+@SuppressWarnings("unused")
+public class Totals {
+  private final int limit = 3;
+
+  public static int sum(List<Integer> values) {
+    int total = 0;
+    for (int i = 0; i < values.size(); i++) {
+      total += values.get(i);
+    }
+    try {
+      check(values);
+    } catch (IllegalStateException e) {
+      return -1;
+    }
+    values.forEach(v -> {
+      System.out.println(v);
+    });
+    return total;
+  }
+
+  record Line(String sku, int qty) {}
+
+  enum Unit { PIECE, BOX }
+}
+"""
 
 DART = """\
 class Foo {
@@ -72,30 +106,34 @@ class DartScopeTest(unittest.TestCase):
     ]
 
     def test_member(self):
-        scope = dart_scope(self.SCOPES, 'member', 4, 4)
+        scope = ast_scope(self.SCOPES, 'member', 4, 4)
         self.assertEqual((scope.start_line, scope.end_line), (4, 17))
 
     def test_expression_prefers_smallest(self):
-        scope = dart_scope(self.SCOPES, 'expression', 7, 7)
+        scope = ast_scope(self.SCOPES, 'expression', 7, 7)
         self.assertEqual((scope.start_line, scope.end_line), (6, 7))
 
     def test_function_prefers_closure(self):
-        scope = dart_scope(self.SCOPES, 'function', 15, 15)
+        scope = ast_scope(self.SCOPES, 'function', 15, 15)
         self.assertEqual((scope.start_line, scope.end_line), (13, 16))
 
     def test_catch(self):
-        scope = dart_scope(self.SCOPES, 'catch', 11, 11)
+        scope = ast_scope(self.SCOPES, 'catch', 11, 11)
         self.assertEqual((scope.start_line, scope.end_line), (10, 12))
 
     def test_no_match_returns_none(self):
-        self.assertIsNone(dart_scope(self.SCOPES, 'catch', 5, 5))
+        self.assertIsNone(ast_scope(self.SCOPES, 'catch', 5, 5))
 
     def test_rule_mapping(self):
         self.assertEqual(scope_kind_for('dart:S3776', 'lib/a.dart'), 'member')
         self.assertEqual(scope_kind_for('dart:S9999', 'lib/a.dart'), 'statement')
         self.assertEqual(scope_kind_for('githubactions:S7637', '.github/workflows/b.yaml'),
                          'yaml_step')
-        self.assertIsNone(scope_kind_for('java:S1', 'src/A.java'))
+        self.assertEqual(scope_kind_for('java:S1118', 'src/A.java'), 'type')
+        self.assertEqual(scope_kind_for('java:S127', 'src/A.java'), 'loop')
+        self.assertEqual(scope_kind_for('java:S9999', 'src/A.java'), 'statement')
+        self.assertIsNone(scope_kind_for('java:S1128', 'src/A.java'))
+        self.assertIsNone(scope_kind_for('kotlin:S1', 'src/A.kt'))
 
     def test_falls_back_to_line_buffer(self):
         scope = resolve_scope('java:S1', 'src/A.java', ['x'] * 20, 10, 10, None)
@@ -145,6 +183,74 @@ class DartAstIntegrationTest(unittest.TestCase):
         self.assertIn(('class', 'Foo', None), names)
         self.assertIn(('field', 'x', 'Foo'), names)
         self.assertIn(('method', 'bar', 'Foo'), names)
+
+
+class JavaVersionTest(unittest.TestCase):
+    def test_parses_modern_and_legacy_versions(self):
+        self.assertEqual(java_major_version('openjdk version "21.0.2" 2024-01-16'), 21)
+        self.assertEqual(java_major_version('openjdk version "23" 2024-09-17'), 23)
+        self.assertEqual(java_major_version('java version "1.8.0_392"'), 8)
+        self.assertEqual(java_major_version('nonsense'), 0)
+
+
+@unittest.skipUnless(shutil.which('java') and JavaAstClient(Path('.')).available,
+                     'JDK 17+ is not installed')
+class JavaAstIntegrationTest(unittest.TestCase):
+    """Runs the real Java AST tool on JAVA above."""
+
+    PATH = 'src/main/java/shop/Totals.java'
+
+    @classmethod
+    def setUpClass(cls):
+        import tempfile
+        cls.tmp = tempfile.TemporaryDirectory()
+        root = Path(cls.tmp.name)
+        (root / 'src/main/java/shop').mkdir(parents=True)
+        (root / cls.PATH).write_text(JAVA)
+        cls.ast = JavaAstClient(root)
+        cls.lines = JAVA.splitlines()
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.tmp.cleanup()
+
+    def scope(self, rule, line):
+        return resolve_scope(rule, self.PATH, self.lines, line, line, self.ast)
+
+    def test_utility_class_rule_takes_whole_class_without_javadoc(self):
+        s = self.scope('java:S1118', 7)
+        self.assertEqual((s.start_line, s.end_line, s.kind), (6, 29, 'type'))
+
+    def test_complexity_takes_whole_method(self):
+        s = self.scope('java:S3776', 10)
+        self.assertEqual((s.start_line, s.end_line, s.kind), (10, 24, 'member'))
+
+    def test_loop_counter_rule_takes_loop(self):
+        s = self.scope('java:S127', 13)
+        self.assertEqual((s.start_line, s.end_line, s.kind), (12, 14, 'loop'))
+
+    def test_default_takes_innermost_statement(self):
+        s = self.scope('java:S9999', 13)
+        self.assertEqual((s.start_line, s.end_line, s.kind), (13, 13, 'statement'))
+        s = self.scope('java:S1068', 8)
+        self.assertEqual((s.start_line, s.end_line, s.kind), (8, 8, 'statement'))
+
+    def test_outline(self):
+        outline = self.ast.outline(self.PATH)
+        names = {(d.kind, d.name, d.parent) for d in outline.declarations}
+        self.assertIn(('class', 'Totals', None), names)
+        self.assertIn(('field', 'limit', 'Totals'), names)
+        self.assertIn(('method', 'sum', 'Totals'), names)
+        self.assertIn(('record', 'Line', 'Totals'), names)
+        self.assertIn(('enum_constant', 'BOX', 'Unit'), names)
+        signatures = {d.name: d.signature for d in outline.declarations}
+        self.assertEqual(signatures['Totals'], 'public class Totals')
+        self.assertEqual(signatures['sum'], 'public static int sum(List<Integer> values)')
+        self.assertIn({'uri': 'shop', 'kind': 'package'}, outline.imports)
+        self.assertIn({'uri': 'java.util.List', 'kind': 'import'}, outline.imports)
+        kinds = {s.kind for s in outline.scopes}
+        self.assertTrue({'type', 'member', 'statement', 'loop', 'try', 'catch',
+                         'function'} <= kinds)
 
 
 if __name__ == '__main__':
