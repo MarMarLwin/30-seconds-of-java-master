@@ -57,13 +57,4 @@ public class PalindromCheckSnippet {
     }
     return true;
   }
-      }
-
-      if (Character.toLowerCase(s.charAt(i)) != Character.toLowerCase(s.charAt(j))) {
-        return false;
-      }
-    }
-
-    return true;
-  }
-}
+     
