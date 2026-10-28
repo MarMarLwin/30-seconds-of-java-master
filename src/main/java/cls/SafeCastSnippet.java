@@ -31,6 +31,10 @@ import java.util.Optional;
  */
 public class SafeCastSnippet {
 
+  private SafeCastSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
   /**
    * Safely casts an object to the specified type.
    *

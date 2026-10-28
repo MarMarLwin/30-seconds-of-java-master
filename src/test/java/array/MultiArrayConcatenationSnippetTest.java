@@ -40,7 +40,7 @@ class MultiArrayConcatenationSnippetTest {
   @Test
   void testnArrayConcat() {
     var single = MultiArrayConcatenationSnippet.multiArrayConcat(new Integer[1]);
-    assertEquals(single.length, 1);
+    assertEquals(1, single.length);
     var multiple
             = MultiArrayConcatenationSnippet.multiArrayConcat(new String[5],
                                                               new String[12],

@@ -34,6 +34,10 @@ import java.util.stream.Collectors;
  */
 public class GetAllPublicFieldNamesSnippet {
 
+  private GetAllPublicFieldNamesSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
   /**
    * Print all declared public field names of the class or the interface the class extends.
    *
@@ -43,6 +47,6 @@ public class GetAllPublicFieldNamesSnippet {
   public static List<String> getAllPublicFieldNames(final Class<?> clazz) {
     return Arrays.stream(clazz.getFields())
         .map(Field::getName)
-        .collect(Collectors.toList());
+        .toList();
   }
 }

@@ -34,6 +34,10 @@ import java.util.List;
  */
 public class ReadLinesSnippet {
 
+  private ReadLinesSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
   /**
    * Read file as list of strings.
    *

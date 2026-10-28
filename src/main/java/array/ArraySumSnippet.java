@@ -31,6 +31,10 @@ import java.util.Arrays;
  */
 public class ArraySumSnippet {
 
+  private ArraySumSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
   /**
    * Returns sum of the integers in the array.
    *

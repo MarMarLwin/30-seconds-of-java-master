@@ -29,6 +29,10 @@ package math;
  */
 public class FactorialSnippet {
 
+  private FactorialSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
   /**
    * Factorial. Works only for small numbers
    *

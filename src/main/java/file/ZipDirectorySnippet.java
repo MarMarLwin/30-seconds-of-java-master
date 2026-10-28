@@ -36,6 +36,9 @@ import java.util.zip.ZipOutputStream;
  */
 public class ZipDirectorySnippet {
 
+  private ZipDirectorySnippet() {
+  }
+
   /**
    * Zip a complete directory.
    *
@@ -69,6 +72,7 @@ public class ZipDirectorySnippet {
     if (fileToZip.isDirectory()) {
       if (fileName.endsWith("/")) {
         zipOut.putNextEntry(new ZipEntry(fileName)); // To be zipped next
+        zipOut.write(new byte[0]); // Directory entries carry no content; write explicitly to avoid an empty entry
         zipOut.closeEntry();
       } else {
         // Add the "/" mark explicitly to preserve structure while unzipping action is performed

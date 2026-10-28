@@ -31,6 +31,9 @@ import java.util.Arrays;
  */
 public class ArrayMedianSnippet {
 
+  private ArrayMedianSnippet() {
+  }
+
   /**
    * Returns the median of the array.
    *
@@ -40,6 +43,6 @@ public class ArrayMedianSnippet {
   public static double arrayMedian(int[] arr) {
     Arrays.sort(arr);
     var mid = arr.length / 2;
-    return arr.length % 2 != 0 ? (double) arr[mid] : (double) (arr[mid] + arr[mid - 1]) / 2;
+    return arr.length % 2 == 0 ? (double) (arr[mid] + arr[mid - 1]) / 2 : (double) arr[mid];
   }
 }

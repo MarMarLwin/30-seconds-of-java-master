@@ -31,6 +31,8 @@ public class CompareVersionSnippet {
 
   private static final String EXTRACT_VERSION_REGEX = ".*?((?<!\\w)\\d+([.-]\\d+)*).*";
 
+  private CompareVersionSnippet() {
+  }
   /**
    * Compares two version strings.
    * Credits: https://stackoverflow.com/a/6702000/6645088 and https://stackoverflow.com/a/44592696/6645088
@@ -57,6 +59,16 @@ public class CompareVersionSnippet {
   }
 
   private static String[] getVersionComponents(String version) {
-    return version.replaceAll(EXTRACT_VERSION_REGEX, "$1").split("\\.");
+    String numericVersion = extractNumericVersion(version);
+    return numericVersion.split("\\.");
+  }
+
+  private static String extractNumericVersion(String version) {
+    int index = 0;
+    while (index < version.length()
+        && (Character.isDigit(version.charAt(index)) || version.charAt(index) == '.')) {
+      index++;
+    }
+    return version.substring(0, index);
   }
 }

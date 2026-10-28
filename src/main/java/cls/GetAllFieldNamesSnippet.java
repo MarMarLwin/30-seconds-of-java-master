@@ -35,6 +35,9 @@ import java.util.stream.Collectors;
  */
 public class GetAllFieldNamesSnippet {
 
+  private GetAllFieldNamesSnippet() {
+  }
+
   /**
    * Print all declared field names of the class or the interface the class extends.
    *
@@ -49,7 +52,7 @@ public class GetAllFieldNamesSnippet {
           Arrays.stream(currentClazz.getDeclaredFields())
               .filter(field -> !field.isSynthetic())
               .map(Field::getName)
-              .collect(Collectors.toList()));
+              .toList());
       currentClazz = currentClazz.getSuperclass();
     }
     return fields;

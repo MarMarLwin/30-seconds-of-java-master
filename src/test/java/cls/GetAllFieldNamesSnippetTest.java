@@ -41,7 +41,6 @@ class GetAllFieldNamesSnippetTest {
   void testGetAllFieldNames() {
     class SuperClass {
       public int superFieldOne;
-      private int superFieldTwo;
     }
 
     class TestClass extends SuperClass {

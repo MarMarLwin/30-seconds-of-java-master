@@ -34,14 +34,18 @@ import java.net.http.HttpResponse;
  */
 public class HttpGetSnippet {
 
+  private HttpGetSnippet() {
+  }
+
   /**
    * Performs HTTP GET request.
    *
    * @param uri the URI of the connection
    * @return response object
-   * @throws Exception i/o error, interruption error, etc
+   * @throws java.io.IOException i/o error
+   * @throws InterruptedException interruption error
    */
-  public static HttpResponse<String> httpGet(String uri) throws Exception {
+  public static HttpResponse<String> httpGet(String uri) throws java.io.IOException, InterruptedException {
     var client = HttpClient.newHttpClient();
     var request = HttpRequest.newBuilder()
             .uri(URI.create(uri))

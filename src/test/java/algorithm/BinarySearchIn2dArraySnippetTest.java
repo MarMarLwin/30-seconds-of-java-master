@@ -39,7 +39,6 @@ public class BinarySearchIn2dArraySnippetTest {
     void testBinarySearchIn2dArraySnippetTest() {
     int[][] arr1 = {{3, 4, 7, 9}, {12, 24, 26, 29}, {34, 55, 88, 99}, {100, 189, 232, 234}};
     int[] ans1 = {1, 2};
-    Assertions assertions  = null;
     Assertions.assertArrayEquals(ans1, BinarySearchIn2dArraySnippet.binarySearchIn2darr(arr1, 26));
     int[][] arr2 = {{3, 4, 7, 9}, {12, 24, 26, 29}, {34, 55, 88, 99}, {100, 189, 232, 234}};
     int[] ans2 = {-1, -1};

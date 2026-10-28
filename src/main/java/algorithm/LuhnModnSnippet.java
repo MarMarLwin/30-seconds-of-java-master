@@ -27,10 +27,12 @@ package algorithm;
 /**
  * LuhnModnSnippet.
  */
-public class LuhnModnSnippet {
+public final class LuhnModnSnippet {
+
+  private LuhnModnSnippet() {
+  }
 
   private static final String CODE_POINTS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
   /**
    * Generates a check character using the Luhn mod N algorithm.
    *

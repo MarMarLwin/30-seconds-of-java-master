@@ -34,6 +34,9 @@ import java.util.stream.Collectors;
  */
 public class GetAllMethodsSnippet {
 
+  private GetAllMethodsSnippet() {
+  }
+
   /**
    * Print all declared methods of the class.
    *
@@ -43,6 +46,6 @@ public class GetAllMethodsSnippet {
   public static List<String> getAllMethods(final Class<?> cls) {
     return Arrays.stream(cls.getDeclaredMethods())
         .map(Method::getName)
-        .collect(Collectors.toList());
+        .toList();
   }
 }
