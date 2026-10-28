@@ -99,6 +99,7 @@ class PromptGenerator:
             'snippet_end_line': issue.snippet_end_line,
             'scope_kind': issue.scope_kind,
             'target_snippet': issue.target_snippet,
+            'file_imports': issue.file_imports,
             'rule_info': {'name': rule.name, 'type': rule.type, 'impacts': rule.impacts,
                           'description_source': rule.description_source},
             'prompts': prompts,

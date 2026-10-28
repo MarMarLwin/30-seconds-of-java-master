@@ -3,7 +3,8 @@
 import unittest
 
 from pipeline.stage2.models import ContextChunk, IssueRecord, RuleInfo
-from pipeline.stage2.template import CODE_HEADING, CONTEXT_HEADING, render_prompt
+from pipeline.stage2.template import (CODE_HEADING, CONTEXT_HEADING, IMPORTS_HEADING,
+                                      render_prompt)
 
 ISSUE = IssueRecord(
     issue_key='K1', rule='dart:S3358', message='Extract this nested ternary operation.',
@@ -46,6 +47,21 @@ class TemplateTest(unittest.TestCase):
     def test_context_chunks_are_included(self):
         self.assertIn(CHUNK.text, self.prompts['repository_aware'])
         self.assertNotIn(CHUNK.text, self.prompts['zero_shot'])
+
+    def test_imports_section(self):
+        self.assertNotIn(IMPORTS_HEADING, self.prompts['zero_shot'])     # not computed
+        java = IssueRecord(
+            issue_key='K2', rule='java:S1319', message='Use the interface.',
+            file_path='src/A.java', start_line=5, end_line=5, snippet_start_line=5,
+            snippet_end_line=5, target_snippet='void f(HashMap<K, V> m) {}',
+            file_imports='import java.util.HashMap;')
+        prompts = [render_prompt(java, RULE, s, []) for s in ('zero_shot', 'few_shot')]
+        for text in prompts:
+            self.assertIn(f"{IMPORTS_HEADING}\n", text)
+            self.assertIn('```java\nimport java.util.HashMap;\n```', text)
+        self.assertEqual(split(prompts[0])[0], split(prompts[1])[0])
+        java.file_imports = ''
+        self.assertIn('The file has no imports yet.', render_prompt(java, RULE, 'zero_shot', []))
 
     def test_flagged_code(self):
         self.assertEqual(ISSUE.flagged_code, '  ? b')
