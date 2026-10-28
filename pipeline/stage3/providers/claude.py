@@ -16,7 +16,7 @@ Differences from the OpenAI-compatible providers, all recorded per result:
 import logging
 from typing import Any, Dict, Optional
 
-from .base import ProviderFatalError, extract_code, new_result
+from .base import ProviderFatalError, extract_code, extract_imports, new_result
 
 try:
     import anthropic
@@ -109,6 +109,7 @@ class ClaudeRefactorer:
 
         text = ''.join(block.text for block in response.content if block.type == 'text')
         result['refactored_code'] = extract_code(text)
+        result['imports'] = extract_imports(text)
         result['finish_reason'] = response.stop_reason
         result['served_by'] = response.model
         result['fallback_used'] = any(

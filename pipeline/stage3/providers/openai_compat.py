@@ -10,7 +10,7 @@ from typing import Any, Dict, Optional
 from tenacity import (before_sleep_log, retry, retry_if_exception,
                       stop_after_attempt, wait_random_exponential)
 
-from .base import ProviderFatalError, extract_code, new_result
+from .base import ProviderFatalError, extract_code, extract_imports, new_result
 
 try:
     import openai
@@ -150,6 +150,7 @@ class OpenAICompatibleRefactorer:
 
         choice = response.choices[0]
         result['refactored_code'] = extract_code(choice.message.content)
+        result['imports'] = extract_imports(choice.message.content)
         if response.usage:
             result['prompt_tokens'] = response.usage.prompt_tokens
             result['completion_tokens'] = response.usage.completion_tokens

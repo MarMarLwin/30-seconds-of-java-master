@@ -16,6 +16,9 @@ and several repositories can be processed side by side:
     stage3_applied_<model>.json  which patches went onto which branch (apply)
     stage3_applied_<model>_<strategy>_in_place.json
                                  same, for apply --strategy (working tree)
+    stage4_verify_<model>[_<strategy>_in_place].json
+                                 build and test results per branch (verify)
+    stage4_logs/                 build output of each verify step (verify)
 """
 
 import re
@@ -83,6 +86,14 @@ class Workspace:
         """Report for the branches, or for one strategy applied to the working tree."""
         suffix = f'_{strategy}_in_place' if strategy else ''
         return self.workdir / f'stage3_applied_{_safe(model)}{suffix}.json'
+
+    def verify_file(self, model: str, strategy: Optional[str] = None) -> Path:
+        suffix = f'_{strategy}_in_place' if strategy else ''
+        return self.workdir / f'stage4_verify_{_safe(model)}{suffix}.json'
+
+    @property
+    def verify_logs_dir(self) -> Path:
+        return self.workdir / 'stage4_logs'
 
     @property
     def excluded_paths(self) -> tuple:
