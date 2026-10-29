@@ -2493,17 +2493,24 @@ python3 -m pipeline refactor --repo . --provider claude-code --strategy reposito
 python3 -m pipeline refactor --repo . --provider deepseek --strategy zero_shot
 
 
-
 python3 -m pipeline refactor     --repo . --limit 1
 
+# Compile main and test sources
+./gradlew compileJava compileTestJava
+
+# Run all JUnit 5 tests (a JaCoCo coverage report is generated afterwards)
+./gradlew test
+
+# Full build: compile + tests + Checkstyle (Google style, 0 warnings allowed)
+./gradlew build
 
 - How to declare expamples of few shots.
 - Package level analysis
 - Need to fully understand AST for source code chuncking.
-- Which tools are 
+- Which tools are
 - Why you select that tools (AST)?
 - https://www.antlr.org
 - Explain how Vector comes from AST?
-- How can know similar code? 
+- How can know similar code?
 
 ```
