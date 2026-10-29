@@ -30,6 +30,7 @@ import java.util.Date;
 /**
  * AddDaysToDateSnippet.
  */
+
 public class AddDaysToDateSnippet {
 
   private AddDaysToDateSnippet() {
