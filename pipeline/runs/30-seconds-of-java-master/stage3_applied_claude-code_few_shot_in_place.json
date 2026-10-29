@@ -1,13 +1,13 @@
 {
-  "applied_at": "2026-10-28T11:13:31.077785+00:00",
+  "applied_at": "2026-10-29T02:39:34.263730+00:00",
   "model": "claude-code",
   "strategy": "few_shot",
   "target": "working tree",
   "results_file": "stage3_results_claude-code.json",
-  "applied": 95,
+  "applied": 96,
   "already_applied": 0,
   "conflict": 21,
-  "skipped": 5,
+  "skipped": 4,
   "issues": [
     {
       "issue_key": "AaFsqnxKZptvl_vNu0T-",
@@ -19,7 +19,11 @@
       ],
       "status": "applied",
       "new_line_count": 2,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        18,
+        19
+      ]
     },
     {
       "issue_key": "AaFsqnxPZptvl_vNu0T_",
@@ -31,7 +35,11 @@
       ],
       "status": "applied",
       "new_line_count": 2,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        16,
+        17
+      ]
     },
     {
       "issue_key": "AaFsibi_N1YzpLYI6ZjB",
@@ -39,11 +47,15 @@
       "file_path": "src/main/java/algorithm/BinarySearchIn2dArraySnippet.java",
       "lines": [
         30,
-        95
+        98
       ],
       "status": "applied",
       "new_line_count": 69,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        98
+      ]
     },
     {
       "issue_key": "AaFsibjAN1YzpLYI6ZjC",
@@ -51,11 +63,15 @@
       "file_path": "src/main/java/algorithm/BinarySearchSnippet.java",
       "lines": [
         30,
-        55
+        58
       ],
       "status": "applied",
       "new_line_count": 29,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        58
+      ]
     },
     {
       "issue_key": "AaFsibiwN1YzpLYI6Zi3",
@@ -63,11 +79,15 @@
       "file_path": "src/main/java/algorithm/BubbleSortSnippet.java",
       "lines": [
         30,
-        50
+        53
       ],
       "status": "applied",
       "new_line_count": 24,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        53
+      ]
     },
     {
       "issue_key": "AaFsibi2N1YzpLYI6Zi8",
@@ -75,11 +95,15 @@
       "file_path": "src/main/java/algorithm/CountingSortSnippet.java",
       "lines": [
         32,
-        64
+        67
       ],
       "status": "applied",
       "new_line_count": 36,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        32,
+        67
+      ]
     },
     {
       "issue_key": "AaFsibi0N1YzpLYI6Zi6",
@@ -87,11 +111,15 @@
       "file_path": "src/main/java/algorithm/CycleSortSnippet.java",
       "lines": [
         30,
-        52
+        55
       ],
       "status": "applied",
       "new_line_count": 26,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        55
+      ]
     },
     {
       "issue_key": "AaFsibi9N1YzpLYI6ZjA",
@@ -103,7 +131,11 @@
       ],
       "status": "applied",
       "new_line_count": 12,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        47,
+        58
+      ]
     },
     {
       "issue_key": "AaFsibi1N1YzpLYI6Zi7",
@@ -111,11 +143,15 @@
       "file_path": "src/main/java/algorithm/InsertionSortSnippet.java",
       "lines": [
         30,
-        49
+        52
       ],
       "status": "applied",
       "new_line_count": 23,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        52
+      ]
     },
     {
       "issue_key": "AaFsibixN1YzpLYI6Zi4",
@@ -123,11 +159,15 @@
       "file_path": "src/main/java/algorithm/LinearSearchIn2dArraySnippet.java",
       "lines": [
         30,
-        51
+        54
       ],
       "status": "applied",
       "new_line_count": 25,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        54
+      ]
     },
     {
       "issue_key": "AaFsibi5N1YzpLYI6Zi-",
@@ -135,11 +175,15 @@
       "file_path": "src/main/java/algorithm/LinearSearchSnippet.java",
       "lines": [
         30,
-        47
+        50
       ],
       "status": "applied",
       "new_line_count": 21,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        50
+      ]
     },
     {
       "issue_key": "AaFsibi6N1YzpLYI6Zi_",
@@ -147,11 +191,15 @@
       "file_path": "src/main/java/algorithm/LuhnModnSnippet.java",
       "lines": [
         30,
-        120
+        123
       ],
       "status": "applied",
       "new_line_count": 94,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        123
+      ]
     },
     {
       "issue_key": "AaFsibi4N1YzpLYI6Zi9",
@@ -159,11 +207,15 @@
       "file_path": "src/main/java/algorithm/MergeSortSnippet.java",
       "lines": [
         30,
-        79
+        82
       ],
       "status": "applied",
       "new_line_count": 53,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        82
+      ]
     },
     {
       "issue_key": "AaFsibivN1YzpLYI6Zi2",
@@ -171,11 +223,15 @@
       "file_path": "src/main/java/algorithm/QuickSortSnippet.java",
       "lines": [
         30,
-        66
+        69
       ],
       "status": "applied",
       "new_line_count": 40,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        69
+      ]
     },
     {
       "issue_key": "AaFsibizN1YzpLYI6Zi5",
@@ -183,11 +239,15 @@
       "file_path": "src/main/java/algorithm/SelectionSortSnippet.java",
       "lines": [
         30,
-        54
+        57
       ],
       "status": "applied",
       "new_line_count": 28,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        57
+      ]
     },
     {
       "issue_key": "AaFsibjCN1YzpLYI6ZjE",
@@ -195,19 +255,23 @@
       "file_path": "src/main/java/algorithm/SieveOfEratosthenesSnippet.java",
       "lines": [
         30,
-        53
+        56
       ],
       "status": "applied",
       "new_line_count": 27,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        56
+      ]
     },
     {
       "issue_key": "AaFsibjCN1YzpLYI6ZjF",
       "rule": "java:S1125",
       "file_path": "src/main/java/algorithm/SieveOfEratosthenesSnippet.java",
       "lines": [
-        44,
-        48
+        42,
+        44
       ],
       "status": "conflict",
       "conflicts_with": "AaFsibjCN1YzpLYI6ZjE",
@@ -219,11 +283,15 @@
       "file_path": "src/main/java/algorithm/VerhoeffSnippet.java",
       "lines": [
         30,
-        95
+        98
       ],
       "status": "applied",
       "new_line_count": 69,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        98
+      ]
     },
     {
       "issue_key": "AaFsibjPN1YzpLYI6ZjR",
@@ -231,11 +299,15 @@
       "file_path": "src/main/java/array/AllEqualSnippet.java",
       "lines": [
         32,
-        44
+        47
       ],
       "status": "applied",
       "new_line_count": 16,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        32,
+        47
+      ]
     },
     {
       "issue_key": "AaFsibjMN1YzpLYI6ZjO",
@@ -243,11 +315,15 @@
       "file_path": "src/main/java/array/ArrayConcatSnippet.java",
       "lines": [
         32,
-        47
+        50
       ],
       "status": "applied",
       "new_line_count": 19,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        32,
+        50
+      ]
     },
     {
       "issue_key": "AaFsibjHN1YzpLYI6ZjK",
@@ -255,11 +331,15 @@
       "file_path": "src/main/java/array/ArrayMeanSnippet.java",
       "lines": [
         32,
-        43
+        46
       ],
       "status": "applied",
       "new_line_count": 15,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        32,
+        46
+      ]
     },
     {
       "issue_key": "AaFsibjGN1YzpLYI6ZjI",
@@ -267,19 +347,23 @@
       "file_path": "src/main/java/array/ArrayMedianSnippet.java",
       "lines": [
         32,
-        45
+        48
       ],
       "status": "applied",
       "new_line_count": 17,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        32,
+        48
+      ]
     },
     {
       "issue_key": "AaFsibjGN1YzpLYI6ZjJ",
       "rule": "java:S9435",
       "file_path": "src/main/java/array/ArrayMedianSnippet.java",
       "lines": [
-        43,
-        43
+        40,
+        46
       ],
       "status": "conflict",
       "conflicts_with": "AaFsibjGN1YzpLYI6ZjI",
@@ -291,11 +375,15 @@
       "file_path": "src/main/java/array/ArrayModeInPlaceSnippet.java",
       "lines": [
         32,
-        67
+        70
       ],
       "status": "applied",
       "new_line_count": 39,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        32,
+        70
+      ]
     },
     {
       "issue_key": "AaFsibjNN1YzpLYI6ZjP",
@@ -303,11 +391,15 @@
       "file_path": "src/main/java/array/ArraySumSnippet.java",
       "lines": [
         32,
-        43
+        46
       ],
       "status": "applied",
       "new_line_count": 15,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        32,
+        46
+      ]
     },
     {
       "issue_key": "AaFsibjLN1YzpLYI6ZjN",
@@ -315,11 +407,15 @@
       "file_path": "src/main/java/array/FindMaxSnippet.java",
       "lines": [
         32,
-        43
+        46
       ],
       "status": "applied",
       "new_line_count": 15,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        32,
+        46
+      ]
     },
     {
       "issue_key": "AaFsibjON1YzpLYI6ZjQ",
@@ -327,10 +423,15 @@
       "file_path": "src/main/java/array/FindMinSnippet.java",
       "lines": [
         32,
-        43
+        46
       ],
-      "status": "skipped",
-      "reason": "refactoring failed: Claude Code error: API Error: Can't reach the API server — check your internet or DNS (ENOTFOUND)"
+      "status": "applied",
+      "new_line_count": 15,
+      "reindented": false,
+      "patched_lines": [
+        32,
+        46
+      ]
     },
     {
       "issue_key": "AaFsibjFN1YzpLYI6ZjH",
@@ -338,11 +439,15 @@
       "file_path": "src/main/java/array/MultiArrayConcatenationSnippet.java",
       "lines": [
         32,
-        56
+        59
       ],
       "status": "applied",
       "new_line_count": 28,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        32,
+        59
+      ]
     },
     {
       "issue_key": "AaFsibjKN1YzpLYI6ZjM",
@@ -350,11 +455,15 @@
       "file_path": "src/main/java/array/ReverseArraySnippet.java",
       "lines": [
         30,
-        62
+        65
       ],
       "status": "applied",
       "new_line_count": 36,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        65
+      ]
     },
     {
       "issue_key": "AaFsibidN1YzpLYI6Zim",
@@ -362,11 +471,15 @@
       "file_path": "src/main/java/cls/CreatingObjectSnippet.java",
       "lines": [
         32,
-        59
+        62
       ],
       "status": "applied",
       "new_line_count": 31,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        32,
+        62
+      ]
     },
     {
       "issue_key": "AaFsibiZN1YzpLYI6Zih",
@@ -374,19 +487,23 @@
       "file_path": "src/main/java/cls/GetAllFieldNamesSnippet.java",
       "lines": [
         36,
-        57
+        60
       ],
       "status": "applied",
       "new_line_count": 25,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        36,
+        60
+      ]
     },
     {
       "issue_key": "AaFsibiZN1YzpLYI6Zii",
       "rule": "java:S6204",
       "file_path": "src/main/java/cls/GetAllFieldNamesSnippet.java",
       "lines": [
-        48,
-        52
+        51,
+        55
       ],
       "status": "conflict",
       "conflicts_with": "AaFsibiZN1YzpLYI6Zih",
@@ -398,19 +515,23 @@
       "file_path": "src/main/java/cls/GetAllMethodsSnippet.java",
       "lines": [
         35,
-        48
+        51
       ],
       "status": "applied",
       "new_line_count": 17,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        35,
+        51
+      ]
     },
     {
       "issue_key": "AaFsibg3N1YzpLYI6Zig",
       "rule": "java:S6204",
       "file_path": "src/main/java/cls/GetAllMethodsSnippet.java",
       "lines": [
-        44,
-        46
+        43,
+        49
       ],
       "status": "conflict",
       "conflicts_with": "AaFsibg3N1YzpLYI6Zif",
@@ -422,19 +543,23 @@
       "file_path": "src/main/java/cls/GetAllPublicFieldNamesSnippet.java",
       "lines": [
         35,
-        48
+        51
       ],
       "status": "applied",
       "new_line_count": 17,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        35,
+        51
+      ]
     },
     {
       "issue_key": "AaFsibiaN1YzpLYI6Zik",
       "rule": "java:S6204",
       "file_path": "src/main/java/cls/GetAllPublicFieldNamesSnippet.java",
       "lines": [
-        44,
-        46
+        43,
+        49
       ],
       "status": "conflict",
       "conflicts_with": "AaFsibiaN1YzpLYI6Zij",
@@ -446,11 +571,15 @@
       "file_path": "src/main/java/cls/SafeCastSnippet.java",
       "lines": [
         32,
-        46
+        49
       ],
       "status": "applied",
       "new_line_count": 18,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        32,
+        49
+      ]
     },
     {
       "issue_key": "AaFsibjnN1YzpLYI6Zjt",
@@ -461,20 +590,28 @@
         31
       ],
       "status": "applied",
-      "new_line_count": 5,
-      "reindented": false
+      "new_line_count": 7,
+      "reindented": false,
+      "patched_lines": [
+        25,
+        31
+      ]
     },
     {
       "issue_key": "AaFsibjnN1YzpLYI6Zjs",
       "rule": "java:S1118",
       "file_path": "src/main/java/date/AddDaysToDateSnippet.java",
       "lines": [
-        35,
-        64
+        33,
+        65
       ],
       "status": "applied",
       "new_line_count": 33,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        33,
+        65
+      ]
     },
     {
       "issue_key": "AaFsibjpN1YzpLYI6Zju",
@@ -482,11 +619,15 @@
       "file_path": "src/main/java/date/DateDifferenceSnippet.java",
       "lines": [
         34,
-        74
+        77
       ],
       "status": "applied",
       "new_line_count": 44,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        34,
+        77
+      ]
     },
     {
       "issue_key": "AaFsibjqN1YzpLYI6Zjv",
@@ -494,11 +635,15 @@
       "file_path": "src/main/java/encoding/Base64DecodeSnippet.java",
       "lines": [
         32,
-        43
+        46
       ],
       "status": "applied",
       "new_line_count": 15,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        32,
+        46
+      ]
     },
     {
       "issue_key": "AaFsibjrN1YzpLYI6Zjw",
@@ -506,11 +651,15 @@
       "file_path": "src/main/java/encoding/Base64EncodeSnippet.java",
       "lines": [
         32,
-        42
+        45
       ],
       "status": "applied",
       "new_line_count": 14,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        32,
+        45
+      ]
     },
     {
       "issue_key": "AaFsibjhN1YzpLYI6Zjl",
@@ -518,11 +667,15 @@
       "file_path": "src/main/java/file/ListAllFilesSnippet.java",
       "lines": [
         34,
-        56
+        59
       ],
       "status": "applied",
       "new_line_count": 26,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        34,
+        59
+      ]
     },
     {
       "issue_key": "AaFsibjiN1YzpLYI6Zjm",
@@ -530,11 +683,15 @@
       "file_path": "src/main/java/file/ListDirectoriesSnippet.java",
       "lines": [
         32,
-        43
+        46
       ],
       "status": "applied",
       "new_line_count": 15,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        32,
+        46
+      ]
     },
     {
       "issue_key": "AaFsibjgN1YzpLYI6Zjk",
@@ -542,11 +699,15 @@
       "file_path": "src/main/java/file/ListFilesInDirectorySnippet.java",
       "lines": [
         32,
-        43
+        46
       ],
       "status": "applied",
       "new_line_count": 15,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        32,
+        46
+      ]
     },
     {
       "issue_key": "AaFsibjjN1YzpLYI6Zjn",
@@ -554,11 +715,15 @@
       "file_path": "src/main/java/file/ReadLinesSnippet.java",
       "lines": [
         35,
-        47
+        50
       ],
       "status": "applied",
       "new_line_count": 16,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        35,
+        50
+      ]
     },
     {
       "issue_key": "AaFsibjlN1YzpLYI6Zjo",
@@ -566,19 +731,23 @@
       "file_path": "src/main/java/file/ZipDirectorySnippet.java",
       "lines": [
         37,
-        96
+        99
       ],
       "status": "applied",
       "new_line_count": 63,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        37,
+        99
+      ]
     },
     {
       "issue_key": "AaFsibjlN1YzpLYI6Zjp",
       "rule": "java:S9342",
       "file_path": "src/main/java/file/ZipDirectorySnippet.java",
       "lines": [
-        64,
-        95
+        67,
+        98
       ],
       "status": "conflict",
       "conflicts_with": "AaFsibjlN1YzpLYI6Zjo",
@@ -589,8 +758,8 @@
       "rule": "java:S9342",
       "file_path": "src/main/java/file/ZipDirectorySnippet.java",
       "lines": [
-        64,
-        95
+        67,
+        98
       ],
       "status": "conflict",
       "conflicts_with": "AaFsibjlN1YzpLYI6Zjo",
@@ -602,11 +771,15 @@
       "file_path": "src/main/java/file/ZipFileSnippet.java",
       "lines": [
         37,
-        62
+        65
       ],
       "status": "applied",
       "new_line_count": 29,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        37,
+        65
+      ]
     },
     {
       "issue_key": "AaFsibjmN1YzpLYI6Zjr",
@@ -614,11 +787,15 @@
       "file_path": "src/main/java/file/ZipFilesSnippet.java",
       "lines": [
         37,
-        65
+        68
       ],
       "status": "applied",
       "new_line_count": 32,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        37,
+        68
+      ]
     },
     {
       "issue_key": "AaFsibjxN1YzpLYI6Zj2",
@@ -626,11 +803,15 @@
       "file_path": "src/main/java/io/InputStreamToStringSnippet.java",
       "lines": [
         36,
-        48
+        51
       ],
       "status": "applied",
       "new_line_count": 16,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        36,
+        51
+      ]
     },
     {
       "issue_key": "AaFsibjwN1YzpLYI6Zj0",
@@ -638,19 +819,23 @@
       "file_path": "src/main/java/io/ReadFileSnippet.java",
       "lines": [
         37,
-        50
+        53
       ],
       "status": "applied",
       "new_line_count": 17,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        37,
+        53
+      ]
     },
     {
       "issue_key": "AaFsibjwN1YzpLYI6Zj1",
       "rule": "java:S6204",
       "file_path": "src/main/java/io/ReadFileSnippet.java",
       "lines": [
-        47,
-        47
+        44,
+        50
       ],
       "status": "conflict",
       "conflicts_with": "AaFsibjwN1YzpLYI6Zj0",
@@ -662,19 +847,23 @@
       "file_path": "src/main/java/math/EloRatingSnippet.java",
       "lines": [
         30,
-        54
+        57
       ],
       "status": "applied",
       "new_line_count": 28,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        57
+      ]
     },
     {
       "issue_key": "AaFsibiqN1YzpLYI6Zix",
       "rule": "java:S1488",
       "file_path": "src/main/java/math/EloRatingSnippet.java",
       "lines": [
-        44,
-        53
+        47,
+        56
       ],
       "status": "conflict",
       "conflicts_with": "AaFsibiqN1YzpLYI6Ziy",
@@ -686,11 +875,15 @@
       "file_path": "src/main/java/math/EvenOdd.java",
       "lines": [
         30,
-        45
+        48
       ],
       "status": "applied",
       "new_line_count": 19,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        48
+      ]
     },
     {
       "issue_key": "AaFsibimN1YzpLYI6Ziu",
@@ -698,11 +891,15 @@
       "file_path": "src/main/java/math/FactorialSnippet.java",
       "lines": [
         30,
-        59
+        62
       ],
       "status": "applied",
       "new_line_count": 33,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        62
+      ]
     },
     {
       "issue_key": "AaFsibiuN1YzpLYI6Zi1",
@@ -710,11 +907,15 @@
       "file_path": "src/main/java/math/FibonacciSnippet.java",
       "lines": [
         33,
-        82
+        85
       ],
       "status": "applied",
       "new_line_count": 53,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        33,
+        85
+      ]
     },
     {
       "issue_key": "AaFsibieN1YzpLYI6Zin",
@@ -722,11 +923,15 @@
       "file_path": "src/main/java/math/GreatestCommonDivisorSnippet.java",
       "lines": [
         30,
-        45
+        48
       ],
       "status": "applied",
       "new_line_count": 19,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        48
+      ]
     },
     {
       "issue_key": "AaFsibiiN1YzpLYI6Ziq",
@@ -734,11 +939,15 @@
       "file_path": "src/main/java/math/HaversineFormulaSnippet.java",
       "lines": [
         30,
-        75
+        78
       ],
       "status": "applied",
       "new_line_count": 49,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        78
+      ]
     },
     {
       "issue_key": "AaFsibisN1YzpLYI6Zi0",
@@ -746,11 +955,15 @@
       "file_path": "src/main/java/math/LeastCommonMultipleSnippet.java",
       "lines": [
         30,
-        49
+        52
       ],
       "status": "applied",
       "new_line_count": 23,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        52
+      ]
     },
     {
       "issue_key": "AaFsibilN1YzpLYI6Zit",
@@ -758,19 +971,23 @@
       "file_path": "src/main/java/math/LuhnSnippet.java",
       "lines": [
         30,
-        66
+        69
       ],
       "status": "applied",
       "new_line_count": 40,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        69
+      ]
     },
     {
       "issue_key": "AaFsibilN1YzpLYI6Zis",
       "rule": "java:S1488",
       "file_path": "src/main/java/math/LuhnSnippet.java",
       "lines": [
-        43,
-        65
+        46,
+        68
       ],
       "status": "conflict",
       "conflicts_with": "AaFsibilN1YzpLYI6Zit",
@@ -782,11 +999,15 @@
       "file_path": "src/main/java/math/NaturalNumberBinaryConversionSnippet.java",
       "lines": [
         35,
-        75
+        78
       ],
       "status": "applied",
       "new_line_count": 44,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        35,
+        78
+      ]
     },
     {
       "issue_key": "AaFsibipN1YzpLYI6Ziw",
@@ -794,11 +1015,15 @@
       "file_path": "src/main/java/math/PerformLotterySnippet.java",
       "lines": [
         33,
-        50
+        53
       ],
       "status": "applied",
       "new_line_count": 21,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        33,
+        53
+      ]
     },
     {
       "issue_key": "AaFsibifN1YzpLYI6Zio",
@@ -806,11 +1031,15 @@
       "file_path": "src/main/java/math/PrimeNumberSnippet.java",
       "lines": [
         30,
-        60
+        63
       ],
       "status": "applied",
       "new_line_count": 34,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        63
+      ]
     },
     {
       "issue_key": "AaFsibinN1YzpLYI6Ziv",
@@ -822,7 +1051,11 @@
       ],
       "status": "applied",
       "new_line_count": 2,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        58,
+        59
+      ]
     },
     {
       "issue_key": "AaFsibirN1YzpLYI6Ziz",
@@ -830,11 +1063,15 @@
       "file_path": "src/main/java/math/SquareRoot.java",
       "lines": [
         30,
-        64
+        67
       ],
       "status": "applied",
       "new_line_count": 38,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        67
+      ]
     },
     {
       "issue_key": "AaFsibjuN1YzpLYI6Zjz",
@@ -842,11 +1079,15 @@
       "file_path": "src/main/java/media/CaptureScreenSnippet.java",
       "lines": [
         38,
-        54
+        57
       ],
       "status": "applied",
       "new_line_count": 20,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        38,
+        57
+      ]
     },
     {
       "issue_key": "AaFsibjzN1YzpLYI6Zj6",
@@ -854,19 +1095,23 @@
       "file_path": "src/main/java/network/HttpGetSnippet.java",
       "lines": [
         35,
-        51
+        54
       ],
       "status": "applied",
       "new_line_count": 20,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        35,
+        54
+      ]
     },
     {
       "issue_key": "AaFsibjzN1YzpLYI6Zj5",
       "rule": "java:S112",
       "file_path": "src/main/java/network/HttpGetSnippet.java",
       "lines": [
-        44,
-        50
+        41,
+        47
       ],
       "status": "conflict",
       "conflicts_with": "AaFsibjzN1YzpLYI6Zj6",
@@ -877,8 +1122,8 @@
       "rule": "java:S2095",
       "file_path": "src/main/java/network/HttpGetSnippet.java",
       "lines": [
-        44,
-        50
+        42,
+        48
       ],
       "status": "conflict",
       "conflicts_with": "AaFsibjzN1YzpLYI6Zj6",
@@ -890,19 +1135,23 @@
       "file_path": "src/main/java/network/HttpPostSnippet.java",
       "lines": [
         40,
-        68
+        71
       ],
       "status": "applied",
       "new_line_count": 32,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        40,
+        71
+      ]
     },
     {
       "issue_key": "AaFsibjyN1YzpLYI6Zj3",
       "rule": "java:S1319",
       "file_path": "src/main/java/network/HttpPostSnippet.java",
       "lines": [
-        51,
-        67
+        48,
+        54
       ],
       "status": "conflict",
       "conflicts_with": "AaFsibjyN1YzpLYI6Zj4",
@@ -913,8 +1162,8 @@
       "rule": "java:S2095",
       "file_path": "src/main/java/network/HttpPostSnippet.java",
       "lines": [
-        51,
-        67
+        54,
+        70
       ],
       "status": "conflict",
       "conflicts_with": "AaFsibjyN1YzpLYI6Zj4",
@@ -926,11 +1175,15 @@
       "file_path": "src/main/java/string/AnagramSnippet.java",
       "lines": [
         32,
-        58
+        61
       ],
       "status": "applied",
       "new_line_count": 30,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        32,
+        61
+      ]
     },
     {
       "issue_key": "AaFsibjbN1YzpLYI6Zjg",
@@ -938,11 +1191,15 @@
       "file_path": "src/main/java/string/CommonLettersSnippet.java",
       "lines": [
         33,
-        55
+        58
       ],
       "status": "applied",
       "new_line_count": 26,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        33,
+        58
+      ]
     },
     {
       "issue_key": "AaFsibjUN1YzpLYI6ZjW",
@@ -950,11 +1207,15 @@
       "file_path": "src/main/java/string/CompareVersionSnippet.java",
       "lines": [
         30,
-        62
+        65
       ],
       "status": "applied",
       "new_line_count": 36,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        65
+      ]
     },
     {
       "issue_key": "AaFsibjUN1YzpLYI6ZjX",
@@ -973,8 +1234,8 @@
       "rule": "java:S8786",
       "file_path": "src/main/java/string/CompareVersionSnippet.java",
       "lines": [
-        60,
-        60
+        57,
+        63
       ],
       "status": "conflict",
       "conflicts_with": "AaFsibjUN1YzpLYI6ZjW",
@@ -986,11 +1247,15 @@
       "file_path": "src/main/java/string/DuplicateCharacterSnippet.java",
       "lines": [
         33,
-        50
+        53
       ],
       "status": "applied",
       "new_line_count": 21,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        33,
+        53
+      ]
     },
     {
       "issue_key": "AaFsibjVN1YzpLYI6ZjZ",
@@ -998,11 +1263,15 @@
       "file_path": "src/main/java/string/FormatBytesSnippet.java",
       "lines": [
         33,
-        60
+        63
       ],
       "status": "applied",
       "new_line_count": 31,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        33,
+        63
+      ]
     },
     {
       "issue_key": "AaFsibjTN1YzpLYI6ZjU",
@@ -1010,19 +1279,23 @@
       "file_path": "src/main/java/string/KmpSubstringSearchSnippet.java",
       "lines": [
         31,
-        96
+        99
       ],
       "status": "applied",
       "new_line_count": 69,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        31,
+        99
+      ]
     },
     {
       "issue_key": "AaFsibjTN1YzpLYI6ZjV",
       "rule": "java:S7158",
       "file_path": "src/main/java/string/KmpSubstringSearchSnippet.java",
       "lines": [
-        41,
-        43
+        38,
+        44
       ],
       "status": "conflict",
       "conflicts_with": "AaFsibjTN1YzpLYI6ZjU",
@@ -1034,11 +1307,15 @@
       "file_path": "src/main/java/string/LevenshteinDistanceSnippet.java",
       "lines": [
         30,
-        58
+        61
       ],
       "status": "applied",
       "new_line_count": 32,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        61
+      ]
     },
     {
       "issue_key": "AaFsibjYN1YzpLYI6Zjb",
@@ -1046,11 +1323,15 @@
       "file_path": "src/main/java/string/LindenmayerSystemSnippet.java",
       "lines": [
         32,
-        64
+        67
       ],
       "status": "applied",
       "new_line_count": 36,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        32,
+        67
+      ]
     },
     {
       "issue_key": "AaFsibjcN1YzpLYI6Zjh",
@@ -1058,11 +1339,15 @@
       "file_path": "src/main/java/string/MaxCharacterCountSnippet.java",
       "lines": [
         30,
-        53
+        56
       ],
       "status": "applied",
       "new_line_count": 27,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        56
+      ]
     },
     {
       "issue_key": "AaFsibjZN1YzpLYI6Zje",
@@ -1070,19 +1355,23 @@
       "file_path": "src/main/java/string/PalindromCheckSnippet.java",
       "lines": [
         30,
-        55
+        58
       ],
       "status": "applied",
       "new_line_count": 29,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        58
+      ]
     },
     {
       "issue_key": "AaFsibjZN1YzpLYI6Zjc",
       "rule": "java:S127",
       "file_path": "src/main/java/string/PalindromCheckSnippet.java",
       "lines": [
-        41,
-        43
+        39,
+        45
       ],
       "status": "conflict",
       "conflicts_with": "AaFsibjZN1YzpLYI6Zje",
@@ -1106,11 +1395,15 @@
       "file_path": "src/main/java/string/ReverseStringSnippet.java",
       "lines": [
         30,
-        41
+        44
       ],
       "status": "applied",
       "new_line_count": 15,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        44
+      ]
     },
     {
       "issue_key": "AaFsibjRN1YzpLYI6ZjT",
@@ -1118,11 +1411,15 @@
       "file_path": "src/main/java/string/StringToDateSnippet.java",
       "lines": [
         34,
-        48
+        51
       ],
       "status": "applied",
       "new_line_count": 18,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        34,
+        51
+      ]
     },
     {
       "issue_key": "AaFsibjEN1YzpLYI6ZjG",
@@ -1130,11 +1427,15 @@
       "file_path": "src/main/java/system/GetEnvOrDefaultSnippet.java",
       "lines": [
         30,
-        42
+        45
       ],
       "status": "applied",
       "new_line_count": 16,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        45
+      ]
     },
     {
       "issue_key": "AaFsibjsN1YzpLYI6Zjx",
@@ -1142,11 +1443,15 @@
       "file_path": "src/main/java/thread/ThreadPool.java",
       "lines": [
         33,
-        44
+        47
       ],
       "status": "applied",
       "new_line_count": 15,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        33,
+        47
+      ]
     },
     {
       "issue_key": "AaFsibjtN1YzpLYI6Zjy",
@@ -1154,11 +1459,15 @@
       "file_path": "src/main/java/thread/ThreadSnippet.java",
       "lines": [
         30,
-        42
+        45
       ],
       "status": "applied",
       "new_line_count": 16,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        30,
+        45
+      ]
     },
     {
       "issue_key": "AaFsibj6N1YzpLYI6ZkA",
@@ -1181,7 +1490,11 @@
       ],
       "status": "applied",
       "new_line_count": 1,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        44,
+        44
+      ]
     },
     {
       "issue_key": "AaFsibj_N1YzpLYI6ZkE",
@@ -1193,7 +1506,11 @@
       ],
       "status": "applied",
       "new_line_count": 1,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        47,
+        47
+      ]
     },
     {
       "issue_key": "AaFsibj_N1YzpLYI6ZkF",
@@ -1205,7 +1522,11 @@
       ],
       "status": "applied",
       "new_line_count": 1,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        50,
+        50
+      ]
     },
     {
       "issue_key": "AaFsibj7N1YzpLYI6ZkB",
@@ -1228,7 +1549,11 @@
       ],
       "status": "applied",
       "new_line_count": 1,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        43,
+        43
+      ]
     },
     {
       "issue_key": "AaFsibj4N1YzpLYI6Zj-",
@@ -1240,7 +1565,11 @@
       ],
       "status": "applied",
       "new_line_count": 1,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        46,
+        46
+      ]
     },
     {
       "issue_key": "AaFsibj4N1YzpLYI6Zj_",
@@ -1252,7 +1581,11 @@
       ],
       "status": "applied",
       "new_line_count": 1,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        49,
+        49
+      ]
     },
     {
       "issue_key": "AaFsibj9N1YzpLYI6ZkC",
@@ -1264,7 +1597,11 @@
       ],
       "status": "applied",
       "new_line_count": 46,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        40,
+        85
+      ]
     },
     {
       "issue_key": "AaFsibkAN1YzpLYI6ZkG",
@@ -1276,7 +1613,14 @@
       ],
       "status": "applied",
       "new_line_count": 2,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        68,
+        69
+      ],
+      "imports_added": [
+        "import static org.junit.jupiter.api.Assertions.assertEquals;"
+      ]
     },
     {
       "issue_key": "AaFsibkON1YzpLYI6ZkN",
@@ -1288,7 +1632,11 @@
       ],
       "status": "applied",
       "new_line_count": 1,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        43,
+        43
+      ]
     },
     {
       "issue_key": "AaFsibkON1YzpLYI6ZkO",
@@ -1300,7 +1648,11 @@
       ],
       "status": "applied",
       "new_line_count": 1,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        45,
+        45
+      ]
     },
     {
       "issue_key": "AaFsibkLN1YzpLYI6ZkL",
@@ -1312,7 +1664,11 @@
       ],
       "status": "applied",
       "new_line_count": 1,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        43,
+        43
+      ]
     },
     {
       "issue_key": "AaFsibkLN1YzpLYI6ZkM",
@@ -1324,7 +1680,11 @@
       ],
       "status": "applied",
       "new_line_count": 1,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        49,
+        49
+      ]
     },
     {
       "issue_key": "AaFsqnwoZptvl_vNu0T7",
@@ -1358,7 +1718,11 @@
       ],
       "status": "applied",
       "new_line_count": 26,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        46,
+        71
+      ]
     },
     {
       "issue_key": "AaFsibkJN1YzpLYI6ZkJ",
@@ -1393,8 +1757,12 @@
         33
       ],
       "status": "applied",
-      "new_line_count": 6,
-      "reindented": false
+      "new_line_count": 7,
+      "reindented": false,
+      "patched_lines": [
+        27,
+        33
+      ]
     },
     {
       "issue_key": "AaFsibkEN1YzpLYI6ZkI",
@@ -1405,8 +1773,12 @@
         34
       ],
       "status": "applied",
-      "new_line_count": 6,
-      "reindented": false
+      "new_line_count": 7,
+      "reindented": false,
+      "patched_lines": [
+        28,
+        34
+      ]
     },
     {
       "issue_key": "AaFsibkRN1YzpLYI6ZkP",
@@ -1418,7 +1790,11 @@
       ],
       "status": "applied",
       "new_line_count": 44,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        34,
+        77
+      ]
     },
     {
       "issue_key": "AaFsibkTN1YzpLYI6ZkQ",
@@ -1430,7 +1806,11 @@
       ],
       "status": "applied",
       "new_line_count": 33,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        38,
+        70
+      ]
     },
     {
       "issue_key": "AaFsibj1N1YzpLYI6Zj7",
@@ -1442,7 +1822,11 @@
       ],
       "status": "applied",
       "new_line_count": 12,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        37,
+        48
+      ]
     },
     {
       "issue_key": "AaFsibj2N1YzpLYI6Zj8",
@@ -1454,7 +1838,11 @@
       ],
       "status": "applied",
       "new_line_count": 1,
-      "reindented": false
+      "reindented": false,
+      "patched_lines": [
+        55,
+        55
+      ]
     }
   ]
 }

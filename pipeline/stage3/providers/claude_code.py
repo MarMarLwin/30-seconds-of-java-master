@@ -29,7 +29,7 @@ from .base import ProviderFatalError, extract_code, extract_imports, new_result
 logger = logging.getLogger(__name__)
 
 # low | medium | high | xhigh | max, as for --provider claude.
-DEFAULT_EFFORT = 'high'
+DEFAULT_EFFORT = 'medium'
 EFFORT_LEVELS = ('low', 'medium', 'high', 'xhigh', 'max')
 
 # Label used for the results file name when no --model is given. Claude Code

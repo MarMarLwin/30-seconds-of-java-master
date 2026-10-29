@@ -42,7 +42,7 @@ class ArrayConcatSnippetTest {
     var integers = ArrayConcatSnippet.arrayConcat(new Integer[5], new Integer[5]);
     assertEquals(10, integers.length);
     var strings = ArrayConcatSnippet.arrayConcat(new String[0], new String[0]);
-    assertEquals(0, strings.length);
+    assertEquals(strings.length, 0);
     assertThrows(NullPointerException.class, () -> ArrayConcatSnippet.arrayConcat(null, null));
   }
 }
