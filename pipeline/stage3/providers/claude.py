@@ -41,7 +41,7 @@ REQUEST_TIMEOUT_SECONDS = 300
 MAX_RETRIES = 5
 
 # Models that accept server-side refusal fallbacks (fallbacks="default").
-FALLBACK_MODELS = {'claude-opus-5-5', 'claude-opus-5', 'claude-fable-5-1', 'claude-sonnet-5-5'}
+FALLBACK_MODELS = {'claude-sonnet-5-5','claude-opus-5-5', 'claude-opus-5'}
 FALLBACK_BETA = 'server-side-fallback-2026-07-01'
 
 

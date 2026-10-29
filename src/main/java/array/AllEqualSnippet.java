@@ -32,6 +32,13 @@ import java.util.Arrays;
 public class AllEqualSnippet {
 
   /**
+   * Private constructor to prevent instantiation.
+   */
+  private AllEqualSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
+  /**
    * Returns true if all elements in array are equal.
    *
    * @param arr the array to check (not null)

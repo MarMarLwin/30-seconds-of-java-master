@@ -2495,4 +2495,15 @@ python3 -m pipeline refactor --repo . --provider deepseek --strategy zero_shot
 
 
 python3 -m pipeline refactor     --repo . --limit 1
+
+
+- How to declare expamples of few shots.
+- Package level analysis
+- Need to fully understand AST for source code chuncking.
+- Which tools are 
+- Why you select that tools (AST)?
+- https://www.antlr.org
+- Explain how Vector comes from AST?
+- How can know similar code? 
+
 ```

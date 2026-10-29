@@ -56,7 +56,7 @@ public class RandomNumber {
               + random.nextInt(end.intValue() - start.intValue() + 1);
     } else if (start instanceof Long && end instanceof Long) {
       return start.longValue()
-              + (long) (random.nextDouble() * end.longValue() - start.longValue() + 1);
+              + random.nextLong(end.longValue() - start.longValue() + 1);
     } else if (start instanceof Float && end instanceof Float) {
       return start.floatValue()
               + random.nextFloat() * (end.floatValue() - start.floatValue());

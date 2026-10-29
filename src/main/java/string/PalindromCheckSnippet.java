@@ -29,6 +29,9 @@ package string;
  */
 public class PalindromCheckSnippet {
 
+  private PalindromCheckSnippet() {
+  }
+
   /**
    * Checks if given string is palindrome (same forward and backward). Skips non-letter characters
    * Credits: https://github.com/kousen/java_8_recipes

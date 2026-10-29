@@ -32,6 +32,13 @@ import java.util.Arrays;
 public class ArrayModeInPlaceSnippet {
 
   /**
+   * Private constructor to prevent instantiation.
+   */
+  private ArrayModeInPlaceSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
+  /**
   * Returns the mode of the array.
   *
   * @param arr array to find mode in it

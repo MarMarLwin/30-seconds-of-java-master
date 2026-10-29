@@ -29,6 +29,9 @@ package algorithm;
  */
 public class LinearSearchIn2dArraySnippet {
 
+  private LinearSearchIn2dArraySnippet() {
+  }
+
   /**
    * Search an item with linearSearch algorithm.
    *

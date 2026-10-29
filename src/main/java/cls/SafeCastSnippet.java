@@ -31,6 +31,9 @@ import java.util.Optional;
  */
 public class SafeCastSnippet {
 
+  private SafeCastSnippet() {
+  }
+
   /**
    * Safely casts an object to the specified type.
    *
