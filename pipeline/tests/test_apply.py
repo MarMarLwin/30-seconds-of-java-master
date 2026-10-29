@@ -163,6 +163,73 @@ class ApplyTest(unittest.TestCase):
         self.assertEqual((self.repo / 'lib' / 'a.dart').read_text(), content)
 
 
+JAVA_SOURCE = """\
+package network;
+
+import java.util.HashMap;
+
+public class Post {
+  public static void post(HashMap<String, String> args) {
+    send(args);
+  }
+}
+"""
+
+
+@unittest.skipUnless(shutil.which('git'), 'git is not installed')
+class JavaImportsTest(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.repo = Path(self.tmp.name)
+        (self.repo / 'Post.java').write_text(JAVA_SOURCE)
+        self.results = self.repo / 'results.json'
+        self.report = self.repo / 'report.json'
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def apply(self, code, imports=None):
+        original = '\n'.join(JAVA_SOURCE.splitlines()[5:8])
+        self.results.write_text(json.dumps([{
+            'issue_key': 'S1319', 'rule': 'java:S1319', 'file_path': 'Post.java',
+            'snippet_start_line': 6, 'snippet_end_line': 8, 'original_snippet': original,
+            'results': {'zero_shot': {'refactored_code': code, 'imports': imports or []}}}]))
+        report = apply_in_place(self.repo, self.results, 'm', 'zero_shot', self.report)
+        return report['issues'][0], (self.repo / 'Post.java').read_text()
+
+    def test_new_import_added_and_replaced_one_removed(self):
+        issue, content = self.apply(
+            '  public static void post(Map<String, String> args) {\n    send(args);\n  }',
+            ['import java.util.Map;'])
+        self.assertIn('import java.util.Map;\n', content)
+        self.assertNotIn('HashMap', content)
+        self.assertEqual(issue['imports_added'], ['import java.util.Map;'])
+        self.assertEqual(issue['imports_removed'], ['import java.util.HashMap;'])
+        self.assertEqual(issue['patched_lines'], [6, 8])
+        self.assertEqual(content.splitlines()[5],
+                         '  public static void post(Map<String, String> args) {')
+
+    def test_imports_at_the_top_of_the_code_move_to_the_header(self):
+        issue, content = self.apply(
+            'import java.util.Map;\n\n  public static void post(Map<String, String> m) {\n'
+            '    send(m);\n  }')
+        self.assertTrue(content.startswith('package network;\n\nimport java.util.Map;\n\n'
+                                           'public class Post {'))
+        self.assertEqual(issue['patched_lines'], [6, 8])
+
+    def test_patched_lines_follow_added_imports(self):
+        issue, content = self.apply(
+            '  public static void post(HashMap<String, String> args) {\n'
+            '    assertNotNull(args);\n    send(args);\n  }',
+            ['import static java.util.Objects.requireNonNull;', 'import java.util.List;'])
+        lines = content.splitlines()
+        start, end = issue['patched_lines']
+        self.assertEqual(lines[start - 1],
+                         '  public static void post(HashMap<String, String> args) {')
+        self.assertEqual(lines[end - 1], '  }')
+        self.assertEqual(end - start, 3)
+
+
 class IndentationTest(unittest.TestCase):
     def test_fit_indentation(self):
         self.assertEqual(fit_indentation(['    a'], ['a', '  b']), (['    a', '      b'], True))
