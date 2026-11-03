@@ -45,7 +45,13 @@ SYSTEM_PROMPT_TEMPLATE = (
     "- Return the complete refactored version of the code you are asked to "
     "refactor, including its unchanged surrounding lines, with the original "
     "indentation preserved.\n"
-    "- Respond with a single fenced code block and no explanation."
+    "- The code must still compile. If your change uses a type or static member "
+    "that the file does not import yet (see the file's imports, when given), "
+    "list the new import statements in a second fenced code block tagged "
+    "`imports`. Do not put import statements in the code block unless the code "
+    "you were given contains the file's imports.\n"
+    "- Respond with the fenced code block (and the imports block, if needed) "
+    "and no explanation."
 )
 
 
@@ -123,13 +129,20 @@ def prompt_hash(text: str) -> str:
     return hashlib.sha256(text.encode('utf-8')).hexdigest()[:16]
 
 
+# Stored with each result, so changing the system prompt's instructions re-runs
+# the calls made with the old ones.
+SYSTEM_PROMPT_SHA = prompt_hash(SYSTEM_PROMPT_TEMPLATE)
+
+
 def is_reusable(result: Optional[Dict[str, Any]], refactorer: Refactorer,
                 prompt_sha: str) -> bool:
-    """True if an earlier result succeeded with the same model, settings and prompt."""
+    """True if an earlier result succeeded with the same model, settings, prompt
+    and system prompt instructions."""
     return (bool(result) and 'error' not in result
             and result.get('model') == refactorer.model
             and result.get('settings', {}) == refactorer.settings
-            and result.get('prompt_sha256') == prompt_sha)
+            and result.get('prompt_sha256') == prompt_sha
+            and result.get('system_prompt_sha256') == SYSTEM_PROMPT_SHA)
 
 
 def is_complete(result_record: Optional[Dict[str, Any]], issue: Dict[str, Any],
@@ -165,6 +178,7 @@ def process_issue(issue: Dict[str, Any], refactorer: Refactorer,
 
         result = refactorer.run(system_prompt, user_prompt)
         result['prompt_sha256'] = sha
+        result['system_prompt_sha256'] = SYSTEM_PROMPT_SHA
         results[strategy] = result
         if 'error' in result:
             logger.warning("  %-16s failed: %s", strategy, result['error'])

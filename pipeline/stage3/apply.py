@@ -21,7 +21,15 @@ skipped when:
     file changed since extraction, or the change is not committed),
   - it overlaps a patch already applied on the branch. Larger patches are
     applied first, so an enclosing refactoring (e.g. a whole method for
-    Cognitive Complexity) wins over the smaller ones inside it.
+    Cognitive Complexity) wins over the smaller ones inside it,
+  - Stage 4 found that it breaks the build (rebuild_branch(exclude=...)).
+
+The snippet starts below the file's imports, so after patching a Java, Kotlin
+or Dart file the imports are fixed up too: new imports the model listed (or put
+at the top of its code) are merged into the header, and imports the patch
+replaced and that are no longer used are removed. Each applied patch records
+patched_lines, its line range in the patched file, which Stage 4 uses to map
+compiler errors back to issues.
 
 What happened to every patch is written to a stage3_applied_<model>*.json
 report.
@@ -34,7 +42,10 @@ import re
 import subprocess
 import tempfile
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Set, Tuple
+
+from ..common.imports import (header_end_line, import_language, merge_imports, normalize,
+                              remove_unused_imports, split_leading_imports, used_imports)
 
 logger = logging.getLogger(__name__)
 
@@ -109,16 +120,23 @@ def fit_indentation(original: List[str], refactored: List[str]) -> Tuple[List[st
     return [pad + l if l.strip() else l for l in refactored], True
 
 
-def _plan_patches(results: List[Dict[str, Any]], strategy: str
+def _plan_patches(results: List[Dict[str, Any]], strategy: str,
+                  exclude: Optional[Dict[str, str]] = None
                   ) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
-    """Split one strategy's results into patches to try and outcomes for the rest."""
+    """
+    Split one strategy's results into patches to try and outcomes for the rest.
+    exclude maps issue keys to the reason they are left out.
+    """
     patches, outcomes = [], []
     for record in results:
         outcome = {'issue_key': record.get('issue_key'), 'rule': record.get('rule'),
                    'file_path': record.get('file_path'),
                    'lines': [record.get('snippet_start_line'), record.get('snippet_end_line')]}
         result = (record.get('results') or {}).get(strategy)
-        if not result:
+        if exclude and outcome['issue_key'] in exclude:
+            outcomes.append({**outcome, 'status': 'skipped',
+                             'reason': exclude[outcome['issue_key']]})
+        elif not result:
             outcomes.append({**outcome, 'status': 'skipped', 'reason': 'no result'})
         elif result.get('error') or not result.get('refactored_code'):
             outcomes.append({**outcome, 'status': 'skipped',
@@ -126,7 +144,14 @@ def _plan_patches(results: List[Dict[str, Any]], strategy: str
         elif None in outcome['lines'] or not record.get('original_snippet'):
             outcomes.append({**outcome, 'status': 'skipped', 'reason': 'no line range'})
         else:
-            patches.append({'record': record, 'code': result['refactored_code'],
+            code = result['refactored_code'].splitlines()
+            imports = list(result.get('imports') or [])
+            language = import_language(outcome['file_path'] or '')
+            if language:
+                code, leading = split_leading_imports(
+                    code, record['original_snippet'].splitlines(), language)
+                imports += leading
+            patches.append({'record': record, 'code': '\n'.join(code), 'imports': imports,
                             'outcome': outcome})
     # Larger patches first, so an enclosing refactoring wins over those inside it.
     patches.sort(key=lambda p: p['outcome']['lines'][1] - p['outcome']['lines'][0],
@@ -167,23 +192,66 @@ def _apply_patches(worktree: Path, patches: List[Dict[str, Any]]) -> List[Dict[s
         applied.setdefault(outcome['file_path'], []).append((start, end, outcome['issue_key']))
         accepted.append(patch)
 
-    # Write bottom-up per file so earlier line numbers stay valid.
     by_file: Dict[str, List[Dict[str, Any]]] = {}
     for patch in accepted:
         by_file.setdefault(patch['outcome']['file_path'], []).append(patch)
     for file_path, file_patches in by_file.items():
-        path = worktree / file_path
-        text = path.read_text(encoding='utf-8')
-        lines = text.splitlines()
-        for patch in sorted(file_patches, key=lambda p: p['outcome']['lines'][0], reverse=True):
-            start, end = patch['outcome']['lines']
-            new_lines, reindented = fit_indentation(lines[start - 1:end],
-                                                    patch['code'].splitlines())
-            lines[start - 1:end] = new_lines
-            outcomes.append({**patch['outcome'], 'status': 'applied',
-                             'new_line_count': len(new_lines), 'reindented': reindented})
-        path.write_text('\n'.join(lines) + ('\n' if text.endswith('\n') else ''),
-                        encoding='utf-8')
+        outcomes += _patch_file(worktree / file_path, file_patches)
+    return outcomes
+
+
+def _patch_file(path: Path, patches: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Write a file's patches, then fix up its imports."""
+    text = path.read_text(encoding='utf-8')
+    lines = text.splitlines()
+    language = import_language(path.name)
+    header_end = header_end_line(lines, language)
+    # Imports the replaced code used; dropped below if nothing uses them anymore.
+    replaced: Dict[str, Set[str]] = {}
+
+    # Write bottom-up so earlier line numbers stay valid.
+    written = []
+    for patch in sorted(patches, key=lambda p: p['outcome']['lines'][0], reverse=True):
+        start, end = patch['outcome']['lines']
+        if language:
+            replaced[patch['outcome']['issue_key']] = used_imports(
+                lines, '\n'.join(lines[start - 1:end]), language)
+        new_lines, reindented = fit_indentation(lines[start - 1:end],
+                                                patch['code'].splitlines())
+        lines[start - 1:end] = new_lines
+        written.append((patch, len(new_lines), reindented))
+
+    added: List[str] = []
+    removed: List[str] = []
+    if language:
+        before = len(lines)
+        lines, added = merge_imports(lines, [i for p in patches for i in p['imports']],
+                                     language)
+        lines, removed = remove_unused_imports(
+            lines, set().union(*replaced.values()), language)
+        header_shift = len(lines) - before
+    else:
+        header_shift = 0
+
+    outcomes = []
+    shift = header_shift
+    for patch, count, reindented in reversed(written):         # top-down now
+        start, end = patch['outcome']['lines']
+        top = start + (shift if start > header_end else 0)
+        outcome = {**patch['outcome'], 'status': 'applied', 'new_line_count': count,
+                   'reindented': reindented, 'patched_lines': [top, top + count - 1]}
+        wanted = {normalize(i, language) for i in patch['imports']} if language else set()
+        mine_added = [i for i in added if i in wanted]
+        mine_removed = [i for i in removed if i in replaced.get(outcome['issue_key'], ())]
+        if mine_added:
+            outcome['imports_added'] = mine_added
+        if mine_removed:
+            outcome['imports_removed'] = mine_removed
+        outcomes.append(outcome)
+        shift += count - (end - start + 1)
+
+    path.write_text('\n'.join(lines) + ('\n' if text.endswith('\n') else ''),
+                    encoding='utf-8')
     return outcomes
 
 
@@ -264,10 +332,22 @@ def _log_outcomes(target: str, counts: Dict[str, int], outcomes: List[Dict[str, 
                         o['rule'], o.get('reason', ''))
 
 
+def rebuild_branch(repo: Path, results_path: Path, model: str, strategy: str, base: str,
+                   exclude: Dict[str, str]) -> Dict[str, Any]:
+    """
+    Build one strategy's branch again from base without the excluded issues
+    (issue key -> reason), e.g. the patches Stage 4 found break the build.
+    """
+    results = json.loads(results_path.read_text(encoding='utf-8'))
+    return _build_branch(repo, base, branch_name(model, strategy), model, strategy, results,
+                         exclude)
+
+
 def _build_branch(repo: Path, base: str, branch: str, model: str, strategy: str,
-                  results: List[Dict[str, Any]]) -> Dict[str, Any]:
+                  results: List[Dict[str, Any]],
+                  exclude: Optional[Dict[str, str]] = None) -> Dict[str, Any]:
     _check_branch_replaceable(repo, branch, base)
-    patches, outcomes = _plan_patches(results, strategy)
+    patches, outcomes = _plan_patches(results, strategy, exclude)
 
     with tempfile.TemporaryDirectory(prefix='pipeline-apply-') as tmp:
         worktree = Path(tmp) / 'tree'

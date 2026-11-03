@@ -42,6 +42,9 @@ class IssueRecord:
     snippet_end_line: int
     target_snippet: str
     scope_kind: str = 'lines'
+    # The import statements above the snippet ('' if none); None when the
+    # language has no imports or the snippet reaches into them.
+    file_imports: Optional[str] = None
 
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> 'IssueRecord':
@@ -57,6 +60,7 @@ class IssueRecord:
             snippet_end_line=int(data.get('snippet_end_line', data['end_line'])),
             target_snippet=data['target_snippet'],
             scope_kind=data.get('scope_kind', 'lines'),
+            file_imports=data.get('file_imports'),
         )
 
     @property

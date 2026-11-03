@@ -13,6 +13,8 @@ Commands, in pipeline order:
     refactor      Stage 3  send the prompts to an LLM, then apply the code
     apply         Stage 3  write refactored code into the source (--strategy) or
                            into one git branch per strategy
+    verify        Stage 4  compile and test what apply wrote, and find the
+                           patches that broke the build
     run                    all of the above (except inspect) in order
 
 Outputs go to pipeline/runs/<repo folder name>/ unless --workdir is given.
@@ -90,6 +92,8 @@ def cmd_refactor(ws: Workspace, args: argparse.Namespace) -> None:
         raise SystemExit(f"{ws.prompts_file} not found; run `python -m pipeline prompts` first")
     model = run_refactoring([ws.prompts_file], ws.results_file, args.provider, args.model,
                             args.temperature, args.limit, args.fresh, args.effort)
+    # The model label names the results file; verify in `run` reads the same one.
+    args.applied_model = model
     if not args.no_apply:
         _apply(ws, model, args.strategy)
 
@@ -118,6 +122,25 @@ def _apply(ws: Workspace, model: str, strategy: Optional[str]) -> None:
         logger.info("%-17s -> %s (%d applied)", name, info['branch'], info['applied'])
 
 
+def cmd_verify(ws: Workspace, args: argparse.Namespace) -> None:
+    from .stage3.providers import default_model
+    from .stage4.verify import VerifyError, VerifyOptions, summary_lines, verify
+    model = getattr(args, 'applied_model', None) or args.model or default_model(args.provider)
+    options = VerifyOptions(
+        overrides={'compile': args.compile_cmd, 'test': args.test_cmd, 'style': args.style_cmd},
+        run_tests=not args.skip_tests, run_style=not args.skip_style,
+        baseline=not args.no_baseline, revert_broken=args.revert_broken,
+        timeout=args.build_timeout)
+    try:
+        report = verify(ws.repo_root, ws.applied_file(model, args.strategy),
+                        ws.results_file(model), ws.verify_file(model, args.strategy),
+                        ws.verify_logs_dir, options)
+    except VerifyError as e:
+        raise SystemExit(f"Verify failed: {e}")
+    for line in summary_lines(report):
+        logger.info("%s", line)
+
+
 def cmd_run(ws: Workspace, args: argparse.Namespace) -> None:
     steps = []
     if args.fetch or (not args.issues and not ws.issues_file.is_file()):
@@ -128,6 +151,8 @@ def cmd_run(ws: Workspace, args: argparse.Namespace) -> None:
     steps.append(('Stage 2: generate prompts', cmd_prompts))
     if not args.no_refactor:
         steps.append(('Stage 3: refactor', cmd_refactor))
+        if not args.no_apply and not args.no_verify:
+            steps.append(('Stage 4: verify', cmd_verify))
 
     for title, step in steps:
         logger.info("===== %s =====", title)
@@ -209,6 +234,25 @@ def _add_refactor_args(p: argparse.ArgumentParser) -> None:
     _add_strategy_arg(p)
 
 
+def _add_verify_args(p: argparse.ArgumentParser) -> None:
+    from .stage4.verify import DEFAULT_TIMEOUT_SECONDS
+    p.add_argument('--skip-tests', action='store_true', help="Only compile, do not run tests")
+    p.add_argument('--skip-style', action='store_true', help="Do not run Checkstyle")
+    p.add_argument('--no-baseline', action='store_true',
+                   help="Do not build the base commit first (every failure is then "
+                        "counted as new)")
+    p.add_argument('--revert-broken', action='store_true',
+                   help="Rebuild each strategy branch without the patches that do not "
+                        "compile, so every branch builds (branches only)")
+    p.add_argument('--compile-cmd', help="Command that compiles main and test code "
+                                         "(default: detected, e.g. ./gradlew testClasses)")
+    p.add_argument('--test-cmd', help="Command that runs the tests (default: detected)")
+    p.add_argument('--style-cmd', help="Command that runs the style checks (default: "
+                                       "Checkstyle if the build configures it)")
+    p.add_argument('--build-timeout', type=int, default=DEFAULT_TIMEOUT_SECONDS,
+                   help=f"Seconds each build step may take (default: {DEFAULT_TIMEOUT_SECONDS})")
+
+
 def _add_strategy_arg(p: argparse.ArgumentParser) -> None:
     p.add_argument('--strategy', choices=stage2_config.STRATEGIES,
                    help="Write this strategy's code straight into the current source files "
@@ -267,6 +311,18 @@ def build_parser() -> argparse.ArgumentParser:
     _add_strategy_arg(p)
     p.set_defaults(func=cmd_apply)
 
+    p = sub.add_parser('verify', parents=common,
+                       help="Stage 4: compile and test the applied refactorings")
+    p.add_argument('--provider', choices=PROVIDER_CHOICES, default='gemini',
+                   help="Provider whose applied results to verify (default: gemini)")
+    p.add_argument('--model', help="Model label of the results file "
+                                   "(default: the provider's default model)")
+    p.add_argument('--strategy', choices=stage2_config.STRATEGIES,
+                   help="Verify the working tree after `apply --strategy` instead of the "
+                        "strategy branches")
+    _add_verify_args(p)
+    p.set_defaults(func=cmd_verify)
+
     p = sub.add_parser('run', parents=common, help="Run every stage in order")
     _add_fetch_args(p)
     _add_extract_args(p)
@@ -277,6 +333,9 @@ def build_parser() -> argparse.ArgumentParser:
                    help="Download issues again even if stage1_issues.json exists")
     p.add_argument('--no-refactor', action='store_true',
                    help="Stop after Stage 2 (no LLM calls)")
+    p.add_argument('--no-verify', action='store_true',
+                   help="Stop after Stage 3 (do not build and test the result)")
+    _add_verify_args(p)
     p.set_defaults(func=cmd_run)
     return parser
 

@@ -2,7 +2,7 @@ name: SonarQube
 on:
   push:
     branches:
-      - refactor/zero-shot
+      - feat/pipeline-setup
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:

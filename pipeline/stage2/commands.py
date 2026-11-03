@@ -11,6 +11,7 @@ import logging
 from typing import Optional
 
 from ..common.ast_router import AstRouter
+from ..common.imports import read_file_imports
 from ..common.sonar_project import read_sonar_properties
 from ..workspace import Workspace
 from . import config
@@ -38,6 +39,9 @@ def generate_prompts(ws: Workspace, budget: int = config.DEFAULT_CONTEXT_BUDGET_
     if not ws.snippets_file.is_file():
         raise SystemExit(f"{ws.snippets_file} not found; run `python -m pipeline extract` first")
     issues = load_issue_records(ws.snippets_file)
+    for issue in issues:
+        issue.file_imports = read_file_imports(ws.repo_root, issue.file_path,
+                                               issue.snippet_start_line)
     logger.info("Loaded %d snippet record(s) from %s", len(issues), ws.snippets_file)
 
     organization = organization or read_sonar_properties(ws.repo_root).get('sonar.organization')

@@ -24,7 +24,7 @@ import subprocess
 import tempfile
 from typing import Any, Dict, Optional
 
-from .base import ProviderFatalError, extract_code, new_result
+from .base import ProviderFatalError, extract_code, extract_imports, new_result
 
 logger = logging.getLogger(__name__)
 
@@ -114,6 +114,7 @@ class ClaudeCodeRefactorer:
         model_usage = data.get('modelUsage') or {}
 
         result['refactored_code'] = extract_code(text)
+        result['imports'] = extract_imports(text)
         result['finish_reason'] = data.get('stop_reason')
         result['served_by'] = _main_model(model_usage, usage) or self.requested_model
 

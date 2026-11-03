@@ -4,8 +4,8 @@ import unittest
 from types import SimpleNamespace
 
 from pipeline.stage3.providers import create_refactorer
-from pipeline.stage3.providers.base import extract_code
-from pipeline.stage3.refactor import is_reusable
+from pipeline.stage3.providers.base import extract_code, extract_imports
+from pipeline.stage3.refactor import SYSTEM_PROMPT_SHA, is_reusable
 
 try:
     from pipeline.stage3.providers.claude import FALLBACK_BETA, ClaudeRefactorer
@@ -217,12 +217,20 @@ class DeepSeekProviderTest(unittest.TestCase):
 class ReuseTest(unittest.TestCase):
     def test_settings_must_match(self):
         refactorer = SimpleNamespace(model='m', settings={'effort': 'high'})
-        result = {'model': 'm', 'settings': {'effort': 'high'}, 'prompt_sha256': 'abc'}
+        result = {'model': 'm', 'settings': {'effort': 'high'}, 'prompt_sha256': 'abc',
+                  'system_prompt_sha256': SYSTEM_PROMPT_SHA}
         self.assertTrue(is_reusable(result, refactorer, 'abc'))
         self.assertFalse(is_reusable({**result, 'settings': {'effort': 'low'}},
                                      refactorer, 'abc'))
         self.assertFalse(is_reusable(result, refactorer, 'other'))
         self.assertFalse(is_reusable({**result, 'error': 'x'}, refactorer, 'abc'))
+
+    def test_system_prompt_must_match(self):
+        refactorer = SimpleNamespace(model='m', settings={})
+        result = {'model': 'm', 'settings': {}, 'prompt_sha256': 'abc'}
+        self.assertFalse(is_reusable(result, refactorer, 'abc'))      # made before it was stored
+        self.assertFalse(is_reusable({**result, 'system_prompt_sha256': 'old'},
+                                     refactorer, 'abc'))
 
 
 class ExtractCodeTest(unittest.TestCase):
@@ -231,6 +239,24 @@ class ExtractCodeTest(unittest.TestCase):
         self.assertEqual(extract_code('```dart\ncut off'), 'cut off')
         self.assertEqual(extract_code('plain'), 'plain')
         self.assertEqual(extract_code(None), '')
+
+    def test_imports_block_is_not_the_code(self):
+        response = ('```java\nvoid f(Map<String, String> m) {}\n```\n'
+                    '```imports\nimport java.util.Map;\nimport java.util.Map;\n```')
+        self.assertEqual(extract_code(response), 'void f(Map<String, String> m) {}')
+        self.assertEqual(extract_imports(response), ['import java.util.Map;'])
+
+    def test_untagged_block_of_imports_counts_as_imports(self):
+        response = ('```java\nimport static org.junit.Assert.assertEquals;\n```\n'
+                    '```java\nassertEquals(1, x);\n```')
+        self.assertEqual(extract_code(response), 'assertEquals(1, x);')
+        self.assertEqual(extract_imports(response),
+                         ['import static org.junit.Assert.assertEquals;'])
+
+    def test_single_block_has_no_separate_imports(self):
+        response = '```java\nimport java.util.Map;\n\nclass A {}\n```'
+        self.assertEqual(extract_code(response), 'import java.util.Map;\n\nclass A {}')
+        self.assertEqual(extract_imports(response), [])
 
 
 if __name__ == '__main__':

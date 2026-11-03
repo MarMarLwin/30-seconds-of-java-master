@@ -14,9 +14,10 @@ any local repository that SonarCloud has analysed.
 | 2 | `inspect` | print what context each prompt contains | (console) |
 | 3 | `refactor` | send every prompt to the LLM, extract the code, then apply it | `stage3_results_<model>.json` + branches |
 | 3 | `apply` | write the refactored code into one git branch per strategy (no LLM calls) | `refactor/<model>/<strategy>` branches, `stage3_applied_<model>.json` |
-| | `run` | `fetch-issues` (if needed) → `extract` → `index` → `prompts` → `refactor` | all of the above |
+| 4 | `verify` | compile, test and style-check each branch, and find the patches that broke the build | `stage4_verify_<model>.json`, `stage4_logs/` |
+| | `run` | `fetch-issues` (if needed) → `extract` → `index` → `prompts` → `refactor` → `verify` | all of the above |
 
-Stages 4 (build and test runner) and 5 (evaluation matrix) are not implemented yet.
+Stage 5 (evaluation matrix) is not implemented yet.
 
 ## How to run
 
@@ -71,6 +72,7 @@ python3 -m pipeline index        --repo .   # again whenever the code changes
 python3 -m pipeline prompts      --repo .
 python3 -m pipeline inspect      --repo . --issue java:S1118 --show repository_aware
 python3 -m pipeline refactor     --repo . --limit 1
+python3 -m pipeline verify       --repo . --provider claude-code
 ```
 
 Useful options (see `python3 -m pipeline <command> --help`):
@@ -122,6 +124,51 @@ one local git branch per strategy (skip with `--no-apply`; re-run with
   for SonarCloud to analyse each one, then compare issues per branch.
 - `stage3_applied_<model>.json` lists, per branch, every issue as `applied`,
   `conflict` or `skipped` with the reason, plus the base and branch commits.
+- **Imports.** The snippet starts below the file's imports, so the prompt
+  lists them (`## Imports in this file`, Java, Kotlin and Dart) and the system
+  prompt asks for any new ones in a second code block tagged `imports`.
+  `apply` merges those (and any imports the model put at the top of its code)
+  into the header in sorted order, and removes imports the replaced code used
+  that nothing uses anymore (e.g. `HashMap` after `HashMap` → `Map`). Each
+  applied issue records `imports_added`, `imports_removed` and
+  `patched_lines`, its line range in the patched file.
+
+### Checking that the refactored code builds (Stage 4)
+
+```sh
+python3 -m pipeline verify --repo . --provider claude-code                 # every branch
+python3 -m pipeline verify --repo . --provider claude-code --revert-broken # drop broken patches
+python3 -m pipeline verify --repo . --provider claude-code --strategy repository_aware  # working tree
+```
+
+`verify` builds the base commit, then each strategy branch, in a temporary
+worktree with the repository's own build: `./gradlew testClasses`, `test` and
+`checkstyleMain checkstyleTest` (Maven: `test-compile`, `test`,
+`checkstyle:check`; Dart/Flutter: `analyze`, `test`). Replace any step with
+`--compile-cmd`, `--test-cmd` or `--style-cmd`. Tests and style checks run
+only when the code compiles. Problems the base commit already had are not
+counted.
+
+Every compiler error, failing test (from the JUnit XML reports) and style
+violation is mapped to the patch that covers it, and each applied issue gets a
+status in `stage4_verify_<model>.json`:
+
+| Status | Meaning |
+|---|---|
+| `broken` | a compiler error inside the patch |
+| `suspect` | a compiler error elsewhere in the same file |
+| `not_verified` | the build failed elsewhere, so this patch was not tested |
+| `test_failed` | a test of this file (or of the class it tests) fails that passed on the base commit |
+| `style_violation` | a new style violation inside the patch |
+| `ok` | compiles, tests pass, no new style violations |
+
+Errors in files no patch touched (usually callers of a changed signature) are
+listed under `unattributed_errors`. With `--revert-broken`, the branch is
+rebuilt without its `broken` patches (up to 3 rounds, since one error can hide
+others) so every branch you push to SonarCloud compiles; reverted issues are
+listed under `reverted` and as `skipped` in the apply report. Build output is
+in `stage4_logs/`. `run` ends with `verify` unless `--no-verify` or
+`--no-apply` is given.
 
 ### Measuring the refactored code
 
@@ -332,7 +379,7 @@ pipeline/
   workspace.py              run folder and file names per repository
   requirements.txt
   common/                   ast_outline.py, ast_router.py, dart_ast.py, java_ast.py,
-                            sonar_project.py, env.py (shared helpers)
+                            imports.py, sonar_project.py, env.py (shared helpers)
   stage1/                   fetch.py, extract.py, scoping.py
   stage2/
     commands.py             index / prompts / inspect
@@ -348,6 +395,7 @@ pipeline/
   stage3/apply.py           results → one git branch per strategy
   stage3/providers/         openai_compat.py (Gemini, OpenAI), claude.py (API),
                             claude_code.py (Claude Code CLI / subscription)
+  stage4/verify.py          applied branches → build, test and style results per issue
   tools/dart_ast/           Dart AST dumper
   tools/java_ast/           Java AST dumper (JavaAst.java)
   tests/                    python3 -m unittest discover -s pipeline/tests -t .
