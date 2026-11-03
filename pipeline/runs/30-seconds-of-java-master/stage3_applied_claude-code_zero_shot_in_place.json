@@ -1,13 +1,13 @@
 {
-  "applied_at": "2026-10-28T09:15:48.134994+00:00",
+  "applied_at": "2026-11-03T12:55:55.847405+00:00",
   "model": "claude-code",
   "strategy": "zero_shot",
   "target": "working tree",
   "results_file": "stage3_results_claude-code.json",
-  "applied": 8,
-  "already_applied": 47,
+  "applied": 0,
+  "already_applied": 58,
   "conflict": 0,
-  "skipped": 66,
+  "skipped": 63,
   "issues": [
     {
       "issue_key": "AaFsqnxKZptvl_vNu0T-",
@@ -17,7 +17,8 @@
         18,
         19
       ],
-      "status": "already_applied"
+      "status": "skipped",
+      "reason": "file content at these lines differs from the snippet sent to the model (changed or not committed)"
     },
     {
       "issue_key": "AaFsqnxPZptvl_vNu0T_",
@@ -27,7 +28,8 @@
         16,
         17
       ],
-      "status": "already_applied"
+      "status": "skipped",
+      "reason": "file content at these lines differs from the snippet sent to the model (changed or not committed)"
     },
     {
       "issue_key": "AaFsibi_N1YzpLYI6ZjB",
@@ -118,8 +120,7 @@
         30,
         47
       ],
-      "status": "skipped",
-      "reason": "file content at these lines differs from the snippet sent to the model (changed or not committed)"
+      "status": "already_applied"
     },
     {
       "issue_key": "AaFsibi6N1YzpLYI6Zi_",
@@ -150,8 +151,7 @@
         30,
         66
       ],
-      "status": "skipped",
-      "reason": "file content at these lines differs from the snippet sent to the model (changed or not committed)"
+      "status": "already_applied"
     },
     {
       "issue_key": "AaFsibizN1YzpLYI6Zi5",
@@ -267,7 +267,8 @@
         32,
         43
       ],
-      "status": "already_applied"
+      "status": "skipped",
+      "reason": "file content at these lines differs from the snippet sent to the model (changed or not committed)"
     },
     {
       "issue_key": "AaFsibjLN1YzpLYI6ZjN",
@@ -277,7 +278,8 @@
         32,
         43
       ],
-      "status": "already_applied"
+      "status": "skipped",
+      "reason": "file content at these lines differs from the snippet sent to the model (changed or not committed)"
     },
     {
       "issue_key": "AaFsibjON1YzpLYI6ZjQ",
@@ -287,8 +289,7 @@
         32,
         43
       ],
-      "status": "skipped",
-      "reason": "file content at these lines differs from the snippet sent to the model (changed or not committed)"
+      "status": "already_applied"
     },
     {
       "issue_key": "AaFsibjFN1YzpLYI6ZjH",
@@ -308,8 +309,7 @@
         30,
         62
       ],
-      "status": "skipped",
-      "reason": "file content at these lines differs from the snippet sent to the model (changed or not committed)"
+      "status": "already_applied"
     },
     {
       "issue_key": "AaFsibidN1YzpLYI6Zim",
@@ -319,8 +319,7 @@
         32,
         59
       ],
-      "status": "skipped",
-      "reason": "file content at these lines differs from the snippet sent to the model (changed or not committed)"
+      "status": "already_applied"
     },
     {
       "issue_key": "AaFsibiZN1YzpLYI6Zih",
@@ -481,8 +480,7 @@
         32,
         43
       ],
-      "status": "skipped",
-      "reason": "file content at these lines differs from the snippet sent to the model (changed or not committed)"
+      "status": "already_applied"
     },
     {
       "issue_key": "AaFsibjjN1YzpLYI6Zjn",
@@ -547,8 +545,7 @@
         37,
         65
       ],
-      "status": "skipped",
-      "reason": "file content at these lines differs from the snippet sent to the model (changed or not committed)"
+      "status": "already_applied"
     },
     {
       "issue_key": "AaFsibjxN1YzpLYI6Zj2",
@@ -558,8 +555,7 @@
         36,
         48
       ],
-      "status": "skipped",
-      "reason": "file content at these lines differs from the snippet sent to the model (changed or not committed)"
+      "status": "already_applied"
     },
     {
       "issue_key": "AaFsibjwN1YzpLYI6Zj0",
@@ -613,8 +609,7 @@
         30,
         45
       ],
-      "status": "skipped",
-      "reason": "file content at these lines differs from the snippet sent to the model (changed or not committed)"
+      "status": "already_applied"
     },
     {
       "issue_key": "AaFsibimN1YzpLYI6Ziu",
@@ -624,7 +619,8 @@
         30,
         59
       ],
-      "status": "already_applied"
+      "status": "skipped",
+      "reason": "file content at these lines differs from the snippet sent to the model (changed or not committed)"
     },
     {
       "issue_key": "AaFsibiuN1YzpLYI6Zi1",
@@ -857,9 +853,8 @@
         32,
         32
       ],
-      "status": "applied",
-      "new_line_count": 1,
-      "reindented": false
+      "status": "skipped",
+      "reason": "file content at these lines differs from the snippet sent to the model (changed or not committed)"
     },
     {
       "issue_key": "AaFsibjUN1YzpLYI6ZjY",
@@ -880,8 +875,7 @@
         33,
         50
       ],
-      "status": "skipped",
-      "reason": "file content at these lines differs from the snippet sent to the model (changed or not committed)"
+      "status": "already_applied"
     },
     {
       "issue_key": "AaFsibjVN1YzpLYI6ZjZ",
@@ -891,7 +885,8 @@
         33,
         60
       ],
-      "status": "already_applied"
+      "status": "skipped",
+      "reason": "file content at these lines differs from the snippet sent to the model (changed or not committed)"
     },
     {
       "issue_key": "AaFsibjTN1YzpLYI6ZjU",
@@ -933,7 +928,8 @@
         32,
         64
       ],
-      "status": "already_applied"
+      "status": "skipped",
+      "reason": "file content at these lines differs from the snippet sent to the model (changed or not committed)"
     },
     {
       "issue_key": "AaFsibjcN1YzpLYI6Zjh",
@@ -943,7 +939,8 @@
         30,
         53
       ],
-      "status": "already_applied"
+      "status": "skipped",
+      "reason": "file content at these lines differs from the snippet sent to the model (changed or not committed)"
     },
     {
       "issue_key": "AaFsibjZN1YzpLYI6Zje",
@@ -986,8 +983,7 @@
         30,
         41
       ],
-      "status": "skipped",
-      "reason": "file content at these lines differs from the snippet sent to the model (changed or not committed)"
+      "status": "already_applied"
     },
     {
       "issue_key": "AaFsibjRN1YzpLYI6ZjT",
@@ -1017,8 +1013,7 @@
         33,
         44
       ],
-      "status": "skipped",
-      "reason": "file content at these lines differs from the snippet sent to the model (changed or not committed)"
+      "status": "already_applied"
     },
     {
       "issue_key": "AaFsibjtN1YzpLYI6Zjy",
@@ -1069,9 +1064,7 @@
         50,
         50
       ],
-      "status": "applied",
-      "new_line_count": 1,
-      "reindented": false
+      "status": "already_applied"
     },
     {
       "issue_key": "AaFsibj7N1YzpLYI6ZkB",
@@ -1112,9 +1105,7 @@
         49,
         49
       ],
-      "status": "applied",
-      "new_line_count": 1,
-      "reindented": false
+      "status": "already_applied"
     },
     {
       "issue_key": "AaFsibj9N1YzpLYI6ZkC",
@@ -1124,9 +1115,7 @@
         40,
         85
       ],
-      "status": "applied",
-      "new_line_count": 46,
-      "reindented": false
+      "status": "already_applied"
     },
     {
       "issue_key": "AaFsibkAN1YzpLYI6ZkG",
@@ -1176,9 +1165,7 @@
         49,
         49
       ],
-      "status": "applied",
-      "new_line_count": 1,
-      "reindented": false
+      "status": "already_applied"
     },
     {
       "issue_key": "AaFsqnwoZptvl_vNu0T7",
@@ -1263,9 +1250,7 @@
         34,
         77
       ],
-      "status": "applied",
-      "new_line_count": 44,
-      "reindented": false
+      "status": "already_applied"
     },
     {
       "issue_key": "AaFsibkTN1YzpLYI6ZkQ",
@@ -1275,9 +1260,7 @@
         38,
         70
       ],
-      "status": "applied",
-      "new_line_count": 33,
-      "reindented": false
+      "status": "already_applied"
     },
     {
       "issue_key": "AaFsibj1N1YzpLYI6Zj7",
@@ -1287,9 +1270,7 @@
         37,
         48
       ],
-      "status": "applied",
-      "new_line_count": 12,
-      "reindented": false
+      "status": "already_applied"
     },
     {
       "issue_key": "AaFsibj2N1YzpLYI6Zj8",
