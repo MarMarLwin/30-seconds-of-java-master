@@ -2495,4 +2495,13 @@ python3 -m pipeline refactor --repo . --provider deepseek --strategy zero_shot
 
 
 python3 -m pipeline refactor     --repo . --limit 1
+
+# Compile main and test sources
+./gradlew compileJava compileTestJava
+
+# Run all JUnit 5 tests (a JaCoCo coverage report is generated afterwards)
+./gradlew test
+
+# Full build: compile + tests + Checkstyle (Google style, 0 warnings allowed)
+./gradlew build
 ```
