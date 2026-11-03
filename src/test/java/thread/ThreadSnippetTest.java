@@ -52,6 +52,6 @@ class ThreadSnippetTest {
     t.start();
     t.join();
 
-    assertEquals(counter.get(), 1000000);
+    assertEquals(1000000, counter.get());
   }
 }

@@ -32,6 +32,9 @@ public class HaversineFormulaSnippet {
   // Radius of sphere on which the points are, in this case Earth.
   private static final double SPHERE_RADIUS_IN_KM = 6372.8;
 
+  private HaversineFormulaSnippet() {
+  }
+
   /**
    * Haversine formula for calculating distance between two latitude, longitude points.
    *

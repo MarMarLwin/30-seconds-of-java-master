@@ -55,6 +55,9 @@ public class VerhoeffSnippet {
 
   private static final int[] inv = {0, 4, 3, 2, 1, 5, 6, 7, 8, 9};
 
+  private VerhoeffSnippet() {
+  }
+
   /**
    * Validates a number using the Verhoeff checksum algorithm.
    *

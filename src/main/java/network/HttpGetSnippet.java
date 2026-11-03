@@ -34,6 +34,9 @@ import java.net.http.HttpResponse;
  */
 public class HttpGetSnippet {
 
+  private HttpGetSnippet() {
+  }
+
   /**
    * Performs HTTP GET request.
    *

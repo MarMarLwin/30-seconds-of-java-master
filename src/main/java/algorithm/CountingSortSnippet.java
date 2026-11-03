@@ -31,6 +31,9 @@ import java.util.Arrays;
  */
 public class CountingSortSnippet {
 
+  private CountingSortSnippet() {
+  }
+
   /**
    * Sort an array having zero or positive numbers with countingSort algorithm.
    *

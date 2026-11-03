@@ -29,6 +29,9 @@ package math;
  */
 public class FactorialSnippet {
 
+  private FactorialSnippet() {
+  }
+
   /**
    * Factorial. Works only for small numbers
    *

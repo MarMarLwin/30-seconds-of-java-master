@@ -29,6 +29,9 @@ package math;
  */
 public class SquareRoot {
 
+  private SquareRoot() {
+  }
+
   /**
    * Returns square root of a number.
    *

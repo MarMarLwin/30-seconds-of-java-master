@@ -31,6 +31,9 @@ public class LuhnModnSnippet {
 
   private static final String CODE_POINTS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+  private LuhnModnSnippet() {
+  }
+
   /**
    * Generates a check character using the Luhn mod N algorithm.
    *

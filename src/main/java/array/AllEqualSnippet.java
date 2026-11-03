@@ -31,6 +31,9 @@ import java.util.Arrays;
  */
 public class AllEqualSnippet {
 
+  private AllEqualSnippet() {
+  }
+
   /**
    * Returns true if all elements in array are equal.
    *

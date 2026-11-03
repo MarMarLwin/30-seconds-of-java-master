@@ -31,6 +31,10 @@ import java.util.Base64;
  */
 public class Base64DecodeSnippet {
 
+  private Base64DecodeSnippet() {
+    throw new IllegalStateException("Utility class");
+  }
+
   /**
    * Decodes a Base64 encoded string to the actual representation.
    *

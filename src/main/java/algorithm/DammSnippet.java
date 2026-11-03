@@ -44,7 +44,7 @@ public class DammSnippet {
   /**
    * The quasigroup table used by the Damm algorithm.
    */
-  private static final int[][] matrix = new int[][] {
+  private static final int[][] matrix = {
           { 0, 3, 1, 7, 5, 9, 8, 6, 4, 2 },
           { 7, 0, 9, 2, 1, 5, 4, 8, 6, 3 },
           { 4, 2, 0, 6, 8, 7, 1, 3, 5, 9 },

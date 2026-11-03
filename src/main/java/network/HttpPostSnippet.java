@@ -39,6 +39,9 @@ import java.util.StringJoiner;
  */
 public class HttpPostSnippet {
 
+  private HttpPostSnippet() {
+  }
+
   /**
    * Performs HTTP POST request. Credits https://stackoverflow.com/questions/3324717/sending-http-post-request-in-java
    *

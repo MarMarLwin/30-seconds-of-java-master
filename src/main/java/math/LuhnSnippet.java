@@ -29,6 +29,10 @@ package math;
  */
 public class LuhnSnippet {
 
+  private LuhnSnippet() {
+    throw new UnsupportedOperationException("Utility class");
+  }
+
   /**
    * Calculates checksum for a given number with Luhn's algorithm. Works only on non-negative
    * integers not greater than {@link Long#MAX_VALUE} i.e., all numbers with a maximum of 18

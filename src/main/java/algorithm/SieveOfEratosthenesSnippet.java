@@ -28,6 +28,10 @@ package algorithm;
  * SieveOfEratosthenesSnippet.
  */
 public class SieveOfEratosthenesSnippet {
+
+  private SieveOfEratosthenesSnippet() {
+  }
+
   /**
    * Search an item with binarySearch algorithm.
    *

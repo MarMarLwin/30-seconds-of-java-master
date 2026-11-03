@@ -29,7 +29,11 @@ package string;
  */
 
 public class KmpSubstringSearchSnippet {
- 
+
+  private KmpSubstringSearchSnippet() {
+    throw new UnsupportedOperationException("Utility class");
+  }
+
   /**
    * Implements the Knuth-Morris-Pratt (KMP) algorithm to find the of a substring.
    *
@@ -93,4 +97,4 @@ public class KmpSubstringSearchSnippet {
     }
     return lps;
   }
-} 
+}

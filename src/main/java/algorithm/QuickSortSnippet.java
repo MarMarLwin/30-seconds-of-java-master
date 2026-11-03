@@ -29,6 +29,9 @@ package algorithm;
  */
 public class QuickSortSnippet {
 
+  private QuickSortSnippet() {
+  }
+
   /**
    * Sort an array with quicksort algorithm.
    *

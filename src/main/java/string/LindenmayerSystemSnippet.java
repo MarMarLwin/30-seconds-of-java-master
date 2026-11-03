@@ -30,6 +30,10 @@ import java.util.Map;
  * LSystemSnippet.
  */
 public class LindenmayerSystemSnippet {
+
+  private LindenmayerSystemSnippet() {
+  }
+
   /**
    * Generates an L-system string based on axiom, production rules, and a number of iterations.
    *
